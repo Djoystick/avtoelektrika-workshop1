@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-🔧 Мастерская Автоэлектрика - Парсер новостей
-Автоматический сбор статей по автоэлектрике из 50+ источников
-с фильтрацией, извлечением симптомов и сохранением в JSON
+🔧 Мастерская Автоэлектрика v2.0
+100+ источников с расширенной фильтрацией и симптомами
 """
 
 import feedparser
@@ -15,7 +14,6 @@ import re
 from datetime import datetime
 from urllib.parse import urlparse
 
-# Импортируем конфиг
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import (
     NEWS_SOURCES,
@@ -37,6 +35,7 @@ class Colors:
     YELLOW = '\033[93m'
     RED = '\033[91m'
     BLUE = '\033[94m'
+    CYAN = '\033[96m'
     END = '\033[0m'
     BOLD = '\033[1m'
 
@@ -45,25 +44,25 @@ class Colors:
 # ============================================
 
 def is_technical(title, summary):
-    """Проверяет, является ли новость технической (по автоэлектрике)"""
+    """Проверяет, является ли новость технической"""
     text = (title + " " + summary).lower()
     
-    # Проверяем стоп-слова
+    # Исключаем по стоп-словам
     for keyword in EXCLUDE_KEYWORDS:
         if keyword.lower() in text:
             return False
     
-    # Считаем техно-слова
+    # Считаем технические слова
     tech_count = 0
     for keyword in TECH_KEYWORDS:
         if keyword.lower() in text:
             tech_count += 1
     
-    # Требуем минимум 1-2 техно-слова
+    # Требуем минимум техно-слово
     return tech_count >= 1
 
 def extract_symptoms(title, summary):
-    """Извлекает симптомы неисправности из текста"""
+    """Извлекает симптомы из текста"""
     text = (title + " " + summary).lower()
     found_symptoms = []
     
@@ -71,20 +70,20 @@ def extract_symptoms(title, summary):
         if symptom.lower() in text:
             found_symptoms.append(symptom)
     
-    # Убираем дубликаты
-    return list(set(found_symptoms))
+    # Убираем дубликаты и сортируем по релевантности
+    found_symptoms = list(set(found_symptoms))
+    found_symptoms.sort(key=lambda x: len(x), reverse=True)
+    
+    return found_symptoms[:10]  # Макс 10 симптомов
 
 def extract_image(entry):
-    """Извлекает изображение из RSS entry"""
-    # Ищем в media:content
+    """Извлекает изображение"""
     if hasattr(entry, 'media_content') and entry.media_content:
         return entry.media_content[0].get('url', '')
     
-    # Ищем в media:thumbnail
     if hasattr(entry, 'media_thumbnail') and entry.media_thumbnail:
         return entry.media_thumbnail[0].get('url', '')
     
-    # Ищем img в summary
     if 'summary' in entry:
         img_match = re.search(r'<img[^>]*src=["\'](.*?)["\']', entry.summary)
         if img_match:
@@ -93,14 +92,12 @@ def extract_image(entry):
     return None
 
 def clean_html(text):
-    """Очищает HTML теги и сущности"""
+    """Очищает HTML теги"""
     if not text:
         return ''
     
-    # Убираем HTML теги
     text = re.sub(r'<[^>]+>', '', text)
     
-    # Убираем HTML entities
     entities = {
         '&nbsp;': ' ',
         '&quot;': '"',
@@ -118,13 +115,11 @@ def clean_html(text):
     for entity, char in entities.items():
         text = text.replace(entity, char)
     
-    # Убираем лишние пробелы
     text = re.sub(r'\s+', ' ', text).strip()
-    
-    return text[:500]  # Макс 500 символов
+    return text[:500]
 
 def shorten_text(text, max_length=200):
-    """Сокращает текст до определённой длины"""
+    """Сокращает текст"""
     if len(text) > max_length:
         return text[:max_length].rsplit(' ', 1)[0] + '...'
     return text
@@ -134,21 +129,24 @@ def shorten_text(text, max_length=200):
 # ============================================
 
 def parse_rss_feed(source):
-    """Парсит один RSS источник и возвращает список новостей"""
+    """Парсит один RSS источник"""
     news_list = []
     
     try:
-        print(f"  📥 Парсю: {source['name']}...")
+        print(f"  {Colors.CYAN}📥{Colors.END} {source['name'][:40]:<40} ", end='')
+        sys.stdout.flush()
+        
         feed = feedparser.parse(source['url'])
         
         if feed.bozo:
-            print(f"    ⚠️  Ошибка парсинга: {feed.bozo_exception}")
+            print(f"{Colors.YELLOW}⚠️  Ошибка парсинга{Colors.END}")
             return news_list
         
         if not feed.entries:
-            print(f"    ⚠️  Нет записей в источнике")
+            print(f"{Colors.YELLOW}⚠️  Нет записей{Colors.END}")
             return news_list
         
+        valid_count = 0
         for entry in feed.entries[:MAX_NEWS_PER_SOURCE]:
             try:
                 title = entry.get('title', 'Без заголовка')
@@ -156,19 +154,14 @@ def parse_rss_feed(source):
                 link = entry.get('link', '')
                 published = entry.get('published', '')
                 
-                # Очищаем текст
                 title = clean_html(title)
                 summary = clean_html(summary)
                 summary = shorten_text(summary, 200)
                 
-                # Проверяем, техническая ли новость
                 if not is_technical(title, summary):
                     continue
                 
-                # Извлекаем симптомы
                 symptoms = extract_symptoms(title, summary)
-                
-                # Извлекаем изображение
                 image = extract_image(entry)
                 
                 news_item = {
@@ -183,15 +176,15 @@ def parse_rss_feed(source):
                 }
                 
                 news_list.append(news_item)
+                valid_count += 1
                 
             except Exception as e:
-                print(f"    ❌ Ошибка обработки записи: {e}")
                 continue
         
-        print(f"    ✅ Загружено {len(news_list)} статей")
+        print(f"{Colors.GREEN}✅{Colors.END} {valid_count} статей")
         
     except Exception as e:
-        print(f"    ❌ Ошибка парсинга источника: {e}")
+        print(f"{Colors.RED}❌ Ошибка{Colors.END}")
     
     return news_list
 
@@ -199,26 +192,29 @@ def fetch_all_news():
     """Загружает новости из всех источников"""
     all_news = []
     
-    print(f"{Colors.BOLD}{Colors.BLUE}🔧 Мастерская Автоэлектрика - Парсер новостей{Colors.END}")
-    print(f"{Colors.BLUE}{'=' * 60}{Colors.END}")
+    print(f"\n{Colors.BOLD}{Colors.BLUE}{'='*70}{Colors.END}")
+    print(f"{Colors.BOLD}🔧 Мастерская Автоэлектрика v2.0 - Парсер новостей{Colors.END}")
+    print(f"{Colors.BLUE}{'='*70}{Colors.END}")
     print(f"⏱️  Начало: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"📡 Источников: {len(NEWS_SOURCES)}")
-    print(f"{'=' * 60}{Colors.END}\n")
+    print(f"📊 Максимум: {MAX_TOTAL_NEWS} статей")
+    print(f"{Colors.BLUE}{'='*70}{Colors.END}\n")
     
-    for source in NEWS_SOURCES:
+    for idx, source in enumerate(NEWS_SOURCES, 1):
+        print(f"[{idx:3d}/{len(NEWS_SOURCES)}] ", end='')
         news = parse_rss_feed(source)
         all_news.extend(news)
     
-    # Сортируем по дате (новые первыми)
+    # Сортируем по дате
     all_news.sort(
         key=lambda x: x.get('published', ''),
         reverse=True
     )
     
-    # Ограничиваем общее количество
+    # Ограничиваем количество
     all_news = all_news[:MAX_TOTAL_NEWS]
     
-    print(f"\n{Colors.BOLD}{Colors.BLUE}{'=' * 60}{Colors.END}")
+    print(f"\n{Colors.BLUE}{'='*70}{Colors.END}")
     print(f"{Colors.GREEN}✅ Успешно загружено статей: {len(all_news)}{Colors.END}")
     
     return all_news
@@ -228,23 +224,23 @@ def fetch_all_news():
 # ============================================
 
 def save_news_to_json(news_list):
-    """Сохраняет список новостей в JSON файл"""
+    """Сохраняет новости в JSON"""
     try:
         output_data = {
             'news': news_list,
             'lastUpdated': datetime.now().isoformat(),
             'totalItems': len(news_list),
             'totalSources': len(set(n['source'] for n in news_list)),
+            'totalSymptoms': len(set(s for n in news_list for s in n.get('symptoms', []))),
         }
         
-        # Создаём директорию, если её нет
         os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
         
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, ensure_ascii=False, indent=2)
         
-        print(f"{Colors.GREEN}💾 Сохранено в: {OUTPUT_FILE}{Colors.END}")
-        print(f"   Размер файла: {os.path.getsize(OUTPUT_FILE) / 1024:.1f} KB")
+        print(f"{Colors.GREEN}💾 Сохранено: {OUTPUT_FILE}{Colors.END}")
+        print(f"   Размер: {os.path.getsize(OUTPUT_FILE) / 1024:.1f} KB")
         
         return True
         
@@ -257,11 +253,10 @@ def save_news_to_json(news_list):
 # ============================================
 
 def print_statistics(news_list):
-    """Выводит статистику по собранным новостям"""
+    """Выводит статистику"""
     print(f"\n{Colors.BOLD}📊 СТАТИСТИКА{Colors.END}")
-    print(f"{Colors.BLUE}{'=' * 60}{Colors.END}")
+    print(f"{Colors.BLUE}{'='*70}{Colors.END}")
     
-    # Общая статистика
     print(f"📝 Всего статей: {len(news_list)}")
     
     # По категориям
@@ -270,21 +265,21 @@ def print_statistics(news_list):
         cat = item.get('category', 'Неизвестно')
         categories[cat] = categories.get(cat, 0) + 1
     
-    print(f"\n📂 По категориям:")
-    for cat, count in sorted(categories.items(), key=lambda x: x[1], reverse=True):
-        print(f"   • {cat}: {count}")
+    print(f"\n📂 Категории ({len(categories)}):")
+    for cat, count in sorted(categories.items(), key=lambda x: x[1], reverse=True)[:15]:
+        print(f"   {cat:30} {count:3d} статей")
     
-    # По симптомам
+    # Топ симптомы
     symptoms_count = {}
     for item in news_list:
         for symptom in item.get('symptoms', []):
             symptoms_count[symptom] = symptoms_count.get(symptom, 0) + 1
     
-    print(f"\n🏷️  Топ симптомов:")
+    print(f"\n🏷️  Топ симптомов ({len(symptoms_count)}):")
     for symptom, count in sorted(symptoms_count.items(), key=lambda x: x[1], reverse=True)[:10]:
-        print(f"   • {symptom}: {count}")
+        print(f"   {symptom:40} {count:3d} совпадений")
     
-    # По источникам
+    # Источники
     sources = {}
     for item in news_list:
         src = item.get('source', 'Неизвестно')
@@ -292,7 +287,7 @@ def print_statistics(news_list):
     
     print(f"\n📌 Активных источников: {len(sources)}")
     
-    print(f"\n{Colors.BLUE}{'=' * 60}{Colors.END}")
+    print(f"\n{Colors.BLUE}{'='*70}{Colors.END}")
 
 # ============================================
 # ОСНОВНАЯ ФУНКЦИЯ
@@ -301,17 +296,14 @@ def print_statistics(news_list):
 def main():
     """Главная функция"""
     try:
-        # Парсим все источники
         news = fetch_all_news()
         
         if not news:
             print(f"{Colors.RED}❌ Ошибка: не удалось загрузить новости{Colors.END}")
             sys.exit(1)
         
-        # Выводим статистику
         print_statistics(news)
         
-        # Сохраняем в JSON
         if not save_news_to_json(news):
             sys.exit(1)
         
