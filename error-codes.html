@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>По ошибкам - Мастерская Автоэлектрика</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">🏠 Главная</a>
+                <a href="/vehicles.html" class="nav-link">🚗 По маркам</a>
+                <a href="/error-codes.html" class="nav-link active">💻 По ошибкам</a>
+                <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
+            </nav>
+        </header>
+
+        <section class="page-content">
+            <h2>💻 Решения по кодам ошибок</h2>
+            <div class="search-box">
+                <input id="code-search" type="text" placeholder="Введите код ошибки (P0300, C0040 и т.д.)">
+                <button onclick="searchCodes()" class="btn btn-primary">Найти</button>
+            </div>
+            <div id="codes-list" class="codes-grid"></div>
+        </section>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="db-manager.js"></script>
+    <script>
+        let db;
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            db = new DatabaseManager();
+            await db.init();
+            
+            const codes = db._getUniqueErrorCodes();
+            const codesList = document.getElementById('codes-list');
+            
+            codesList.innerHTML = codes.map(code => `
+                <div class="code-card">
+                    <h3>💻 ${code}</h3>
+                    <p>${db.searchByErrorCode(code).length} решений</p>
+                    <button onclick="filterByCode('${code}')" class="btn btn-small">Показать</button>
+                </div>
+            `).join('');
+        });
+        
+        function searchCodes() {
+            const code = document.getElementById('code-search').value.toUpperCase();
+            const results = db.searchByErrorCode(code);
+            const codesList = document.getElementById('codes-list');
+            
+            codesList.innerHTML = results.map(r => `
+                <div class="result-card">
+                    <h4>${r.title}</h4>
+                    <p>${r.contentType} • ${r.source}</p>
+                    <a href="${r.link}" target="_blank" class="btn btn-small">Читать</a>
+                </div>
+            `).join('') || '<p>Ничего не найдено</p>';
+        }
+    </script>
+</body>
+</html>
