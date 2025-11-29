@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>По маркам - Мастерская Автоэлектрика</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+            <nav class="main-nav">
+                <a href="/" class="nav-link">🏠 Главная</a>
+                <a href="/vehicles.html" class="nav-link active">🚗 По маркам</a>
+                <a href="/error-codes.html" class="nav-link">💻 По ошибкам</a>
+                <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
+            </nav>
+        </header>
+
+        <section class="page-content">
+            <h2>🚗 Решения по маркам авто</h2>
+            <div id="brands-list" class="brands-grid"></div>
+        </section>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="db-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const db = new DatabaseManager();
+            await db.init();
+            
+            const brands = db._getUniqueBrands();
+            const brandsList = document.getElementById('brands-list');
+            
+            brandsList.innerHTML = brands.map(brand => `
+                <div class="brand-card">
+                    <h3>🚙 ${brand}</h3>
+                    <p>${db.searchByBrand(brand).length} решений</p>
+                    <button onclick="filterByBrand('${brand}')" class="btn btn-small">Показать</button>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>
