@@ -61,11 +61,16 @@ jobs:
           fi
       
       - name: 📝 Коммит обновлений
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add news.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 Обновлена база (100+ источников) — $(date '+%Y-%m-%d %H:%M:%S')" && git push)
+  run: |
+    git config --local user.email "github-actions[bot]@users.noreply.github.com"
+    git config --local user.name "github-actions[bot]"
+    git add news.json
+    git diff --quiet && git diff --staged --quiet || (
+      git pull --rebase origin main
+      git commit -m "🔄 Обновлена база (100+ источников) — $(date '+%Y-%m-%d %H:%M:%S')"
+      git push
+    )
+
       
       - name: 📊 Статистика
         if: always()
