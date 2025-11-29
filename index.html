@@ -106,25 +106,49 @@
             document.getElementById('last-update').textContent = 
                 new Date(db.db.lastUpdated).toLocaleString('ru-RU');
             
-            // VIN-декодер
-            document.getElementById('decode-btn').addEventListener('click', () => {
-                const vin = document.getElementById('vin-input').value.toUpperCase();
+                        // VIN-декодер
+            document.getElementById('decode-btn').addEventListener('click', async () => {
+                const vinBtn = document.getElementById('decode-btn');
+                const vinInput = document.getElementById('vin-input');
+                const resultDiv = document.getElementById('vin-result');
+                
+                const vin = vinInput.value.trim().toUpperCase();
+                
                 if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) {
-                    alert('Некорректный VIN');
+                    alert('Некорректный VIN (должно быть 17 символов, без I, O, Q)');
                     return;
                 }
-                const decoded = decodeVIN(vin);
-                document.getElementById('vin-result').innerHTML = `
-                    <div class="card">
-                        <h4>📋 Расшифровка VIN: ${vin}</h4>
-                        <p><strong>Производитель:</strong> ${decoded.manufacturer}</p>
-                        <p><strong>Год выпуска:</strong> ${decoded.year}</p>
-                        <p><strong>Марка:</strong> ${decoded.brand}</p>
-                    </div>
-                `;
-                document.getElementById('vin-result').classList.remove('hidden');
+
+                vinBtn.textContent = "⏳ Загрузка...";
+                vinBtn.disabled = true;
+                resultDiv.innerHTML = "";
+                resultDiv.classList.add('hidden');
+
+                try {
+                    const decoded = await decodeVIN(vin);
+                    resultDiv.innerHTML = `
+                        <div class="card vin-card">
+                            <div class="vin-header">
+                                <h4>🚗 ${decoded.brand} ${decoded.model} (${decoded.year})</h4>
+                            </div>
+                            <div class="vin-details">
+                                <p><strong>Кузов:</strong> ${decoded.body}</p>
+                                <p><strong>Двигатель:</strong> ${decoded.engine}</p>
+                                <p><strong>Топливо:</strong> ${decoded.fuel}</p>
+                                <p><strong>Производитель:</strong> ${decoded.manufacturer}</p>
+                            </div>
+                            <a href="/vehicles.html" class="btn btn-small">Найти запчасти для этого авто</a>
+                        </div>
+                    `;
+                    resultDiv.classList.remove('hidden');
+                } catch (e) {
+                    alert("Ошибка декодирования: " + e.message);
+                } finally {
+                    vinBtn.textContent = "Декодировать";
+                    vinBtn.disabled = false;
+                }
             });
-            
+
             // DTC поиск
             document.getElementById('dtc-search-btn').addEventListener('click', () => {
                 const code = document.getElementById('dtc-input').value.toUpperCase();
