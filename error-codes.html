@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Коды ошибок OBD2 - Мастерская</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">🏠 Главная</a>
+                    <a href="/vehicles.html" class="nav-link">🚗 По маркам</a>
+                    <a href="/error-codes.html" class="nav-link active">💻 По ошибкам</a>
+                    <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
+                </nav>
+            </div>
+        </header>
 
+        <h2>💻 Справочник кодов ошибок OBD2</h2>
+        <input id="code-search" type="text" placeholder="Поиск по коду (P0300, C0001)..." class="search-input">
+        
+        <table class="codes-table">
+            <thead>
+                <tr>
+                    <th>Код</th>
+                    <th>Описание</th>
+                    <th>Решений</th>
+                </tr>
+            </thead>
+            <tbody id="codes-tbody"></tbody>
+        </table>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="db-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const db = new DatabaseManager();
+            await db.init();
+            
+            const tbody = document.getElementById('codes-tbody');
+            const codes = db.errorCodes.errorCodes;
+            
+            function render(filteredCodes) {
+                tbody.innerHTML = Object.entries(filteredCodes).map(([code, desc]) => {
+                    const solutionsCount = db.db.indexes.errorCodes[code]?.length || 0;
+                    return `
+                        <tr onclick="searchCode('${code}')">
+                            <td><strong>${code}</strong></td>
+                            <td>${desc}</td>
+                            <td><span class="badge">${solutionsCount}</span></td>
+                        </tr>
+                    `;
+                }).join('');
+            }
+            
+            render(codes);
+            
+            document.getElementById('code-search').addEventListener('input', (e) => {
+                const query = e.target.value.toUpperCase();
+                const filtered = Object.fromEntries(
+                    Object.entries(codes).filter(([code, desc]) =>
+                        code.includes(query) || desc.toUpperCase().includes(query)
+                    )
+                );
+                render(filtered);
+            });
+        });
+        
+        function searchCode(code) {
+            window.location.href = `/?search=${code}`;
+        }
+    </script>
+</body>
+</html>
