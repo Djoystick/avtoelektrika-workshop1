@@ -1,7 +1,4 @@
-/* ======================================
-   ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ
-   ====================================== */
-
+/* ===== ПЕРЕМЕННЫЕ ===== */
 :root {
     --color-bg: #0d1117;
     --color-surface: #161b22;
@@ -14,14 +11,9 @@
     --color-warning: #d29922;
     --color-danger: #f85149;
     --radius: 8px;
-    --transition: 0.3s ease;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
     font-size: 14px;
@@ -29,51 +21,32 @@ html {
     line-height: 1.6;
     color: var(--color-text);
     background-color: var(--color-bg);
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    margin: 0;
     padding: 16px;
     background-color: var(--color-bg);
-    color: var(--color-text);
 }
-
-/* ======================================
-   КОНТЕЙНЕР
-   ====================================== */
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
 }
 
-/* ======================================
-   ШАПКА
-   ====================================== */
-
+/* ===== ШАПКА ===== */
 .header {
     background: linear-gradient(135deg, var(--color-surface) 0%, #1c2128 100%);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
     padding: 24px 20px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-}
-
-.logo-section h1 {
+.logo {
     font-size: 24px;
     font-weight: 600;
     color: var(--color-primary);
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
 }
 
 .tagline {
@@ -82,10 +55,7 @@ body {
     margin: 0;
 }
 
-/* ======================================
-   ПОИСК
-   ====================================== */
-
+/* ===== ПОИСК ===== */
 .search-section {
     margin-bottom: 24px;
 }
@@ -98,8 +68,8 @@ body {
     border: 2px solid var(--color-border);
     border-radius: var(--radius);
     color: var(--color-text);
-    transition: var(--transition);
     outline: none;
+    transition: all 0.3s ease;
 }
 
 .search-input:focus {
@@ -115,14 +85,7 @@ body {
     padding: 0 8px;
 }
 
-.search-tips strong {
-    color: var(--color-primary);
-}
-
-/* ======================================
-   ФИЛЬТРЫ ПО КАТЕГОРИЯМ
-   ====================================== */
-
+/* ===== ФИЛЬТРЫ ===== */
 .filters-section {
     margin-bottom: 20px;
     padding: 12px 0;
@@ -135,7 +98,6 @@ body {
     color: var(--color-text-secondary);
     margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .category-filters {
@@ -152,13 +114,11 @@ body {
     color: var(--color-text);
     font-size: 12px;
     cursor: pointer;
-    transition: var(--transition);
-    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 .filter-chip:hover {
     border-color: var(--color-primary);
-    background-color: rgba(31, 111, 235, 0.1);
 }
 
 .filter-chip-active {
@@ -167,10 +127,7 @@ body {
     color: white;
 }
 
-/* ======================================
-   ОБЛАКО ТЕГОВ
-   ====================================== */
-
+/* ===== ОБЛАКО ТЕГОВ ===== */
 .tags-section {
     margin-bottom: 24px;
 }
@@ -181,7 +138,6 @@ body {
     color: var(--color-text-secondary);
     margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .tag-cloud {
@@ -198,18 +154,14 @@ body {
     color: var(--color-primary);
     font-size: 12px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .tag:hover {
     background-color: rgba(31, 111, 235, 0.2);
-    border-color: var(--color-primary);
 }
 
-/* ======================================
-   СПИСОК НОВОСТЕЙ
-   ====================================== */
-
+/* ===== СПИСОК СТАТЕЙ ===== */
 .news-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -225,11 +177,11 @@ body {
     border-radius: var(--radius);
     padding: 16px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     overflow: hidden;
 }
 
-body:not(.touch) .news-item:hover {
+.news-item:hover {
     border-color: var(--color-primary);
     box-shadow: 0 4px 12px rgba(31, 111, 235, 0.15);
     transform: translateY(-2px);
@@ -242,6 +194,32 @@ body:not(.touch) .news-item:hover {
     border-radius: 6px;
     margin-bottom: 12px;
     background-color: #161b22;
+}
+
+.news-item-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+
+.content-type-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: rgba(63, 185, 80, 0.1);
+    color: var(--color-success);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: rgba(31, 111, 235, 0.1);
+    color: var(--color-primary);
+    border-radius: 4px;
+    font-size: 10px;
 }
 
 .news-item-title {
@@ -267,32 +245,14 @@ body:not(.touch) .news-item:hover {
     overflow: hidden;
 }
 
-.news-item-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11px;
-    color: var(--color-text-secondary);
-    margin-top: auto;
-}
-
-.news-item-category {
-    display: inline-block;
-    padding: 2px 8px;
-    background-color: rgba(63, 185, 80, 0.1);
-    color: var(--color-success);
-    border-radius: 4px;
-    font-size: 11px;
-}
-
-.news-item-symptoms {
+.news-item-problems {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
-    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
-.symptom-tag {
+.problem-tag {
     display: inline-block;
     padding: 2px 6px;
     background-color: rgba(248, 81, 73, 0.1);
@@ -301,10 +261,41 @@ body:not(.touch) .news-item:hover {
     font-size: 10px;
 }
 
-/* ======================================
-   МОДАЛЬНОЕ ОКНО
-   ====================================== */
+.news-item-codes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 8px;
+}
 
+.error-code {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: rgba(217, 119, 6, 0.1);
+    color: #d97706;
+    border-radius: 3px;
+    font-size: 10px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.news-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin-top: auto;
+}
+
+.source {
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== МОДАЛКА ===== */
 .modal {
     display: flex;
     position: fixed;
@@ -347,34 +338,21 @@ body:not(.touch) .news-item:hover {
     color: var(--color-text-secondary);
     font-size: 24px;
     cursor: pointer;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-close:hover {
-    color: var(--color-text);
-    background-color: var(--color-border);
-    border-radius: 4px;
 }
 
 #modal-title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 12px;
-    color: var(--color-text);
 }
 
 .modal-meta {
     display: flex;
     gap: 12px;
     margin-bottom: 16px;
-    flex-wrap: wrap;
 }
 
-.modal-category,
-.modal-source {
+#modal-category, #modal-source {
     font-size: 12px;
     color: var(--color-text-secondary);
     padding: 4px 8px;
@@ -388,7 +366,6 @@ body:not(.touch) .news-item:hover {
     object-fit: cover;
     border-radius: var(--radius);
     margin: 16px 0;
-    background-color: var(--color-border);
 }
 
 .modal-symptoms {
@@ -408,7 +385,7 @@ body:not(.touch) .news-item:hover {
     font-size: 12px;
 }
 
-.modal-summary {
+#modal-summary {
     font-size: 13px;
     line-height: 1.6;
     color: var(--color-text-secondary);
@@ -431,20 +408,16 @@ body:not(.touch) .news-item:hover {
     text-align: center;
     font-size: 13px;
     font-weight: 500;
-    transition: var(--transition);
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-read:hover {
     background-color: var(--color-primary-hover);
-    text-decoration: none;
 }
 
-/* ======================================
-   ПУСТОЕ СОСТОЯНИЕ
-   ====================================== */
-
+/* ===== ПУСТО ===== */
 .empty-state {
     text-align: center;
     padding: 60px 20px;
@@ -456,30 +429,11 @@ body:not(.touch) .news-item:hover {
     margin-bottom: 20px;
 }
 
-.btn-update {
-    padding: 10px 20px;
-    background-color: var(--color-warning);
-    color: var(--color-bg);
-    border: none;
-    border-radius: var(--radius);
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-update:hover {
-    background-color: #e0a835;
-}
-
 .hidden {
     display: none !important;
 }
 
-/* ======================================
-   FOOTER
-   ====================================== */
-
+/* ===== ФУТЕР ===== */
 .footer {
     border-top: 1px solid var(--color-border);
     padding: 16px 0;
@@ -493,109 +447,13 @@ body:not(.touch) .news-item:hover {
     margin: 6px 0;
 }
 
-/* ======================================
-   МОБИЛЬНЫЙ АДАПТИВ
-   ====================================== */
-
+/* ===== МОБИЛЬНЫЙ АДАПТИВ ===== */
 @media (max-width: 768px) {
-    body {
-        padding: 12px;
-    }
-
-    .header {
-        padding: 16px;
-    }
-
-    .logo-section h1 {
-        font-size: 18px;
-    }
-
     .news-list {
         grid-template-columns: 1fr;
-        gap: 12px;
     }
-
+    
     .modal-content {
         max-width: 100%;
-        max-height: 100vh;
-        border-radius: 0;
-        padding: 20px;
     }
-
-    .modal {
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-    .filter-chip {
-        font-size: 11px;
-        padding: 5px 10px;
-    }
-
-    .tag {
-        font-size: 11px;
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo-section h1 {
-        font-size: 16px;
-    }
-
-    .tagline {
-        font-size: 12px;
-    }
-
-    .search-input {
-        font-size: 13px;
-        padding: 10px 12px;
-    }
-
-    .modal-content {
-        padding: 16px;
-    }
-
-    #modal-title {
-        font-size: 16px;
-    }
-}
-
-/* ======================================
-   TOUCH КЛАСС ДЛЯ МОБИЛЬНЫХ
-   ====================================== */
-
-body.touch .news-item {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-body.touch .news-item:active {
-    background-color: #1c2128;
-}
-
-/* ======================================
-   СКРОЛЛ
-   ====================================== */
-
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--color-bg);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--color-text-secondary);
 }
