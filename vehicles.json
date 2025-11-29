@@ -5,65 +5,10 @@
       "models": [
         "Vesta",
         "Granta",
-        "Largus",
+        "Priora",
+        "Kalina",
         "Niva",
-        "2101",
-        "2103",
-        "2105",
-        "2106",
-        "2107"
-      ]
-    },
-    "vw": {
-      "name": "Volkswagen",
-      "models": [
-        "Golf",
-        "Passat",
-        "Polo",
-        "Jetta",
-        "Transporter",
-        "Caddy"
-      ]
-    },
-    "audi": {
-      "name": "Audi",
-      "models": [
-        "A4",
-        "A6",
-        "A8",
-        "Q3",
-        "Q5",
-        "Q7"
-      ]
-    },
-    "skoda": {
-      "name": "Škoda",
-      "models": [
-        "Octavia",
-        "Fabia",
-        "Superb",
-        "Yeti"
-      ]
-    },
-    "bmw": {
-      "name": "BMW",
-      "models": [
-        "320",
-        "330",
-        "520",
-        "530",
-        "X3",
-        "X5",
-        "X1"
-      ]
-    },
-    "mercedes": {
-      "name": "Mercedes-Benz",
-      "models": [
-        "C-Class",
-        "E-Class",
-        "GLC",
-        "GLE"
+        "Largus"
       ]
     },
     "toyota": {
@@ -71,41 +16,91 @@
       "models": [
         "Camry",
         "Corolla",
-        "Yaris",
-        "Highlander",
         "RAV4",
-        "Prius"
+        "Land Cruiser",
+        "Prado"
+      ]
+    },
+    "volkswagen": {
+      "name": "Volkswagen",
+      "models": [
+        "Polo",
+        "Golf",
+        "Passat",
+        "Tiguan",
+        "Touareg"
+      ]
+    },
+    "bmw": {
+      "name": "BMW",
+      "models": [
+        "X5",
+        "X3",
+        "3-Series",
+        "5-Series",
+        "E39",
+        "E46",
+        "E90"
+      ]
+    },
+    "ford": {
+      "name": "Ford",
+      "models": [
+        "Focus",
+        "Mondeo",
+        "Fiesta",
+        "Kuga",
+        "Fusion"
       ]
     },
     "hyundai": {
       "name": "Hyundai",
       "models": [
         "Solaris",
-        "Accent",
-        "i30",
-        "Santa Fe",
+        "Creta",
         "Tucson",
-        "Elantra"
+        "Santa Fe",
+        "Sonata"
       ]
     },
     "kia": {
       "name": "Kia",
       "models": [
         "Rio",
-        "Cerato",
         "Sportage",
         "Sorento",
+        "Ceed",
         "Optima"
       ]
     },
     "nissan": {
       "name": "Nissan",
       "models": [
-        "Almera",
-        "Teana",
         "Qashqai",
         "X-Trail",
-        "Micra"
+        "Almera",
+        "Juke",
+        "Terrano"
+      ]
+    },
+    "renault": {
+      "name": "Renault",
+      "models": [
+        "Logan",
+        "Duster",
+        "Sandero",
+        "Kaptur",
+        "Arkana"
+      ]
+    },
+    "chevrolet": {
+      "name": "Chevrolet",
+      "models": [
+        "Cruze",
+        "Lacetti",
+        "Niva",
+        "Aveo",
+        "Tahoe"
       ]
     }
   },
