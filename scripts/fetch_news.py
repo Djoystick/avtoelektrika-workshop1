@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-🔧 ПАРСЕР МАСТЕРСКОЙ АВТОЭЛЕКТРИКА v3.3
+🔧 ПАРСЕР v4.0 - Структурированная БД
 """
 
 import feedparser
@@ -13,12 +13,11 @@ import re
 import html
 from datetime import datetime
 
-# Импортируем конфиг
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import (
     NEWS_SOURCES, MAX_NEWS_PER_SOURCE, MAX_TOTAL_NEWS,
     EXCLUDE_KEYWORDS, INSTRUCTION_KEYWORDS, ERROR_CODES, PROBLEM_CATEGORIES,
-    OUTPUT_FILE,
+    VEHICLE_BRANDS, OUTPUT_FILE, VEHICLES_FILE, ERROR_CODES_FILE
 )
 
 HEADERS = {
@@ -26,7 +25,7 @@ HEADERS = {
 }
 
 print("\n" + "=" * 80)
-print("🔧 ПАРСЕР ЗАПУЩЕН")
+print("🔧 ПАРСЕР МАСТЕРСКОЙ АВТОЭЛЕКТРИКА v4.0")
 print("=" * 80 + "\n")
 
 def clean_html(text):
@@ -48,27 +47,31 @@ def get_best_text(entry):
 
 def is_useful_content(title, summary, source_name):
     text = (title + " " + summary).lower()
-    
-    # 1. Бан-слова
     for bad in EXCLUDE_KEYWORDS:
         if bad in text: return False
-        
-    # 2. Drive2 и YouTube берем всегда (там контент целевой)
     if "drive2" in source_name.lower() or "youtube" in source_name.lower():
         return True
-        
-    # 3. Ross-Tech (VAG) берем всегда
-    if "ross-tech" in source_name.lower():
-        return True
-        
-    # 4. Для остальных ищем ключевые слова
     return any(k in text for k in INSTRUCTION_KEYWORDS)
 
 def extract_error_codes(text):
     upper = text.upper()
-    codes = [code for code in ERROR_CODES if code in upper]
+    codes = []
+    for code in ERROR_CODES.keys():
+        if code in upper: codes.append(code)
     codes += re.findall(r"\b[PBUC][0-9]{4}\b", upper)
     return sorted(set(codes))
+
+def extract_brands(text):
+    text_lower = text.lower()
+    brands = []
+    for brand_key, brand_info in VEHICLE_BRANDS.items():
+        if brand_key in text_lower or brand_info["name"].lower() in text_lower:
+            brands.append(brand_key)
+        for model in brand_info["models"]:
+            if model.lower() in text_lower:
+                brands.append(brand_key)
+                break
+    return list(set(brands))
 
 def tag_by_problem(title, summary):
     text = (title + " " + summary).lower()
@@ -81,24 +84,20 @@ def tag_by_problem(title, summary):
 def extract_content_type(source_name):
     name = source_name.lower()
     if "youtube" in name: return "🎬 Видео"
-    if "drive2" in name or "forum" in name: return "💬 Форум"
+    if "drive2" in name: return "💬 Форум"
+    if "yt" in name: return "🎬 Видео"
     return "📚 Статья"
 
 def extract_image(entry):
     link = entry.get("link", "")
-    # YouTube Thumbnails
     if "youtube.com" in link:
         if hasattr(entry, "media_group"):
             try: return entry.media_group[0]["media_thumbnail"][0]["url"]
             except: pass
-            
-    # Enclosures
     if hasattr(entry, "enclosures"):
         for enc in entry.enclosures:
             if getattr(enc, "type", "").startswith("image/"):
                 return getattr(enc, "href", None)
-    
-    # HTML Parsing
     raw = ""
     if hasattr(entry, "content") and entry.content: raw = entry.content[0].value
     elif getattr(entry, "summary", ""): raw = entry.summary
@@ -125,7 +124,11 @@ def parse_rss_source(source):
                 if not title or len(title) < 5: continue
                 if not is_useful_content(title, summary, name): continue
                 
+                error_codes = extract_error_codes(title + " " + summary)
+                brands = extract_brands(title + " " + summary)
+                
                 article = {
+                    "id": f"{len(results)}_{int(datetime.now().timestamp())}",
                     "title": title,
                     "summary": summary,
                     "link": entry.get("link", ""),
@@ -134,16 +137,19 @@ def parse_rss_source(source):
                     "category": source["category"],
                     "contentType": extract_content_type(name),
                     "problemTags": tag_by_problem(title, summary),
-                    "errorCodes": extract_error_codes(title + " " + summary),
+                    "errorCodes": error_codes,
+                    "brands": brands,
                     "image": extract_image(entry),
                     "published": entry.get("published", datetime.now().isoformat()),
+                    "views": 0,
+                    "helpful": 0,
                 }
                 results.append(article)
                 count += 1
             except: continue
             
         print(f"✅ {count}")
-    except Exception as e:
+    except:
         print(f"❌ Ошибка")
         
     return results
@@ -158,27 +164,79 @@ def main():
     all_articles.sort(key=lambda x: x.get("published", ""), reverse=True)
     all_articles = all_articles[:MAX_TOTAL_NEWS]
     
+    # === ГЕНЕРИРУЕМ ИНДЕКСЫ ===
+    
+    # Индекс марок
+    brand_index = {}
+    for article in all_articles:
+        for brand in article.get("brands", []):
+            if brand not in brand_index:
+                brand_index[brand] = []
+            brand_index[brand].append(article["id"])
+    
+    # Индекс кодов ошибок
+    error_code_index = {}
+    for article in all_articles:
+        for code in article.get("errorCodes", []):
+            if code not in error_code_index:
+                error_code_index[code] = []
+            error_code_index[code].append(article["id"])
+    
+    # Индекс проблем
+    problem_index = {}
+    for article in all_articles:
+        for tag in article.get("problemTags", []):
+            if tag not in problem_index:
+                problem_index[tag] = []
+            problem_index[tag].append(article["id"])
+    
     stats = {
         "totalArticles": len(all_articles),
         "totalSources": len({a["source"] for a in all_articles}),
+        "totalBrands": len(brand_index),
+        "totalErrorCodes": len(error_code_index),
     }
     
     print("\n" + "=" * 80)
     print(f"✅ ИТОГО: {stats['totalArticles']} статей")
+    print(f"📊 Марок: {stats['totalBrands']} | Ошибок: {stats['totalErrorCodes']}")
     print("=" * 80 + "\n")
     
     try:
         os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-        output = {
-            "articles": all_articles,
-            "stats": stats,
-            "lastUpdated": datetime.now().isoformat(),
-            "version": "3.3",
-        }
+        
+        # Основная БД
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(output, f, ensure_ascii=False, indent=2)
+            json.dump({
+                "articles": all_articles,
+                "indexes": {
+                    "brands": brand_index,
+                    "errorCodes": error_code_index,
+                    "problems": problem_index,
+                },
+                "stats": stats,
+                "lastUpdated": datetime.now().isoformat(),
+                "version": "4.0",
+            }, f, ensure_ascii=False, indent=2)
+        
+        # Справочник кодов
+        with open(ERROR_CODES_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "errorCodes": ERROR_CODES,
+                "count": len(ERROR_CODES),
+            }, f, ensure_ascii=False, indent=2)
+        
+        # Справочник марок
+        with open(VEHICLES_FILE, "w", encoding="utf-8") as f:
+            json.dump({
+                "brands": VEHICLE_BRANDS,
+                "count": len(VEHICLE_BRANDS),
+            }, f, ensure_ascii=False, indent=2)
+        
         return True
-    except: return False
+    except Exception as e:
+        print(f"❌ Ошибка: {e}")
+        return False
 
 if __name__ == "__main__":
     sys.exit(0 if main() else 1)
