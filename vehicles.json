@@ -1,0 +1,113 @@
+{
+  "brands": {
+    "lada": {
+      "name": "LADA",
+      "models": [
+        "Vesta",
+        "Granta",
+        "Largus",
+        "Niva",
+        "2101",
+        "2103",
+        "2105",
+        "2106",
+        "2107"
+      ]
+    },
+    "vw": {
+      "name": "Volkswagen",
+      "models": [
+        "Golf",
+        "Passat",
+        "Polo",
+        "Jetta",
+        "Transporter",
+        "Caddy"
+      ]
+    },
+    "audi": {
+      "name": "Audi",
+      "models": [
+        "A4",
+        "A6",
+        "A8",
+        "Q3",
+        "Q5",
+        "Q7"
+      ]
+    },
+    "skoda": {
+      "name": "Škoda",
+      "models": [
+        "Octavia",
+        "Fabia",
+        "Superb",
+        "Yeti"
+      ]
+    },
+    "bmw": {
+      "name": "BMW",
+      "models": [
+        "320",
+        "330",
+        "520",
+        "530",
+        "X3",
+        "X5",
+        "X1"
+      ]
+    },
+    "mercedes": {
+      "name": "Mercedes-Benz",
+      "models": [
+        "C-Class",
+        "E-Class",
+        "GLC",
+        "GLE"
+      ]
+    },
+    "toyota": {
+      "name": "Toyota",
+      "models": [
+        "Camry",
+        "Corolla",
+        "Yaris",
+        "Highlander",
+        "RAV4",
+        "Prius"
+      ]
+    },
+    "hyundai": {
+      "name": "Hyundai",
+      "models": [
+        "Solaris",
+        "Accent",
+        "i30",
+        "Santa Fe",
+        "Tucson",
+        "Elantra"
+      ]
+    },
+    "kia": {
+      "name": "Kia",
+      "models": [
+        "Rio",
+        "Cerato",
+        "Sportage",
+        "Sorento",
+        "Optima"
+      ]
+    },
+    "nissan": {
+      "name": "Nissan",
+      "models": [
+        "Almera",
+        "Teana",
+        "Qashqai",
+        "X-Trail",
+        "Micra"
+      ]
+    }
+  },
+  "count": 10
+}
