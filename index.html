@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔧 Мастерская Автоэлектрика - База решений</title>
+    <title>🔧 Помощник автоэлектрика - База решений</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -11,8 +11,13 @@
         <!-- НАВИГАЦИЯ -->
         <header class="header">
             <div class="header-content">
-                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <div class="logo-wrapper">
+                    <img src="./logo.png" alt="Помощник автоэлектрика" class="logo-image">
+                    <div class="logo-text">
+                        <div class="logo-title">Помощник автоэлектрика</div>
+                        <div class="logo-subtitle">Профессиональная база знаний по диагностике и ремонту</div>
+                    </div>
+                </div>
                 <nav class="main-nav">
                     <a href="./" class="nav-link active">🏠 Главная</a>
                     <a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
@@ -106,7 +111,7 @@
             document.getElementById('last-update').textContent = 
                 new Date(db.db.lastUpdated).toLocaleString('ru-RU');
             
-            // VIN-декодер
+            // VIN-декодер (упрощенный пример)
             document.getElementById('decode-btn').addEventListener('click', async () => {
                 const vinBtn = document.getElementById('decode-btn');
                 const vinInput = document.getElementById('vin-input');
@@ -125,11 +130,10 @@
                 resultDiv.classList.add('hidden');
 
                 try {
-                    // Простой декодер
                     const decoded = {
                         brand: vin.substring(0, 3) === 'XTA' ? 'LADA' : vin.substring(0, 3),
                         model: 'Model',
-                        year: 2000 + parseInt(vin.substring(9, 10)) || 2020,
+                        year: 2000 + (parseInt(vin.substring(9, 10)) || 20),
                         body: 'Sedan',
                         engine: '1.6L',
                         fuel: 'Petrol',
@@ -147,7 +151,7 @@
                                 <p><strong>Топливо:</strong> ${decoded.fuel}</p>
                                 <p><strong>Производитель:</strong> ${decoded.manufacturer}</p>
                             </div>
-                            <a href="./vehicles.html" class="btn btn-small">Найти запчасти для этого авто</a>
+                            <a href="./vehicles.html" class="btn btn-small">Найти решения для этого авто</a>
                         </div>
                     `;
                     resultDiv.classList.remove('hidden');
@@ -177,8 +181,8 @@
                 `;
                 document.getElementById('dtc-result').classList.remove('hidden');
             });
-
-            // Поиск по симптому
+            
+            // Поиск по симптому (пока просто лог в консоль)
             document.querySelectorAll('.symptom-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
                     const symptom = btn.dataset.symptom;
