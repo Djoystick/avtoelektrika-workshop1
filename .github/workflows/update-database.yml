@@ -55,19 +55,7 @@ jobs:
       - name: "📊 Show Statistics"
         run: |
           echo "📊 Database Statistics:"
-          python -c "
-import json
-try:
-    data = json.load(open('db.json'))
-    stats = data.get('stats', {})
-    print(f\"✅ Total Articles: {stats.get('totalArticles', 0)}\")
-    print(f\"   🎬 YouTube: {stats.get('youtube', 0)}\")
-    print(f\"   📚 Habr: {stats.get('habr', 0)}\")
-    print(f\"   💬 Forums: {stats.get('forums', 0)}\")
-    print(f\"   🤝 Community: {stats.get('community', 0)}\")
-except Exception as e:
-    print(f\"❌ Error: {e}\")
-          "
+          python -c "import json; data = json.load(open('db.json')); stats = data.get('stats', {}); print(f'✅ Total Articles: {stats.get(\"totalArticles\", 0)}'); print(f'   🎬 YouTube: {stats.get(\"youtube\", 0)}'); print(f'   📚 Habr: {stats.get(\"habr\", 0)}'); print(f'   💬 Forums: {stats.get(\"forums\", 0)}'); print(f'   🤝 Community: {stats.get(\"community\", 0)}')"
       
       - name: "🔄 Commit & Push Changes"
         run: |
