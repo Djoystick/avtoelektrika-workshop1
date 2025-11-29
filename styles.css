@@ -1,0 +1,601 @@
+/* ======================================
+   ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ
+   ====================================== */
+
+:root {
+    --color-bg: #0d1117;
+    --color-surface: #161b22;
+    --color-border: #30363d;
+    --color-text: #e6edf3;
+    --color-text-secondary: #8b949e;
+    --color-primary: #1f6feb;
+    --color-primary-hover: #388bfd;
+    --color-success: #3fb950;
+    --color-warning: #d29922;
+    --color-danger: #f85149;
+    --radius: 8px;
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* ======================================
+   КОНТЕЙНЕР
+   ====================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ======================================
+   ШАПКА
+   ====================================== */
+
+.header {
+    background: linear-gradient(135deg, var(--color-surface) 0%, #1c2128 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-section h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0 0 4px 0;
+}
+
+.tagline {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* ======================================
+   ПОИСК
+   ====================================== */
+
+.search-section {
+    margin-bottom: 24px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text);
+    transition: var(--transition);
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: var(--color-primary);
+    background-color: #1c2128;
+    box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.2);
+}
+
+.search-tips {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+    padding: 0 8px;
+}
+
+.search-tips strong {
+    color: var(--color-primary);
+}
+
+/* ======================================
+   ФИЛЬТРЫ ПО КАТЕГОРИЯМ
+   ====================================== */
+
+.filters-section {
+    margin-bottom: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.filters-section h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-chip {
+    padding: 6px 12px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    color: var(--color-text);
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.filter-chip:hover {
+    border-color: var(--color-primary);
+    background-color: rgba(31, 111, 235, 0.1);
+}
+
+.filter-chip-active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+/* ======================================
+   ОБЛАКО ТЕГОВ
+   ====================================== */
+
+.tags-section {
+    margin-bottom: 24px;
+}
+
+.tags-section h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 12px;
+    background-color: rgba(31, 111, 235, 0.1);
+    border: 1px solid rgba(31, 111, 235, 0.3);
+    border-radius: var(--radius);
+    color: var(--color-primary);
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tag:hover {
+    background-color: rgba(31, 111, 235, 0.2);
+    border-color: var(--color-primary);
+}
+
+/* ======================================
+   СПИСОК НОВОСТЕЙ
+   ====================================== */
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.news-item {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 16px;
+    cursor: pointer;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+body:not(.touch) .news-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(31, 111, 235, 0.15);
+    transform: translateY(-2px);
+}
+
+.news-item-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    background-color: #161b22;
+}
+
+.news-item-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-item-summary {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-item-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    margin-top: auto;
+}
+
+.news-item-category {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: rgba(63, 185, 80, 0.1);
+    color: var(--color-success);
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.news-item-symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.symptom-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    background-color: rgba(248, 81, 73, 0.1);
+    color: var(--color-danger);
+    border-radius: 3px;
+    font-size: 10px;
+}
+
+/* ======================================
+   МОДАЛЬНОЕ ОКНО
+   ====================================== */
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+    backdrop-filter: blur(2px);
+}
+
+.modal-hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 24px;
+    max-width: 700px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    color: var(--color-text-secondary);
+    font-size: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: var(--color-text);
+    background-color: var(--color-border);
+    border-radius: 4px;
+}
+
+#modal-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.modal-meta {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.modal-category,
+.modal-source {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    padding: 4px 8px;
+    background-color: var(--color-border);
+    border-radius: 4px;
+}
+
+.modal-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin: 16px 0;
+    background-color: var(--color-border);
+}
+
+.modal-symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.modal-symptom-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: rgba(248, 81, 73, 0.15);
+    color: var(--color-danger);
+    border: 1px solid rgba(248, 81, 73, 0.3);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.modal-summary {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 16px 0;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-read {
+    flex: 1;
+    padding: 10px 16px;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-read:hover {
+    background-color: var(--color-primary-hover);
+    text-decoration: none;
+}
+
+/* ======================================
+   ПУСТОЕ СОСТОЯНИЕ
+   ====================================== */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-text-secondary);
+}
+
+.empty-state p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-update {
+    padding: 10px 20px;
+    background-color: var(--color-warning);
+    color: var(--color-bg);
+    border: none;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-update:hover {
+    background-color: #e0a835;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ======================================
+   FOOTER
+   ====================================== */
+
+.footer {
+    border-top: 1px solid var(--color-border);
+    padding: 16px 0;
+    margin-top: 32px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+}
+
+.footer p {
+    margin: 6px 0;
+}
+
+/* ======================================
+   МОБИЛЬНЫЙ АДАПТИВ
+   ====================================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    .header {
+        padding: 16px;
+    }
+
+    .logo-section h1 {
+        font-size: 18px;
+    }
+
+    .news-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .modal {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .filter-chip {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-section h1 {
+        font-size: 16px;
+    }
+
+    .tagline {
+        font-size: 12px;
+    }
+
+    .search-input {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .modal-content {
+        padding: 16px;
+    }
+
+    #modal-title {
+        font-size: 16px;
+    }
+}
+
+/* ======================================
+   TOUCH КЛАСС ДЛЯ МОБИЛЬНЫХ
+   ====================================== */
+
+body.touch .news-item {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+body.touch .news-item:active {
+    background-color: #1c2128;
+}
+
+/* ======================================
+   СКРОЛЛ
+   ====================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-secondary);
+}
