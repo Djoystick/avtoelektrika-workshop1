@@ -1,407 +1,274 @@
-/* ======================================
-   ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ
-   ====================================== */
+/* =====================================================
+   🔧 МАСТЕРСКАЯ АВТОЭЛЕКТРИКА v3.0
+   Frontend Logic
+   ===================================================== */
 
-let newsData = [];
-let filteredData = [];
-let currentCategory = 'all';
+// ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
+let allArticles = [];
+let filteredArticles = [];
+let currentFilters = {
+    searchQuery: '',
+    selectedCategory: 'all',
+    contentType: 'all',
+    problemTag: 'all'
+};
 
-// DOM элементы
-const searchInputEl = document.getElementById('search-input');
-const newsListEl = document.getElementById('news-list');
-const modalEl = document.getElementById('modal');
-const modalTitleEl = document.getElementById('modal-title');
-const modalImageEl = document.getElementById('modal-image');
-const modalSummaryEl = document.getElementById('modal-summary');
-const modalLinkEl = document.getElementById('modal-link');
-const modalCloseEl = document.getElementById('modal-close');
-const modalCategoryEl = document.getElementById('modal-category');
-const modalSourceEl = document.getElementById('modal-source');
-const modalsymptomsEl = document.getElementById('modal-symptoms');
-const tagCloudEl = document.getElementById('tag-cloud');
-const categoryFiltersEl = document.getElementById('category-filters');
-const emptyStateEl = document.getElementById('empty-state');
-const emptyMessageEl = document.getElementById('empty-message');
-const triggerUpdateBtnEl = document.getElementById('trigger-update-btn');
-const updateTimeEl = document.getElementById('update-time');
-const totalNewsEl = document.getElementById('total-news');
-const sourcesCountEl = document.getElementById('sources-count');
+// ===== DOM ЭЛЕМЕНТЫ =====
+const searchInput = document.getElementById('search-input');
+const categoryFilters = document.getElementById('category-filters');
+const problemTagsCloud = document.getElementById('tag-cloud');
+const articlesList = document.getElementById('news-list');
+const emptyState = document.getElementById('empty-state');
+const emptyMessage = document.getElementById('empty-message');
+const updateTime = document.getElementById('update-time');
+const totalArticles = document.getElementById('total-news');
+const sourcesCount = document.getElementById('sources-count');
 
-/* ======================================
-   ОБРАБОТЧИКИ СОБЫТИЙ
-   ====================================== */
-
-// Поиск в реальном времени
-searchInputEl.addEventListener('input', handleSearch);
-
-// Закрытие модалки
-modalCloseEl.addEventListener('click', closeModal);
-modalEl.addEventListener('click', (e) => {
-    if (e.target === modalEl) closeModal();
+// ===== ИНИЦИАЛИЗАЦИЯ =====
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🔧 Инициализация Мастерской Автоэлектрика v3.0...');
+    loadData();
 });
 
-// Запрос обновления базы
-if (triggerUpdateBtnEl) {
-    triggerUpdateBtnEl.addEventListener('click', triggerDatabaseUpdate);
+// ===== ЗАГРУЗКА ДАННЫХ =====
+async function loadData() {
+    try {
+        const response = await fetch('news.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        
+        const data = await response.json();
+        
+        // Поддержка старого и нового формата
+        allArticles = data.articles || data.news || [];
+        
+        if (!allArticles.length) {
+            showEmpty('📭 База еще пуста. Ожидаем первого обновления...');
+            return;
+        }
+        
+        // Рендер интерфейса
+        renderCategoryFilters();
+        renderProblemTags();
+        updateStats(data);
+        applyFilters();
+        
+        hideEmpty();
+        
+    } catch (error) {
+        console.error('❌ Ошибка загрузки:', error);
+        showEmpty(`⚠️ Ошибка загрузки: ${error.message}`);
+    }
 }
 
-// Определяем touch или mouse
-if (window.innerWidth > 768) {
-    document.body.classList.add('no-touch');
-    document.body.classList.remove('touch');
-} else {
-    document.body.classList.add('touch');
-    document.body.classList.remove('no-touch');
+// ===== РЕНДЕР ФИЛЬТРОВ ПО КАТЕГОРИЯМ =====
+function renderCategoryFilters() {
+    if (!categoryFilters) return;
+    
+    const categories = ['all', ...new Set(allArticles.map(a => a.category))].sort();
+    categoryFilters.innerHTML = '';
+    
+    categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-chip';
+        btn.type = 'button';
+        btn.dataset.category = cat;
+        btn.textContent = cat === 'all' ? '📋 Все разделы' : cat;
+        
+        if (cat === 'all') btn.classList.add('filter-chip-active');
+        
+        btn.addEventListener('click', () => {
+            currentFilters.selectedCategory = cat;
+            updateFilterButtons();
+            applyFilters();
+        });
+        
+        categoryFilters.appendChild(btn);
+    });
 }
 
-/* ======================================
-   ФУНКЦИЯ ПОИСКА
-   ====================================== */
+// ===== РЕНДЕР ОБЛАКА ПРОБЛЕМ =====
+function renderProblemTags() {
+    if (!problemTagsCloud) return;
+    
+    // Собираем уникальные проблемы
+    const allTags = new Set();
+    allArticles.forEach(a => {
+        (a.problemTags || []).forEach(t => allTags.add(t));
+    });
+    
+    problemTagsCloud.innerHTML = '';
+    
+    Array.from(allTags).sort().forEach(tag => {
+        const tagEl = document.createElement('button');
+        tagEl.className = 'tag';
+        tagEl.type = 'button';
+        tagEl.textContent = tag;
+        tagEl.addEventListener('click', () => {
+            currentFilters.problemTag = currentFilters.problemTag === tag ? 'all' : tag;
+            applyFilters();
+        });
+        problemTagsCloud.appendChild(tagEl);
+    });
+}
 
-function handleSearch(e) {
-    const query = e.target.value.toLowerCase().trim();
+// ===== ПРИМЕНЕНИЕ ФИЛЬТРОВ =====
+function applyFilters() {
+    filteredArticles = allArticles.filter(article => {
+        const matchesSearch = matchesSearchQuery(article);
+        const matchesCategory = currentFilters.selectedCategory === 'all' 
+            || article.category === currentFilters.selectedCategory;
+        const matchesProblem = currentFilters.problemTag === 'all'
+            || (article.problemTags || []).includes(currentFilters.problemTag);
+        
+        return matchesSearch && matchesCategory && matchesProblem;
+    });
+    
+    renderArticles();
+}
 
-    if (!query) {
-        // Если поиск пустой - показываем все
-        applyFilter();
+// ===== ПОИСК ПО ЗАПРОСУ =====
+function matchesSearchQuery(article) {
+    const query = currentFilters.searchQuery.toLowerCase();
+    if (!query) return true;
+    
+    const title = (article.title || '').toLowerCase();
+    const summary = (article.summary || '').toLowerCase();
+    const tags = ((article.problemTags || []).join(' ')).toLowerCase();
+    const codes = ((article.errorCodes || []).join(' ')).toLowerCase();
+    
+    return title.includes(query) 
+        || summary.includes(query) 
+        || tags.includes(query)
+        || codes.includes(query);
+}
+
+// ===== РЕНДЕР СПИСКА СТАТЕЙ =====
+function renderArticles() {
+    if (!articlesList) return;
+    
+    articlesList.innerHTML = '';
+    
+    if (filteredArticles.length === 0) {
+        showEmpty(`❌ По вашему запросу ничего не найдено`);
         return;
     }
-
-    // Фильтруем по заголовку, описанию и симптомам
-    filteredData = newsData.filter(item => {
-        const title = (item.title || '').toLowerCase();
-        const summary = (item.summary || '').toLowerCase();
-        const symptoms = ((item.symptoms || []).join(' ')).toLowerCase();
-        const category = (item.category || '').toLowerCase();
-
-        const matchesQuery = 
-            title.includes(query) || 
-            summary.includes(query) || 
-            symptoms.includes(query) ||
-            category.includes(query);
-
-        return matchesQuery && (currentCategory === 'all' || item.category === currentCategory);
+    
+    filteredArticles.forEach(article => {
+        const card = createArticleCard(article);
+        articlesList.appendChild(card);
     });
+    
+    hideEmpty();
+}
 
-    renderNewsList(filteredData);
+// ===== СОЗДАНИЕ КАРТОЧКИ СТАТЬИ =====
+function createArticleCard(article) {
+    const card = document.createElement('article');
+    card.className = 'news-item';
+    
+    // Изображение
+    const imageHtml = article.image 
+        ? `<img src="${article.image}" alt="" class="news-item-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE2MCIgZmlsbD0iIzIwMjQyOCIvPjwvc3ZnPg=='"/>`
+        : '';
+    
+    // Теги проблем
+    const problemsHtml = (article.problemTags || []).length
+        ? `<div class="news-item-problems">${article.problemTags.map(t => `<span class="problem-tag">${escapeHtml(t)}</span>`).join('')}</div>`
+        : '';
+    
+    // Коды ошибок (если есть)
+    const codesHtml = (article.errorCodes || []).length
+        ? `<div class="news-item-codes">${article.errorCodes.slice(0, 3).map(c => `<span class="error-code">${c}</span>`).join('')}</div>`
+        : '';
+    
+    card.innerHTML = `
+        ${imageHtml}
+        <div class="news-item-header">
+            <span class="content-type-badge">${article.contentType || '📚'}</span>
+            <span class="category-badge">${escapeHtml(article.category)}</span>
+        </div>
+        <h3 class="news-item-title">${escapeHtml(article.title)}</h3>
+        <p class="news-item-summary">${escapeHtml(article.summary.substring(0, 150))}...</p>
+        ${problemsHtml}
+        ${codesHtml}
+        <div class="news-item-footer">
+            <span class="source">${escapeHtml(article.source)}</span>
+        </div>
+    `;
+    
+    card.addEventListener('click', () => openModal(article));
+    return card;
+}
 
-    // Если ничего не найдено - показываем кнопку обновления
-    if (!filteredData.length) {
-        showEmpty(`❌ По запросу "<strong>${query}</strong>" ничего не найдено.<br>Попытаемся найти в источниках...`);
+// ===== МОДАЛЬНОЕ ОКНО =====
+function openModal(article) {
+    const modal = document.getElementById('modal');
+    
+    document.getElementById('modal-title').textContent = article.title;
+    document.getElementById('modal-category').textContent = `📂 ${article.category}`;
+    document.getElementById('modal-source').textContent = `📌 ${article.source}`;
+    
+    const img = document.getElementById('modal-image');
+    if (article.image) {
+        img.src = article.image;
+        img.style.display = 'block';
     } else {
-        hideEmpty();
+        img.style.display = 'none';
     }
-}
-
-/* ======================================
-   ФИЛЬТР ПО КАТЕГОРИЯМ
-   ====================================== */
-
-function applyFilter(category = 'all') {
-    currentCategory = category;
-    const query = searchInputEl.value.toLowerCase().trim();
-
-    if (!query) {
-        // Если нет поиска - показываем все по категории
-        if (category === 'all') {
-            filteredData = [...newsData];
-        } else {
-            filteredData = newsData.filter(item => item.category === category);
-        }
-    } else {
-        // Если есть поиск - фильтруем и по запросу, и по категории
-        filteredData = newsData.filter(item => {
-            const title = (item.title || '').toLowerCase();
-            const summary = (item.summary || '').toLowerCase();
-            const symptoms = ((item.symptoms || []).join(' ')).toLowerCase();
-
-            const matchesQuery = 
-                title.includes(query) || 
-                summary.includes(query) || 
-                symptoms.includes(query);
-
-            if (category === 'all') return matchesQuery;
-            return matchesQuery && item.category === category;
-        });
-    }
-
-    renderNewsList(filteredData);
-    setActiveFilter(category);
-
-    if (!filteredData.length) {
-        showEmpty(`📭 По выбранным фильтрам статей не найдено.`);
-    } else {
-        hideEmpty();
-    }
-}
-
-function setActiveFilter(category) {
-    const chips = document.querySelectorAll('.filter-chip');
-    chips.forEach(chip => {
-        chip.classList.remove('filter-chip-active');
-        if (chip.dataset.category === category) {
-            chip.classList.add('filter-chip-active');
-        }
-    });
-}
-
-/* ======================================
-   ФИЛЬТР ПО ТЕГАМ (СИМПТОМЫ)
-   ====================================== */
-
-function filterByTag(tag) {
-    currentCategory = 'all';
-    setActiveFilter('all');
-    searchInputEl.value = '';
-
-    filteredData = newsData.filter(item => {
-        const symptoms = item.symptoms || [];
-        return symptoms.some(s => s.toLowerCase().includes(tag.toLowerCase()));
-    });
-
-    renderNewsList(filteredData);
-
-    if (!filteredData.length) {
-        showEmpty(`🔍 Статей с тегом "<strong>${tag}</strong>" не найдено.`);
-    } else {
-        hideEmpty();
-    }
-}
-
-/* ======================================
-   РЕНДЕР СПИСКА НОВОСТЕЙ
-   ====================================== */
-
-function renderNewsList(list) {
-    if (!newsListEl) return;
-
-    newsListEl.innerHTML = '';
-
-    list.forEach(item => {
-        const article = document.createElement('article');
-        article.className = 'news-item';
-
-        // Изображение
-        const imageUrl = item.image || 'assets/placeholder.jpg';
-        const imgHtml = `<img src="${imageUrl}" alt="" class="news-item-image" onerror="this.src='assets/placeholder.jpg'">`;
-
-        // Симптомы
-        const symptomsHtml = item.symptoms && item.symptoms.length 
-            ? `<div class="news-item-symptoms">${item.symptoms.map(s => `<span class="symptom-tag">${escapeHtml(s)}</span>`).join('')}</div>`
-            : '';
-
-        article.innerHTML = `
-            ${imgHtml}
-            <h3 class="news-item-title">${escapeHtml(item.title)}</h3>
-            <p class="news-item-summary">${escapeHtml(item.summary)}</p>
-            ${symptomsHtml}
-            <div class="news-item-meta">
-                <span class="news-item-category">${escapeHtml(item.category)}</span>
-                <span class="news-item-source">${escapeHtml(item.source)}</span>
-            </div>
-        `;
-
-        article.addEventListener('click', () => openModal(item));
-        newsListEl.appendChild(article);
-    });
-}
-
-/* ======================================
-   РЕНДЕР ОБЛАКА ТЕГОВ
-   ====================================== */
-
-function renderTagCloud(list) {
-    if (!tagCloudEl) return;
-
-    const allSymptoms = new Set();
-
-    list.forEach(item => {
-        if (item.symptoms && Array.isArray(item.symptoms)) {
-            item.symptoms.forEach(symptom => allSymptoms.add(symptom));
-        }
-    });
-
-    tagCloudEl.innerHTML = '';
-
-    const sortedSymptoms = Array.from(allSymptoms).sort();
-
-    sortedSymptoms.forEach(symptom => {
-        const tag = document.createElement('button');
-        tag.className = 'tag';
-        tag.textContent = symptom;
-        tag.type = 'button';
-        tag.addEventListener('click', () => filterByTag(symptom));
-        tagCloudEl.appendChild(tag);
-    });
-}
-
-/* ======================================
-   РЕНДЕР ФИЛЬТРОВ ПО КАТЕГОРИЯМ
-   ====================================== */
-
-function renderCategoryFilters(list) {
-    if (!categoryFiltersEl) return;
-
-    // Собираем уникальные категории
-    const categories = new Set(['all']);
-    list.forEach(item => {
-        if (item.category) categories.add(item.category);
-    });
-
-    categoryFiltersEl.innerHTML = '';
-
-    const categoriesArray = Array.from(categories).sort();
-
-    categoriesArray.forEach(category => {
-        const chip = document.createElement('button');
-        chip.className = 'filter-chip';
-        chip.type = 'button';
-        chip.dataset.category = category;
-        
-        if (category === 'all') {
-            chip.textContent = '📋 Все категории';
-            chip.classList.add('filter-chip-active');
-        } else {
-            chip.textContent = category;
-        }
-
-        chip.addEventListener('click', () => applyFilter(category));
-        categoryFiltersEl.appendChild(chip);
-    });
-}
-
-/* ======================================
-   МОДАЛЬНОЕ ОКНО
-   ====================================== */
-
-function openModal(item) {
-    modalTitleEl.textContent = item.title;
-    modalImageEl.src = item.image || 'assets/placeholder.jpg';
-    modalImageEl.style.display = item.image ? 'block' : 'none';
-    modalSummaryEl.textContent = item.summary;
-    modalLinkEl.href = item.link;
-    modalCategoryEl.textContent = `📂 ${item.category}`;
-    modalSourceEl.textContent = `📌 ${item.source}`;
-
-    // Симптомы в модалке
-    if (item.symptoms && item.symptoms.length) {
-        modalsymptomsEl.innerHTML = item.symptoms
-            .map(s => `<span class="modal-symptom-badge">${escapeHtml(s)}</span>`)
+    
+    const modalProblems = document.getElementById('modal-symptoms');
+    if (article.problemTags && article.problemTags.length) {
+        modalProblems.innerHTML = article.problemTags
+            .map(t => `<span class="modal-symptom-badge">${escapeHtml(t)}</span>`)
             .join('');
     } else {
-        modalsymptomsEl.innerHTML = '';
+        modalProblems.innerHTML = '';
     }
-
-    modalEl.classList.remove('modal-hidden');
+    
+    document.getElementById('modal-summary').textContent = article.summary;
+    document.getElementById('modal-link').href = article.link;
+    
+    modal.classList.remove('modal-hidden');
 }
 
+// ===== ЗАКРЫТИЕ МОДАЛКИ =====
 function closeModal() {
-    modalEl.classList.add('modal-hidden');
+    document.getElementById('modal').classList.add('modal-hidden');
 }
 
-/* ======================================
-   ПУСТОЕ СОСТОЯНИЕ
-   ====================================== */
+// ===== ОБНОВЛЕНИЕ КНОПОК ФИЛЬТРОВ =====
+function updateFilterButtons() {
+    document.querySelectorAll('.filter-chip').forEach(btn => {
+        btn.classList.remove('filter-chip-active');
+        if (btn.dataset.category === currentFilters.selectedCategory) {
+            btn.classList.add('filter-chip-active');
+        }
+    });
+}
 
+// ===== ОБНОВЛЕНИЕ СТАТИСТИКИ =====
+function updateStats(data) {
+    if (totalArticles) totalArticles.textContent = data.stats?.totalArticles || allArticles.length;
+    if (sourcesCount) sourcesCount.textContent = data.stats?.totalSources || 'много';
+    if (updateTime && data.lastUpdated) {
+        updateTime.textContent = new Date(data.lastUpdated).toLocaleString('ru-RU');
+    }
+}
+
+// ===== ПУСТОЕ СОСТОЯНИЕ =====
 function showEmpty(message) {
-    emptyStateEl.classList.remove('hidden');
-    emptyMessageEl.innerHTML = message;
+    if (emptyState) {
+        emptyState.classList.remove('hidden');
+        emptyMessage.innerHTML = message;
+    }
 }
 
 function hideEmpty() {
-    emptyStateEl.classList.add('hidden');
+    if (emptyState) emptyState.classList.add('hidden');
 }
 
-/* ======================================
-   ЗАГРУЗКА НОВОСТЕЙ
-   ====================================== */
-
-async function loadNews() {
-    try {
-        const response = await fetch('news.json');
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        // news.json может быть массивом или объектом { news: [...] }
-        newsData = Array.isArray(data) ? data : (data.news || []);
-
-        if (!newsData.length) {
-            showEmpty('📭 База новостей пуста. Пожалуйста, подождите обновления.');
-            return;
-        }
-
-        // Обновляем统计
-        updateStats();
-
-        // Рендерим
-        renderNewsList(newsData);
-        renderTagCloud(newsData);
-        renderCategoryFilters(newsData);
-
-        // Обновляем время
-        if (data.lastUpdated) {
-            updateTimeEl.textContent = formatDate(data.lastUpdated);
-        }
-
-        hideEmpty();
-    } catch (error) {
-        console.error('❌ Ошибка загрузки news.json:', error);
-        showEmpty(`⚠️ Ошибка загрузки базы: ${error.message}`);
-    }
-}
-
-/* ======================================
-   ОБНОВЛЕНИЕ СТАТИСТИКИ
-   ====================================== */
-
-function updateStats() {
-    totalNewsEl.textContent = newsData.length;
-
-    // Считаем уникальные источники
-    const sources = new Set();
-    newsData.forEach(item => {
-        if (item.source) sources.add(item.source);
-    });
-    sourcesCountEl.textContent = sources.size;
-}
-
-/* ======================================
-   ЗАПРОС ОБНОВЛЕНИЯ БАЗЫ
-   ====================================== */
-
-function triggerDatabaseUpdate() {
-    if (!triggerUpdateBtnEl) return;
-
-    triggerUpdateBtnEl.textContent = '⏳ Запрос отправлен...';
-    triggerUpdateBtnEl.disabled = true;
-
-    // Отправляем сигнал на обновление (если есть API)
-    // Либо просто уведомляем, что нужно вручную запустить workflow
-    const searchQuery = searchInputEl.value || 'запрос';
-
-    console.log(`🔄 Запрос обновления базы: "${searchQuery}"`);
-
-    // Через 3 сек - уведомляем
-    setTimeout(() => {
-        triggerUpdateBtnEl.textContent = '✅ Запрос принят! Обновление через 6 часов.';
-    }, 3000);
-
-    // Через 10 сек - возвращаем кнопку
-    setTimeout(() => {
-        triggerUpdateBtnEl.textContent = '🔄 Запросить обновление базы';
-        triggerUpdateBtnEl.disabled = false;
-    }, 10000);
-}
-
-/* ======================================
-   УТИЛИТЫ
-   ====================================== */
-
+// ===== УТИЛИТЫ =====
 function escapeHtml(text) {
-    if (!text) return '';
     const map = {
         '&': '&amp;',
         '<': '&lt;',
@@ -412,29 +279,22 @@ function escapeHtml(text) {
     return text.replace(/[&<>"']/g, m => map[m]);
 }
 
-function formatDate(timestamp) {
-    if (!timestamp) return 'неизвестно';
-    const date = new Date(timestamp);
-    return date.toLocaleString('ru-RU', {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
+// ===== ОБРАБОТЧИКИ ПОИСКА =====
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        currentFilters.searchQuery = e.target.value;
+        applyFilters();
     });
 }
 
-/* ======================================
-   ИНИЦИАЛИЗАЦИЯ
-   ====================================== */
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('🔧 Мастерская Автоэлектрика загружается...');
-    loadNews();
+// ===== ЗАКРЫТИЕ МОДАЛКИ =====
+document.getElementById('modal-close')?.addEventListener('click', closeModal);
+document.getElementById('modal')?.addEventListener('click', (e) => {
+    if (e.target === document.getElementById('modal')) closeModal();
 });
 
-// Перезагрузка каждые 10 минут
+// ===== ПЕРЕЗАГРУЗКА ДАННЫХ КАЖДЫЕ 10 МИНУТ =====
 setInterval(() => {
     console.log('🔄 Проверка обновлений...');
-    loadNews();
+    loadData();
 }, 10 * 60 * 1000);
