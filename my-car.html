@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое авто - Мастерская Автоэлектрика</title>
+    <title>Мое авто - Помощник автоэлектрика</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="header-content">
-                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <div class="logo-wrapper">
+                    <img src="./logo.png" alt="Помощник автоэлектрика" class="logo-image">
+                    <div class="logo-text">
+                        <div class="logo-title">Помощник автоэлектрика</div>
+                        <div class="logo-subtitle">Профессиональная база знаний по диагностике и ремонту</div>
+                    </div>
+                </div>
                 <nav class="main-nav">
                     <a href="./" class="nav-link">🏠 Главная</a>
                     <a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
@@ -111,12 +116,10 @@
                     document.getElementById('my-model').value = car.model || '';
                     document.getElementById('my-year').value = car.year || '';
                     
-                    // Показать информацию о машине
                     const carDisplay = `${car.brand}${car.model ? ' ' + car.model : ''}${car.year ? ' (' + car.year + ')' : ''}`;
                     document.getElementById('car-display').textContent = carDisplay;
                     document.getElementById('my-car-info').classList.remove('hidden');
                     
-                    // Получить релевантные статьи
                     const articles = db.searchByBrand(car.brand);
                     
                     if (articles.length === 0) {
