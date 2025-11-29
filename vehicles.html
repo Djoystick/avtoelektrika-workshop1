@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>По маркам - Мастерская Автоэлектрика</title>
+    <title>По маркам - Помощник автоэлектрика</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="header-content">
-                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <div class="logo-wrapper">
+                    <img src="./logo.png" alt="Помощник автоэлектрика" class="logo-image">
+                    <div class="logo-text">
+                        <div class="logo-title">Помощник автоэлектрика</div>
+                        <div class="logo-subtitle">Профессиональная база знаний по диагностике и ремонту</div>
+                    </div>
+                </div>
                 <nav class="main-nav">
                     <a href="./" class="nav-link">🏠 Главная</a>
                     <a href="./vehicles.html" class="nav-link active">🚗 По маркам</a>
@@ -57,7 +62,7 @@
                 <div class="brand-card">
                     <h3>🚙 ${brand}</h3>
                     <p>${db.searchByBrand(brand).length} решений</p>
-                    <button onclick="filterByBrand('${brand}')" class="btn btn-primary">Показать</button>
+                    <button onclick="filterByBrand('${brand}')" class="btn btn-primary btn-small">Показать</button>
                 </div>
             `).join('');
         });
@@ -77,7 +82,7 @@
             
             filteredArticles.innerHTML = `
                 <div style="margin-bottom: 20px;">
-                    <button onclick="goBack()" class="btn btn-secondary">← Назад к маркам</button>
+                    <button onclick="goBack()" class="btn btn-secondary btn-small">← Назад к маркам</button>
                     <h3>🚗 Решения для ${brand}</h3>
                 </div>
                 ${articles.map(a => `
