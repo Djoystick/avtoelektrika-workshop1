@@ -71,20 +71,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p942ni",
-      "title": "Tired of constant random things breaking in my 2013 Kia Rio, is a 2012 Lexus CT200h any more reliable?",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Basically I sold my diesel 2013 Kia Rio, and I need another car. I live in Germany and have €10k to spend on one. I’m thinking of going hybrid. I need a reliable car first and foremost. I know about Toyota hybrids but I just can’t make my peace with their interior, I really hate it. Any chance a 2012 Lexus CT200h with 130k km on the odometer is a good choice? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/anchouse94\"> /u/",
-      "link": "https://www.reddit.com/r/Autos/comments/1p942ni/tired_of_constant_random_things_breaking_in_my/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-28T19:41:25+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p8xit0",
       "title": "What's a car that handles better than it has any business doing?",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>I feel like my C-max handles way better than its perceived as it should. I'm not saying it's a Miata or anything but its also far from a plowing mess other front cars I've driven have been.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mental_Medium3988\"> /u/Mental_Medium3988 </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments/1p8xit0/whats_a_car_that_handles_better_than_it_has_any/\">[link]</a></span> &#32;",
@@ -94,6 +80,20 @@
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
       "published": "2025-11-28T15:24:02+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1p942ni",
+      "title": "Tired of constant random things breaking in my 2013 Kia Rio, is a 2012 Lexus CT200h any more reliable?",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Basically I sold my diesel 2013 Kia Rio, and I need another car. I live in Germany and have €10k to spend on one. I’m thinking of going hybrid. I need a reliable car first and foremost. I know about Toyota hybrids but I just can’t make my peace with their interior, I really hate it. Any chance a 2012 Lexus CT200h with 130k km on the odometer is a good choice? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/anchouse94\"> /u/",
+      "link": "https://www.reddit.com/r/Autos/comments/1p942ni/tired_of_constant_random_things_breaking_in_my/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-11-28T19:41:25+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -352,5 +352,5 @@
     }
   ],
   "count": 25,
-  "lastUpdated": "2025-11-29T12:22:10.435544"
+  "lastUpdated": "2025-11-29T12:43:21.480281"
 }
