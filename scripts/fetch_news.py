@@ -20,27 +20,32 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
 
-def is_technical(title, summary):
+def is_useful_article(title, summary):
     text = (title + " " + summary).lower()
-    for k in EXCLUDE_KEYWORDS:
-        if k.lower() in text: return False
-    for k in TECH_KEYWORDS:
-        if k.lower() in text: return True
-    return False
+    
+    # 1. ЖЕСТКИЙ БАН: Если это новость про выход машины или продажи
+    for bad_word in EXCLUDE_KEYWORDS:
+        if bad_word in text:
+            return False
+            
+    # 2. ПОИСК ПОЛЬЗЫ: Статья должна содержать либо симптом, либо процесс ремонта
+    has_tech = any(k in text for k in TECH_KEYWORDS)
+    has_symptom = any(k in text for k in SYMPTOMS_KEYWORDS)
+    
+    # Пропускаем только если есть техническая конкретика или описание проблемы
+    return has_tech or has_symptom
 
 def extract_symptoms(title, summary):
     text = (title + " " + summary).lower()
-    # Ищем совпадения симптомов
+    # Ищем текстовые симптомы
     found = [s for s in SYMPTOMS_KEYWORDS if s.lower() in text]
-    
-    # Дополнительно: ищем коды ошибок (P0123, P0300 и т.д.)
+    # Ищем коды ошибок (P0123, P0300)
     error_codes = re.findall(r'\b[PpBcCuU][0-9]{4}\b', text)
     found.extend([code.upper() for code in error_codes])
-    
     return list(set(found))[:10]
 
 def extract_image(entry):
-    # YouTube (Max Resolution)
+    # YouTube Thumbnail (High Res)
     if 'youtube.com' in entry.get('link', ''):
         if 'media_group' in entry and 'media_thumbnail' in entry.media_group[0]:
             return entry.media_group[0]['media_thumbnail'][0]['url']
@@ -49,34 +54,31 @@ def extract_image(entry):
     if hasattr(entry, 'enclosures'):
         for enc in entry.enclosures:
             if enc.type.startswith('image/'): return enc.href
-    
-    # HTML Content
+            
+    # HTML Content extraction
     content = ''
     if hasattr(entry, 'content'): content = entry.content[0].value
     elif hasattr(entry, 'summary'): content = entry.summary
     
     match = re.search(r'<img[^>]*src=["\'](.*?)["\']', content)
     if match: return match.group(1)
-    
     return None
 
 def clean_html(text):
     if not text: return ''
     text = html.unescape(text)
-    text = re.sub(r'<[^>]+>', ' ', text) # Удаляем теги
-    text = re.sub(r'http\S+', '', text) # Удаляем ссылки
+    text = re.sub(r'<[^>]+>', ' ', text)
+    text = re.sub(r'http\S+', '', text)
     text = re.sub(r'\s+', ' ', text).strip()
     return text
 
 def get_full_text(entry):
     content = ''
-    # Приоритет: Content -> Summary -> Description
     if hasattr(entry, 'content'):
         for c in entry.content:
             if c.value and len(c.value) > len(content): content = c.value
     if not content and hasattr(entry, 'summary'): content = entry.summary
     if not content and hasattr(entry, 'description'): content = entry.description
-    
     return clean_html(content)
 
 def parse_rss_feed(source):
@@ -95,16 +97,20 @@ def parse_rss_feed(source):
                 title = clean_html(entry.get('title', ''))
                 summary = get_full_text(entry)
                 
-                if not title or not is_technical(title, summary):
+                # ГЛАВНЫЙ ФИЛЬТР
+                if not title or not is_useful_article(title, summary):
                     continue
                 
-                # Лимит текста для JSON (чтобы не вешал браузер, но было информативно)
-                if len(summary) > 2000:
-                    summary = summary[:2000] + '... (Читать далее в источнике)'
+                # Оформление заголовка (добавляем тип контента)
+                final_title = title
+                if "YouTube" in source['name']:
+                    final_title = f"🎬 {title}"
+                elif "Drive2" in source['name']:
+                    final_title = f"🛠️ {title}"
 
                 item = {
-                    'title': title,
-                    'summary': summary,
+                    'title': final_title,
+                    'summary': summary[:2000] + '...' if len(summary) > 2000 else summary,
                     'link': entry.get('link', ''),
                     'source': source['name'],
                     'category': source['category'],
@@ -116,7 +122,7 @@ def parse_rss_feed(source):
                 count += 1
             except:
                 continue
-        print(f"✅ {count}")
+        print(f"✅ {count} инструкций")
         
     except Exception as e:
         print(f"❌ Ошибка: {e}")
@@ -124,7 +130,7 @@ def parse_rss_feed(source):
     return news_list
 
 def main():
-    print(f"🚀 Запуск парсера решений... Источников: {len(NEWS_SOURCES)}")
+    print(f"🚀 Сбор базы знаний... Источников: {len(NEWS_SOURCES)}")
     all_news = []
     
     for source in NEWS_SOURCES:
@@ -142,7 +148,7 @@ def main():
         }
         with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
-        print(f"\n💾 Сохранено {len(all_news)} решений/инструкций.")
+        print(f"\n💾 База обновлена! Добавлено {len(all_news)} решений.")
         return True
     except Exception as e:
         print(f"\n❌ Ошибка сохранения: {e}")
