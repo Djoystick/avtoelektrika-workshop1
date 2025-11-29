@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📱 Мое авто - Мастерская</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">🏠 Главная</a>
+                    <a href="/vehicles.html" class="nav-link">🚗 По маркам</a>
+                    <a href="/error-codes.html" class="nav-link">💻 По ошибкам</a>
+                    <a href="/my-car.html" class="nav-link active">📱 Мое авто</a>
+                </nav>
+            </div>
+        </header>
 
+        <h2>📱 Мой гараж</h2>
+        
+        <section class="add-car">
+            <h3>Добавить автомобиль</h3>
+            <div class="form-group">
+                <select id="brand-select">
+                    <option>Выберите марку...</option>
+                </select>
+                <select id="model-select">
+                    <option>Выберите модель...</option>
+                </select>
+                <input id="year-input" type="number" placeholder="Год выпуска" min="1950" max="2025">
+                <input id="vin-input-mycar" type="text" placeholder="VIN (опционально)">
+                <button class="btn btn-primary" onclick="addCar()">Добавить авто</button>
+            </div>
+        </section>
+
+        <section class="my-cars">
+            <h3>Ваши автомобили</h3>
+            <div id="cars-list" class="cars-list"></div>
+        </section>
+
+        <section class="recommended">
+            <h3>📚 Рекомендуемые инструкции</h3>
+            <div id="recommended-articles" class="articles-grid"></div>
+        </section>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="db-manager.js"></script>
+    <script>
+        class MyCarManager {
+            constructor() {
+                this.storageKey = 'myCars';
+                this.cars = this.loadCars();
+            }
+            
+            loadCars() {
+                const data = localStorage.getItem(this.storageKey);
+                return data ? JSON.parse(data) : [];
+            }
+            
+            saveCars() {
+                localStorage.setItem(this.storageKey, JSON.stringify(this.cars));
+            }
+            
+            addCar(brand, model, year, vin) {
+                this.cars.push({
+                    id: Date.now(),
+                    brand, model, year, vin,
+                    addedDate: new Date().toISOString()
+                });
+                this.saveCars();
+            }
+            
+            removeCar(id) {
+                this.cars = this.cars.filter(c => c.id !== id);
+                this.saveCars();
+            }
+        }
+        
+        let db, myCarMgr;
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            db = new DatabaseManager();
+            await db.init();
+            myCarMgr = new MyCarManager();
+            
+            // Заполнение селектов
+            const brands = db.vehicles.brands;
+            const brandSelect = document.getElementById('brand-select');
+            brandSelect.innerHTML += Object.entries(brands).map(([key, info]) =>
+                `<option value="${key}">${info.name}</option>`
+            ).join('');
+            
+            brandSelect.addEventListener('change', (e) => {
+                const models = brands[e.target.value]?.models || [];
+                document.getElementById('model-select').innerHTML = 
+                    '<option>Выберите модель...</option>' +
+                    models.map(m => `<option value="${m}">${m}</option>`).join('');
+            });
+            
+            // Отрисовка машин
+            function renderCars() {
+                document.getElementById('cars-list').innerHTML = myCarMgr.cars.length === 0
+                    ? '<p>Автомобили не добавлены</p>'
+                    : myCarMgr.cars.map(car => `
+                        <div class="car-card">
+                            <h4>${car.brand} ${car.model} (${car.year})</h4>
+                            ${car.vin ? `<p>VIN: ${car.vin}</p>` : ''}
+                            <button onclick="removeCar(${car.id})" class="btn btn-danger">Удалить</button>
+                        </div>
+                    `).join('');
+            }
+            
+            renderCars();
+            window.addCar = () => {
+                myCarMgr.addCar(
+                    document.getElementById('brand-select').value,
+                    document.getElementById('model-select').value,
+                    document.getElementById('year-input').value,
+                    document.getElementById('vin-input-mycar').value
+                );
+                renderCars();
+            };
+            
+            window.removeCar = (id) => {
+                myCarMgr.removeCar(id);
+                renderCars();
+            };
+        });
+    </script>
+</body>
+</html>
