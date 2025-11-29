@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔧 Мастерская Автоэлектрика - База знаний</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="touch">
+    <div class="container">
+        <!-- ШАПКА САЙТА -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                    <p class="tagline">База знаний по диагностике и ремонту электрооборудования</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ПОИСК ПО СИМПТОМАМ -->
+        <section class="search-section">
+            <input 
+                id="search-input" 
+                class="search-input" 
+                type="text"
+                placeholder="🔍 Поиск по симптомам: горит чек, не заводится, CAN-шина молчит..."
+                autocomplete="off"
+            >
+            <div class="search-tips">
+                <strong>Примеры поиска:</strong> горит чек • не крутит стартер • аккумулятор • генератор • приборка
+            </div>
+        </section>
+
+        <!-- ФИЛЬТРЫ ПО КАТЕГОРИЯМ -->
+        <section class="filters-section">
+            <h3>📂 Категории:</h3>
+            <div id="category-filters" class="category-filters">
+                <!-- Динамически генерируется из script.js -->
+            </div>
+        </section>
+
+        <!-- ОБЛАКО ТЕГОВ (СИМПТОМЫ) -->
+        <section class="tags-section">
+            <h3>🏷️ Популярные симптомы:</h3>
+            <div id="tag-cloud" class="tag-cloud">
+                <!-- Динамически генерируется из script.js -->
+            </div>
+        </section>
+
+        <!-- СПИСОК СТАТЕЙ -->
+        <main>
+            <section id="news-list" class="news-list">
+                <!-- Статьи загружаются здесь -->
+            </section>
+        </main>
+
+        <!-- СООБЩЕНИЕ ОБ ОТСУТСТВИИ РЕЗУЛЬТАТОВ -->
+        <div id="empty-state" class="empty-state hidden">
+            <p id="empty-message"></p>
+            <button id="trigger-update-btn" class="btn-update">🔄 Запросить обновление базы</button>
+        </div>
+    </div>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПОЛНОЙ СТАТЬИ -->
+    <div id="modal" class="modal modal-hidden">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+            <h2 id="modal-title"></h2>
+            
+            <div class="modal-meta">
+                <span id="modal-category" class="modal-category"></span>
+                <span id="modal-source" class="modal-source"></span>
+            </div>
+
+            <img id="modal-image" class="modal-image" style="display:none;" alt="">
+            
+            <div id="modal-symptoms" class="modal-symptoms"></div>
+            
+            <div id="modal-summary" class="modal-summary"></div>
+            
+            <div class="modal-actions">
+                <a id="modal-link" class="btn-read" target="_blank" rel="noopener noreferrer">
+                    📖 Читать полностью на источнике
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Обновлено: <span id="update-time">загрузка...</span> | Статей в базе: <span id="total-news">0</span></p>
+        <p>📡 Источники: <span id="sources-count">0</span> источников | 
+           🔄 Автообновление каждые 6 часов через GitHub Actions</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
