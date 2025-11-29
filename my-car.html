@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мое авто - Мастерская Автоэлектрика</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-            <nav class="main-nav">
-                <a href="/" class="nav-link">🏠 Главная</a>
-                <a href="/vehicles.html" class="nav-link">🚗 По маркам</a>
-                <a href="/error-codes.html" class="nav-link">💻 По ошибкам</a>
-                <a href="/my-car.html" class="nav-link active">📱 Мое авто</a>
-            </nav>
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <nav class="main-nav">
+                    <a href="./" class="nav-link">🏠 Главная</a>
+                    <a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
+                    <a href="./error-codes.html" class="nav-link">💻 По ошибкам</a>
+                    <a href="./my-car.html" class="nav-link active">📱 Мое авто</a>
+                </nav>
+            </div>
         </header>
 
         <section class="page-content">
@@ -23,64 +26,122 @@
             
             <div class="my-car-setup">
                 <div class="form-group">
-                    <label>Марка авто:</label>
-                    <input id="my-brand" type="text" placeholder="Например, LADA">
+                    <label>🚙 Марка авто:</label>
+                    <input id="my-brand" type="text" placeholder="Например, LADA, Toyota, BMW" class="form-input">
                 </div>
                 
                 <div class="form-group">
-                    <label>Модель:</label>
-                    <input id="my-model" type="text" placeholder="Например, Granta">
+                    <label>🏎️ Модель:</label>
+                    <input id="my-model" type="text" placeholder="Например, Granta, Camry" class="form-input">
                 </div>
                 
                 <div class="form-group">
-                    <label>Год выпуска:</label>
-                    <input id="my-year" type="number" placeholder="2020">
+                    <label>📅 Год выпуска:</label>
+                    <input id="my-year" type="number" placeholder="2020" min="1990" max="2030" class="form-input">
                 </div>
                 
-                <button onclick="saveMycar()" class="btn btn-primary">Сохранить</button>
+                <button onclick="saveMycar()" class="btn btn-primary">💾 Сохранить</button>
+                <button onclick="clearMycar()" class="btn btn-secondary">🗑️ Очистить</button>
+            </div>
+
+            <div id="my-car-info" class="hidden" style="margin: 30px 0; padding: 20px; background: #f5f5f5; border-radius: 8px;">
+                <h3>📱 Ваше авто: <span id="car-display"></span></h3>
             </div>
 
             <div id="my-car-articles" class="articles-grid"></div>
         </section>
     </div>
 
-    <script src="utils.js"></script>
-    <script src="db-manager.js"></script>
+    <footer class="footer">
+        <p>Обновлено: <span id="last-update">загрузка...</span></p>
+        <p>🤖 Автоматическое обновление каждые 30 минут</p>
+    </footer>
+
+    <script src="./utils.js"></script>
+    <script src="./db-manager.js"></script>
     <script>
         let db;
         
         document.addEventListener('DOMContentLoaded', async () => {
             db = new DatabaseManager();
             await db.init();
+            
+            document.getElementById('last-update').textContent = 
+                new Date(db.db.lastUpdated).toLocaleString('ru-RU');
+            
             loadMycar();
         });
         
         function saveMycar() {
-            const brand = document.getElementById('my-brand').value;
-            const model = document.getElementById('my-model').value;
-            const year = document.getElementById('my-year').value;
+            const brand = document.getElementById('my-brand').value.trim();
+            const model = document.getElementById('my-model').value.trim();
+            const year = document.getElementById('my-year').value.trim();
             
-            localStorage.setItem('mycar', JSON.stringify({ brand, model, year }));
-            loadMycar();
+            if (!brand) {
+                alert('⚠️ Пожалуйста, введите марку авто');
+                return;
+            }
+            
+            const carData = { brand, model, year };
+            localStorage.setItem('mycar', JSON.stringify(carData));
+            
             alert('✅ Машина сохранена!');
+            loadMycar();
+        }
+        
+        function clearMycar() {
+            if (confirm('Вы уверены? Это удалит сохраненные данные.')) {
+                localStorage.removeItem('mycar');
+                document.getElementById('my-brand').value = '';
+                document.getElementById('my-model').value = '';
+                document.getElementById('my-year').value = '';
+                document.getElementById('my-car-info').classList.add('hidden');
+                document.getElementById('my-car-articles').innerHTML = '';
+                alert('✅ Данные очищены');
+            }
         }
         
         function loadMycar() {
             const stored = localStorage.getItem('mycar');
+            
             if (stored) {
-                const car = JSON.parse(stored);
-                document.getElementById('my-brand').value = car.brand;
-                document.getElementById('my-model').value = car.model;
-                document.getElementById('my-year').value = car.year;
-                
-                const articles = db.searchByBrand(car.brand);
-                document.getElementById('my-car-articles').innerHTML = articles.map(a => `
-                    <div class="article-card">
-                        <h4>${a.title}</h4>
-                        <p>${a.contentType} • ${a.source}</p>
-                        <a href="${a.link}" target="_blank" class="btn-read">Читать</a>
-                    </div>
-                `).join('');
+                try {
+                    const car = JSON.parse(stored);
+                    document.getElementById('my-brand').value = car.brand || '';
+                    document.getElementById('my-model').value = car.model || '';
+                    document.getElementById('my-year').value = car.year || '';
+                    
+                    // Показать информацию о машине
+                    const carDisplay = `${car.brand}${car.model ? ' ' + car.model : ''}${car.year ? ' (' + car.year + ')' : ''}`;
+                    document.getElementById('car-display').textContent = carDisplay;
+                    document.getElementById('my-car-info').classList.remove('hidden');
+                    
+                    // Получить релевантные статьи
+                    const articles = db.searchByBrand(car.brand);
+                    
+                    if (articles.length === 0) {
+                        document.getElementById('my-car-articles').innerHTML = 
+                            `<p style="grid-column: 1/-1; text-align: center;">Решений для ${car.brand} пока не найдено</p>`;
+                        return;
+                    }
+                    
+                    document.getElementById('my-car-articles').innerHTML = articles.map(a => `
+                        <div class="article-card">
+                            ${a.image ? `<img src="${a.image}" alt="">` : ''}
+                            <h4>${a.title}</h4>
+                            <p class="meta">${a.contentType} • ${a.source}</p>
+                            <p>${a.summary.substring(0, 150)}...</p>
+                            <a href="${a.link}" target="_blank" class="btn-read">Читать</a>
+                        </div>
+                    `).join('');
+                } catch (e) {
+                    console.error('Ошибка загрузки данных:', e);
+                    document.getElementById('my-car-articles').innerHTML = '<p>Ошибка загрузки данных</p>';
+                }
+            } else {
+                document.getElementById('my-car-info').classList.add('hidden');
+                document.getElementById('my-car-articles').innerHTML = 
+                    '<p style="grid-column: 1/-1; text-align: center;">👆 Введите данные вашего авто выше</p>';
             }
         }
     </script>

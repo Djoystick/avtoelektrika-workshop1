@@ -4,44 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>По маркам - Мастерская Автоэлектрика</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-            <nav class="main-nav">
-                <a href="/" class="nav-link">🏠 Главная</a>
-                <a href="/vehicles.html" class="nav-link active">🚗 По маркам</a>
-                <a href="/error-codes.html" class="nav-link">💻 По ошибкам</a>
-                <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
-            </nav>
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <nav class="main-nav">
+                    <a href="./" class="nav-link">🏠 Главная</a>
+                    <a href="./vehicles.html" class="nav-link active">🚗 По маркам</a>
+                    <a href="./error-codes.html" class="nav-link">💻 По ошибкам</a>
+                    <a href="./my-car.html" class="nav-link">📱 Мое авто</a>
+                </nav>
+            </div>
         </header>
 
         <section class="page-content">
             <h2>🚗 Решения по маркам авто</h2>
             <div id="brands-list" class="brands-grid"></div>
+            <div id="filtered-articles" class="articles-grid hidden"></div>
         </section>
     </div>
 
-    <script src="utils.js"></script>
-    <script src="db-manager.js"></script>
+    <footer class="footer">
+        <p>Обновлено: <span id="last-update">загрузка...</span></p>
+        <p>🤖 Автоматическое обновление каждые 30 минут</p>
+    </footer>
+
+    <script src="./utils.js"></script>
+    <script src="./db-manager.js"></script>
     <script>
+        let db;
+        
         document.addEventListener('DOMContentLoaded', async () => {
-            const db = new DatabaseManager();
+            db = new DatabaseManager();
             await db.init();
+            
+            document.getElementById('last-update').textContent = 
+                new Date(db.db.lastUpdated).toLocaleString('ru-RU');
             
             const brands = db._getUniqueBrands();
             const brandsList = document.getElementById('brands-list');
+            
+            if (brands.length === 0) {
+                brandsList.innerHTML = '<p>Нет доступных марок авто</p>';
+                return;
+            }
             
             brandsList.innerHTML = brands.map(brand => `
                 <div class="brand-card">
                     <h3>🚙 ${brand}</h3>
                     <p>${db.searchByBrand(brand).length} решений</p>
-                    <button onclick="filterByBrand('${brand}')" class="btn btn-small">Показать</button>
+                    <button onclick="filterByBrand('${brand}')" class="btn btn-primary">Показать</button>
                 </div>
             `).join('');
         });
+        
+        function filterByBrand(brand) {
+            const articles = db.searchByBrand(brand);
+            const brandsList = document.getElementById('brands-list');
+            const filteredArticles = document.getElementById('filtered-articles');
+            
+            if (articles.length === 0) {
+                alert('Решений не найдено');
+                return;
+            }
+            
+            brandsList.classList.add('hidden');
+            filteredArticles.classList.remove('hidden');
+            
+            filteredArticles.innerHTML = `
+                <div style="margin-bottom: 20px;">
+                    <button onclick="goBack()" class="btn btn-secondary">← Назад к маркам</button>
+                    <h3>🚗 Решения для ${brand}</h3>
+                </div>
+                ${articles.map(a => `
+                    <div class="article-card">
+                        ${a.image ? `<img src="${a.image}" alt="">` : ''}
+                        <h4>${a.title}</h4>
+                        <p class="meta">${a.contentType} • ${a.source}</p>
+                        <p>${a.summary.substring(0, 150)}...</p>
+                        <a href="${a.link}" target="_blank" class="btn-read">Читать</a>
+                    </div>
+                `).join('')}
+            `;
+        }
+        
+        function goBack() {
+            document.getElementById('brands-list').classList.remove('hidden');
+            document.getElementById('filtered-articles').classList.add('hidden');
+        }
     </script>
 </body>
 </html>

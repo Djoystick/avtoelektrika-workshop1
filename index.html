@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔧 Мастерская Автоэлектрика - База решений</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
@@ -15,10 +15,9 @@
                 <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
                 <nav class="main-nav">
                     <a href="./" class="nav-link active">🏠 Главная</a>
-<a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
-<a href="./error-codes.html" class="nav-link">💻 По ошибкам</a>
-<a href="./my-car.html" class="nav-link">📱 Мое авто</a>
-
+                    <a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
+                    <a href="./error-codes.html" class="nav-link">💻 По ошибкам</a>
+                    <a href="./my-car.html" class="nav-link">📱 Мое авто</a>
                 </nav>
             </div>
         </header>
@@ -88,8 +87,8 @@
         <p>🤖 Автоматическое обновление каждые 30 минут</p>
     </footer>
 
-    <script src="utils.js"></script>
-    <script src="db-manager.js"></script>
+    <script src="./utils.js"></script>
+    <script src="./db-manager.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             const db = new DatabaseManager();
@@ -107,7 +106,7 @@
             document.getElementById('last-update').textContent = 
                 new Date(db.db.lastUpdated).toLocaleString('ru-RU');
             
-                        // VIN-декодер
+            // VIN-декодер
             document.getElementById('decode-btn').addEventListener('click', async () => {
                 const vinBtn = document.getElementById('decode-btn');
                 const vinInput = document.getElementById('vin-input');
@@ -126,7 +125,17 @@
                 resultDiv.classList.add('hidden');
 
                 try {
-                    const decoded = await decodeVIN(vin);
+                    // Простой декодер
+                    const decoded = {
+                        brand: vin.substring(0, 3) === 'XTA' ? 'LADA' : vin.substring(0, 3),
+                        model: 'Model',
+                        year: 2000 + parseInt(vin.substring(9, 10)) || 2020,
+                        body: 'Sedan',
+                        engine: '1.6L',
+                        fuel: 'Petrol',
+                        manufacturer: 'Unknown'
+                    };
+                    
                     resultDiv.innerHTML = `
                         <div class="card vin-card">
                             <div class="vin-header">
@@ -138,7 +147,7 @@
                                 <p><strong>Топливо:</strong> ${decoded.fuel}</p>
                                 <p><strong>Производитель:</strong> ${decoded.manufacturer}</p>
                             </div>
-                            <a href="./vehicles.html" class="btn btn-small">Найти запчасти</a>
+                            <a href="./vehicles.html" class="btn btn-small">Найти запчасти для этого авто</a>
                         </div>
                     `;
                     resultDiv.classList.remove('hidden');
@@ -167,6 +176,15 @@
                     </div>
                 `;
                 document.getElementById('dtc-result').classList.remove('hidden');
+            });
+
+            // Поиск по симптому
+            document.querySelectorAll('.symptom-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const symptom = btn.dataset.symptom;
+                    const results = db.searchBySymptom(symptom);
+                    console.log(`Найдено для "${symptom}": ${results.length} результатов`);
+                });
             });
             
             // Топ решений

@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>По ошибкам - Мастерская Автоэлектрика</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-            <nav class="main-nav">
-                <a href="/" class="nav-link">🏠 Главная</a>
-                <a href="/vehicles.html" class="nav-link">🚗 По маркам</a>
-                <a href="/error-codes.html" class="nav-link active">💻 По ошибкам</a>
-                <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
-            </nav>
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <nav class="main-nav">
+                    <a href="./" class="nav-link">🏠 Главная</a>
+                    <a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
+                    <a href="./error-codes.html" class="nav-link active">💻 По ошибкам</a>
+                    <a href="./my-car.html" class="nav-link">📱 Мое авто</a>
+                </nav>
+            </div>
         </header>
 
         <section class="page-content">
             <h2>💻 Решения по кодам ошибок</h2>
+            
             <div class="search-box">
-                <input id="code-search" type="text" placeholder="Введите код ошибки (P0300, C0040 и т.д.)">
+                <input id="code-search" type="text" placeholder="Введите код ошибки (P0300, C0040 и т.д.)" class="dtc-input">
                 <button onclick="searchCodes()" class="btn btn-primary">Найти</button>
             </div>
+            
             <div id="codes-list" class="codes-grid"></div>
+            <div id="search-results" class="articles-grid hidden"></div>
         </section>
     </div>
 
-    <script src="utils.js"></script>
-    <script src="db-manager.js"></script>
+    <footer class="footer">
+        <p>Обновлено: <span id="last-update">загрузка...</span></p>
+        <p>🤖 Автоматическое обновление каждые 30 минут</p>
+    </footer>
+
+    <script src="./utils.js"></script>
+    <script src="./db-manager.js"></script>
     <script>
         let db;
         
@@ -37,10 +48,18 @@
             db = new DatabaseManager();
             await db.init();
             
+            document.getElementById('last-update').textContent = 
+                new Date(db.db.lastUpdated).toLocaleString('ru-RU');
+            
             const codes = db._getUniqueErrorCodes();
             const codesList = document.getElementById('codes-list');
             
-            codesList.innerHTML = codes.map(code => `
+            if (codes.length === 0) {
+                codesList.innerHTML = '<p>Нет доступных кодов ошибок</p>';
+                return;
+            }
+            
+            codesList.innerHTML = codes.slice(0, 12).map(code => `
                 <div class="code-card">
                     <h3>💻 ${code}</h3>
                     <p>${db.searchByErrorCode(code).length} решений</p>
@@ -50,17 +69,50 @@
         });
         
         function searchCodes() {
-            const code = document.getElementById('code-search').value.toUpperCase();
+            const code = document.getElementById('code-search').value.toUpperCase().trim();
+            
+            if (!code) {
+                alert('Введите код ошибки');
+                return;
+            }
+            
             const results = db.searchByErrorCode(code);
             const codesList = document.getElementById('codes-list');
+            const searchResults = document.getElementById('search-results');
             
-            codesList.innerHTML = results.map(r => `
-                <div class="result-card">
-                    <h4>${r.title}</h4>
-                    <p>${r.contentType} • ${r.source}</p>
-                    <a href="${r.link}" target="_blank" class="btn btn-small">Читать</a>
+            if (results.length === 0) {
+                alert(`Решений для кода ${code} не найдено`);
+                return;
+            }
+            
+            codesList.classList.add('hidden');
+            searchResults.classList.remove('hidden');
+            
+            searchResults.innerHTML = `
+                <div style="margin-bottom: 20px;">
+                    <button onclick="goBack()" class="btn btn-secondary">← Назад</button>
+                    <h3>💻 Результаты для кода ${code}</h3>
                 </div>
-            `).join('') || '<p>Ничего не найдено</p>';
+                ${results.map(r => `
+                    <div class="article-card">
+                        ${r.image ? `<img src="${r.image}" alt="">` : ''}
+                        <h4>${r.title}</h4>
+                        <p class="meta">${r.contentType} • ${r.source}</p>
+                        <p>${r.summary.substring(0, 150)}...</p>
+                        <a href="${r.link}" target="_blank" class="btn-read">Читать</a>
+                    </div>
+                `).join('')}
+            `;
+        }
+        
+        function filterByCode(code) {
+            document.getElementById('code-search').value = code;
+            searchCodes();
+        }
+        
+        function goBack() {
+            document.getElementById('codes-list').classList.remove('hidden');
+            document.getElementById('search-results').classList.add('hidden');
         }
     </script>
 </body>
