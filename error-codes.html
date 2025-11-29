@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>По ошибкам - Мастерская Автоэлектрика</title>
+    <title>По ошибкам - Помощник автоэлектрика</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="header-content">
-                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <div class="logo-wrapper">
+                    <img src="./logo.png" alt="Помощник автоэлектрика" class="logo-image">
+                    <div class="logo-text">
+                        <div class="logo-title">Помощник автоэлектрика</div>
+                        <div class="logo-subtitle">Профессиональная база знаний по диагностике и ремонту</div>
+                    </div>
+                </div>
                 <nav class="main-nav">
                     <a href="./" class="nav-link">🏠 Главная</a>
                     <a href="./vehicles.html" class="nav-link">🚗 По маркам</a>
@@ -90,7 +95,7 @@
             
             searchResults.innerHTML = `
                 <div style="margin-bottom: 20px;">
-                    <button onclick="goBack()" class="btn btn-secondary">← Назад</button>
+                    <button onclick="goBack()" class="btn btn-secondary btn-small">← Назад</button>
                     <h3>💻 Результаты для кода ${code}</h3>
                 </div>
                 ${results.map(r => `
