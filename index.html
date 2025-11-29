@@ -3,77 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔧 Мастерская Автоэлектрика</title>
+    <title>🔧 Мастерская Автоэлектрика - База решений</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- ШАПКА -->
+        <!-- НАВИГАЦИЯ -->
         <header class="header">
-            <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
-            <p class="tagline">База решений для диагностики и ремонта электрооборудования</p>
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <p class="tagline">Профессиональная база знаний по диагностике и ремонту</p>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link active">🏠 Главная</a>
+                    <a href="/vehicles.html" class="nav-link">🚗 По маркам</a>
+                    <a href="/error-codes.html" class="nav-link">💻 По ошибкам</a>
+                    <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
+                </nav>
+            </div>
         </header>
 
-        <!-- ПОИСК -->
-        <section class="search-section">
-            <input id="search-input" class="search-input" type="text"
-                placeholder="🔍 Ищите решение: 'не заводится', 'ошибка P0300', 'генератор'..."
-                autocomplete="off">
-            <div class="search-tips">
-                <strong>💡 Подсказка:</strong> Ищите по симптому, коду ошибки или детали
+        <!-- VIN-ДЕКОДЕР -->
+        <section class="vin-decoder">
+            <h2>🔍 Расшифровка VIN</h2>
+            <div class="vin-input-group">
+                <input id="vin-input" type="text" placeholder="Введите VIN (17 символов)" maxlength="17" class="vin-input">
+                <button id="decode-btn" class="btn btn-primary">Декодировать</button>
+            </div>
+            <div id="vin-result" class="vin-result hidden"></div>
+        </section>
+
+        <!-- DTC ПОИСК -->
+        <section class="dtc-search">
+            <h2>🚨 Поиск по коду ошибки</h2>
+            <div class="dtc-input-group">
+                <input id="dtc-input" type="text" placeholder="Введите код (P0300, C0040 и т.д.)" class="dtc-input">
+                <button id="dtc-search-btn" class="btn btn-primary">Найти</button>
+            </div>
+            <div id="dtc-result" class="dtc-result hidden"></div>
+        </section>
+
+        <!-- ПОИСК ПО СИМПТОМУ -->
+        <section class="symptom-search">
+            <h2>🆘 Ищу решение по симптому</h2>
+            <div class="symptoms-grid">
+                <button class="symptom-btn" data-symptom="не заводится">🆘 Не заводится</button>
+                <button class="symptom-btn" data-symptom="горит чек">💡 Горит Check Engine</button>
+                <button class="symptom-btn" data-symptom="троит">💨 Троит двигатель</button>
+                <button class="symptom-btn" data-symptom="нет зарядки">🔋 Нет зарядки</button>
+                <button class="symptom-btn" data-symptom="утечка тока">⚡ Утечка тока</button>
+                <button class="symptom-btn" data-symptom="стучит">🔊 Стучит</button>
             </div>
         </section>
 
-        <!-- КАТЕГОРИИ -->
-        <section class="filters-section">
-            <h3>📂 Разделы:</h3>
-            <div id="category-filters" class="category-filters"></div>
+        <!-- СТАТИСТИКА -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="stat-articles">0</div>
+                <div class="stat-label">Инструкций</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-brands">0</div>
+                <div class="stat-label">Марок авто</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-codes">0</div>
+                <div class="stat-label">Кодов ошибок</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="stat-videos">0</div>
+                <div class="stat-label">Видео</div>
+            </div>
         </section>
 
-        <!-- ОБЛАКО ПРОБЛЕМ -->
-        <section class="tags-section">
-            <h3>🚨 Типовые проблемы:</h3>
-            <div id="tag-cloud" class="tag-cloud"></div>
+        <!-- ТОП РЕШЕНИЙ -->
+        <section class="top-solutions">
+            <h2>🏆 Топ решений</h2>
+            <div id="top-articles" class="articles-grid"></div>
         </section>
-
-        <!-- СПИСОК СТАТЕЙ -->
-        <main>
-            <section id="news-list" class="news-list"></section>
-        </main>
-
-        <!-- ПУСТО -->
-        <div id="empty-state" class="empty-state hidden">
-            <p id="empty-message"></p>
-        </div>
     </div>
 
-    <!-- МОДАЛКА -->
-    <div id="modal" class="modal modal-hidden">
-        <div class="modal-content">
-            <button id="modal-close" class="modal-close">&times;</button>
-            <h2 id="modal-title"></h2>
-            <div class="modal-meta">
-                <span id="modal-category"></span>
-                <span id="modal-source"></span>
-            </div>
-            <img id="modal-image" class="modal-image" style="display:none;" alt="">
-            <div id="modal-symptoms" class="modal-symptoms"></div>
-            <div id="modal-summary" class="modal-summary"></div>
-            <div class="modal-actions">
-                <a id="modal-link" class="btn-read" target="_blank" rel="noopener noreferrer">
-                    📖 Перейти к полному тексту
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ФУТЕР -->
     <footer class="footer">
-        <p>Обновлено: <span id="update-time">загрузка...</span></p>
-        <p>Статей в базе: <span id="total-news">0</span> | Источников: <span id="sources-count">0</span></p>
-        <p>🔄 Автообновление каждые 30 минут через GitHub Actions</p>
+        <p>Обновлено: <span id="last-update">загрузка...</span></p>
+        <p>🤖 Автоматическое обновление каждые 30 минут</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="utils.js"></script>
+    <script src="db-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const db = new DatabaseManager();
+            await db.init();
+            
+            // Статистика
+            const stats = db.getStats();
+            document.getElementById('stat-articles').textContent = stats.totalArticles;
+            document.getElementById('stat-brands').textContent = stats.totalBrands;
+            document.getElementById('stat-codes').textContent = stats.totalErrorCodes;
+            document.getElementById('stat-videos').textContent = 
+                db.articles.filter(a => a.contentType === '🎬 Видео').length;
+            
+            // Время обновления
+            document.getElementById('last-update').textContent = 
+                new Date(db.db.lastUpdated).toLocaleString('ru-RU');
+            
+            // VIN-декодер
+            document.getElementById('decode-btn').addEventListener('click', () => {
+                const vin = document.getElementById('vin-input').value.toUpperCase();
+                if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) {
+                    alert('Некорректный VIN');
+                    return;
+                }
+                const decoded = decodeVIN(vin);
+                document.getElementById('vin-result').innerHTML = `
+                    <div class="card">
+                        <h4>📋 Расшифровка VIN: ${vin}</h4>
+                        <p><strong>Производитель:</strong> ${decoded.manufacturer}</p>
+                        <p><strong>Год выпуска:</strong> ${decoded.year}</p>
+                        <p><strong>Марка:</strong> ${decoded.brand}</p>
+                    </div>
+                `;
+                document.getElementById('vin-result').classList.remove('hidden');
+            });
+            
+            // DTC поиск
+            document.getElementById('dtc-search-btn').addEventListener('click', () => {
+                const code = document.getElementById('dtc-input').value.toUpperCase();
+                const articles = db.searchByErrorCode(code);
+                document.getElementById('dtc-result').innerHTML = `
+                    <div class="card">
+                        <h4>💻 Ошибка ${code}</h4>
+                        <p>Найдено решений: ${articles.length}</p>
+                        ${articles.slice(0, 3).map(a => `
+                            <div class="mini-card">
+                                <h5>${a.title}</h5>
+                                <p>${a.contentType} • ${a.source}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                document.getElementById('dtc-result').classList.remove('hidden');
+            });
+            
+            // Топ решений
+            const topArticles = db.articles.slice(0, 6);
+            document.getElementById('top-articles').innerHTML = topArticles.map(a => `
+                <div class="article-card">
+                    ${a.image ? `<img src="${a.image}" alt="">` : ''}
+                    <h4>${a.title}</h4>
+                    <p class="meta">${a.contentType} • ${a.source}</p>
+                    <p>${a.summary.substring(0, 100)}...</p>
+                    <a href="${a.link}" target="_blank" class="btn-read">Читать</a>
+                </div>
+            `).join('');
+        });
+    </script>
 </body>
 </html>
