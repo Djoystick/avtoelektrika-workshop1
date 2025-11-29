@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚗 Марки автомобилей - Мастерская</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">⚡ Мастерская Автоэлектрика</h1>
+                <nav class="main-nav">
+                    <a href="/" class="nav-link">🏠 Главная</a>
+                    <a href="/vehicles.html" class="nav-link active">🚗 По маркам</a>
+                    <a href="/error-codes.html" class="nav-link">💻 По ошибкам</a>
+                    <a href="/my-car.html" class="nav-link">📱 Мое авто</a>
+                </nav>
+            </div>
+        </header>
 
+        <h2>🚗 Выберите марку автомобиля</h2>
+        <div class="brands-grid" id="brands-grid"></div>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="db-manager.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const db = new DatabaseManager();
+            await db.init();
+            
+            const brandsGrid = document.getElementById('brands-grid');
+            const brands = db.vehicles.brands;
+            
+            brandsGrid.innerHTML = Object.entries(brands).map(([key, info]) => {
+                const articlesCount = db.db.indexes.brands[key]?.length || 0;
+                return `
+                    <div class="brand-card" onclick="selectBrand('${key}')">
+                        <h3>${info.name}</h3>
+                        <p>${articlesCount} статей</p>
+                        <p class="models">${info.models.join(', ')}</p>
+                    </div>
+                `;
+            }).join('');
+        });
+        
+        function selectBrand(brandKey) {
+            localStorage.setItem('selectedBrand', brandKey);
+            window.location.href = `/brand-detail.html?brand=${brandKey}`;
+        }
+    </script>
+</body>
+</html>
