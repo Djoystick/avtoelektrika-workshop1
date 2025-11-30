@@ -235,6 +235,19 @@
       "type": "habr"
     },
     {
+      "id": "habr_971694",
+      "title": "Феномен Arduino: почему эта плата завоевала молодежь, а не стала скучным учебником",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/fed/c5d/83a/fedc5d83a47e783884d427689c3ff580.jpg\" /><p>Скромный взгляд студента, который прошел маленький путь от сожженного светодиода до создания работающих устройств. Как Arduino привлекло большое количество молодежи к работе с микроконтроллерами?</p> <a href=\"https://habr.com/ru/articles/971694/?utm_campaign=971694&amp;utm_source=habr",
+      "link": "https://habr.com/ru/articles/971694/?utm_campaign=971694&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Sun, 30 Nov 2025 10:52:29 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_968918",
       "title": "Pi.Alert на минималках — сканируем сеть с помощью ESP32",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b9d/c62/b28/b9dc62b28196068a1f990cbdc2a4e62a.png\" /><p>Привет, Хабр! Меня зовут Алексей, и я разработчик в <a href=\"http://Cloud.ru\" rel=\"noopener noreferrer nofollow\">Cloud.ru</a>. Бороздя просторы Github в поисках вдохновения для проекта выходного дня, наткнулся на репозиторий Pi.Alert. В его описании первой строкой было ёмкое «WIFI / L",
@@ -283,19 +296,6 @@
       "contentType": "📚 Статья",
       "category": "📚 DIY",
       "published": "Sun, 23 Nov 2025 09:01:05 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_969230",
-      "title": "Вайб вместо звука: как я за вечер собрал вибровариометр на ESP32, а Gemini и ко сгенерировали всё, кроме пайки",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/a23/66f/473/a2366f473a16c07be2527dbf2846c24c.jpg\" /><p>Парапланеризм - это про спокойствие, свободу и медитативный полет. Но в этой идиллии есть один назойливый артефакт:&nbsp;<strong>звук вариометра</strong>.</p><p>Традиционные приборы - звуковые. Они меняют тональность в зависимости от скороподъемности. И когда часами часами летаешь под",
-      "link": "https://habr.com/ru/articles/969230/?utm_campaign=969230&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Sat, 22 Nov 2025 23:45:08 GMT",
       "image": null,
       "type": "habr"
     },
@@ -519,6 +519,20 @@
       "published": "Fri, 21 Nov 2025 05:24:42 GMT",
       "image": null,
       "type": "habr"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pae9yi",
+      "title": "How can I find distributors for bumper bars, wheel hubs, and chassis parts?",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone,</p> <p>I’m trying to connect with distributors or wholesalers in the automotive aftermarket. My company is a manufacturer, and we produce bumper reinforcement bars, wheel hubs, and various chassis/suspension parts.</p> <p>We currently supply some overseas buyers and are looking to expand our distribution network. If you’re in the aftermarket business or know someone who is, I’d be happy to share our product list, specs, and pricing.</p> <p>Feel free",
+      "link": "https://www.reddit.com/r/Autos/comments/1pae9yi/how_can_i_find_distributors_for_bumper_bars_wheel/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-11-30T09:34:36+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
     },
     {
       "id": "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -815,20 +829,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p6but6",
-      "title": "What would you choose between a Sportage, Tucson, Qashqai, NX 300/(h), CX-5 and XC60?",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Mornin'</p> <p>As the title says, I need some advice choosing our next car. Yes, I know they are not all in the same class. Keep reading.</p> <p>Some geographical context first : We live in Romania, Europe.</p> <p>After some research, talking to friends and my mechanic, I arrived at these options : Kia Sportage 2017+, Hyundai Tucson 2017+, Nissan Qashqai 2017+, Lexus NX 300(h) 2017+, Volvo XC60 2016+, Mazda CX-5 2017+. All 4 wheel drive, gas or hybrid only, no d",
-      "link": "https://www.reddit.com/r/Autos/comments/1p6but6/what_would_you_choose_between_a_sportage_tucson/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-25T13:01:45+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p60339",
       "title": "My gt2rs that arrived 2 days ago with a full fabspeed.",
       "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p60339/my_gt2rs_that_arrived_2_days_ago_with_a_full/\"> <img alt=\"My gt2rs that arrived 2 days ago with a full fabspeed.\" src=\"https://a.thumbs.redditmedia.com/yzBfQ0iNI89HhBEZAVycXCpqKzGqdZT5efUQJdjVhk8.jpg\" title=\"My gt2rs that arrived 2 days ago with a full fabspeed.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>this is my first rodeo with a RS porsche, and i got a full fabspeed exhaust on it before shipping it here, hon",
@@ -874,6 +874,7 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_971694",
         "habr_970068",
         "habr_908828",
         "habr_967104",
@@ -892,8 +893,7 @@
         "habr_969632",
         "habr_968918",
         "habr_969348",
-        "habr_968496",
-        "habr_969230"
+        "habr_968496"
       ],
       "📚 Электроника": [
         "habr_971344",
@@ -920,11 +920,12 @@
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1p9tuof",
+        "forum_Reddit_-_Autos_t3_1pae9yi",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
-        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
+        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p8xit0",
@@ -941,12 +942,12 @@
         "forum_Reddit_-_Autos_t3_1p5ye8f",
         "forum_Reddit_-_Autos_t3_1p60339",
         "forum_Reddit_-_Autos_t3_1p6m9tq",
-        "forum_Reddit_-_Autos_t3_1p6czj3",
-        "forum_Reddit_-_Autos_t3_1p6but6"
+        "forum_Reddit_-_Autos_t3_1p6czj3"
       ]
     },
     "sources": {
       "Habr.com": [
+        "habr_971694",
         "habr_970068",
         "habr_908828",
         "habr_967104",
@@ -966,7 +967,6 @@
         "habr_968918",
         "habr_969348",
         "habr_968496",
-        "habr_969230",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -991,11 +991,12 @@
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1p9tuof",
+        "forum_Reddit_-_Autos_t3_1pae9yi",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
-        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
+        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p8xit0",
@@ -1012,12 +1013,12 @@
         "forum_Reddit_-_Autos_t3_1p5ye8f",
         "forum_Reddit_-_Autos_t3_1p60339",
         "forum_Reddit_-_Autos_t3_1p6m9tq",
-        "forum_Reddit_-_Autos_t3_1p6czj3",
-        "forum_Reddit_-_Autos_t3_1p6but6"
+        "forum_Reddit_-_Autos_t3_1p6czj3"
       ]
     },
     "types": {
       "habr": [
+        "habr_971694",
         "habr_970068",
         "habr_908828",
         "habr_967104",
@@ -1037,7 +1038,6 @@
         "habr_968918",
         "habr_969348",
         "habr_968496",
-        "habr_969230",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -1062,11 +1062,12 @@
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1p9tuof",
+        "forum_Reddit_-_Autos_t3_1pae9yi",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
-        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
+        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p8xit0",
@@ -1083,8 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p5ye8f",
         "forum_Reddit_-_Autos_t3_1p60339",
         "forum_Reddit_-_Autos_t3_1p6m9tq",
-        "forum_Reddit_-_Autos_t3_1p6czj3",
-        "forum_Reddit_-_Autos_t3_1p6but6"
+        "forum_Reddit_-_Autos_t3_1p6czj3"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-11-30T06:18:36.967208",
+  "lastUpdated": "2025-11-30T12:22:11.896199",
   "version": "5.2-forums"
 }
