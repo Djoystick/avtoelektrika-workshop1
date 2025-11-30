@@ -235,6 +235,32 @@
       "type": "habr"
     },
     {
+      "id": "habr_971304",
+      "title": "Загадка магнитной подвески",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/c34/585/1d1/c345851d173f1baa06a530f592129461.jpg\" /><p>Знаете, что такое мендосинский двигатель? Это демонстрационный солнечный моторчик, левитирующий благодаря магнитам — красивый, простой и по‑настоящему познавательный. Такой мотор можно сделать с помощью самых простых инструментов, поэтому это замечательный проект для любого любителя.<",
+      "link": "https://habr.com/ru/articles/971304/?utm_campaign=971304&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Sun, 30 Nov 2025 16:48:58 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_969098",
+      "title": "Детгиз на помощь взрослым дядям",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/c13/580/3b8/c135803b829aed8b529256460b047e95.jpg\" /><p>У меня в кабинете на работе есть небольшая витринка, в которой стоит некоторое количество... гхм... <em>штуковин</em>, большинство из которых я когда-то смастерил сам. Объединяет их одно - когда-то мне было интересно помахать напильником, а теперь все они служат так называемыми <em>co",
+      "link": "https://habr.com/ru/articles/969098/?utm_campaign=969098&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Sun, 30 Nov 2025 16:48:41 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_971694",
       "title": "Феномен Arduino: почему эта плата завоевала молодежь, а не стала скучным учебником",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/fed/c5d/83a/fedc5d83a47e783884d427689c3ff580.jpg\" /><p>Скромный взгляд студента, который прошел маленький путь от сожженного светодиода до создания работающих устройств. Как Arduino привлекло большое количество молодежи к работе с микроконтроллерами?</p> <a href=\"https://habr.com/ru/articles/971694/?utm_campaign=971694&amp;utm_source=habr",
@@ -261,19 +287,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_969348",
-      "title": "Плата контроллера движения OpenPNP",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/768/331/b6c/768331b6c8a0131a1dead4ffa49879a7.jpg\" /><p>Плата управления на&nbsp;чипе STM32F4×1&nbsp;станком&nbsp;SMT pick and place OpenPNP под&nbsp;управлением прошивки GrblHAL.</p> <a href=\"https://habr.com/ru/articles/969348/?utm_campaign=969348&amp;utm_source=habrahabr&amp;utm_medium=rss#habracut\">Читать далее</a>",
-      "link": "https://habr.com/ru/articles/969348/?utm_campaign=969348&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Sun, 23 Nov 2025 13:15:35 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_969330",
       "title": "Комплексная схема процесса разработки физического продукта",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/0b8/c5b/890/0b8c5b8900d0905bf50eb54fd0644135.jpg\" /><p>Всем привет! Существует множество фреймворков для управления IT SaaS продуктами, по сравнению с которыми - физический продукт в инфополе обделен вниманием, что у нас, что за рубежом, но в меньшей мере. Поэтому я выделил немного времени, чтобы описать общий процесс продукта на основе п",
@@ -283,19 +296,6 @@
       "contentType": "📚 Статья",
       "category": "📚 Электроника",
       "published": "Sun, 23 Nov 2025 11:47:27 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_968496",
-      "title": "[Перевод] Сборка IBM-PC XT на базе ПЛИС",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/2c6/ebe/d1d/2c6ebed1d9f92c3f888062ccdf8b6da5.jpeg\" /><p>Недавно я закончил реализацию своего хобби-проекта по воссозданию ПК IBM XT из 80-х на основе оригинальных деталей с использованием современных технологий. У меня была чёткая цель: возможность играть на этом ПК в EGA-версию Monkey Island 1 со всеми примочками. То есть мне нужна была ",
-      "link": "https://habr.com/ru/companies/ruvds/articles/968496/?utm_campaign=968496&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Sun, 23 Nov 2025 09:01:05 GMT",
       "image": null,
       "type": "habr"
     },
@@ -521,15 +521,15 @@
       "type": "habr"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1pae9yi",
-      "title": "How can I find distributors for bumper bars, wheel hubs, and chassis parts?",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hi everyone,</p> <p>I’m trying to connect with distributors or wholesalers in the automotive aftermarket. My company is a manufacturer, and we produce bumper reinforcement bars, wheel hubs, and various chassis/suspension parts.</p> <p>We currently supply some overseas buyers and are looking to expand our distribution network. If you’re in the aftermarket business or know someone who is, I’d be happy to share our product list, specs, and pricing.</p> <p>Feel free",
-      "link": "https://www.reddit.com/r/Autos/comments/1pae9yi/how_can_i_find_distributors_for_bumper_bars_wheel/",
+      "id": "forum_Reddit_-_Autos_t3_1pahez2",
+      "title": "Horrible mpg in 1994 Subaru Impreza",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>So basically I'm just confused on how bad on gas it is. From a full tank I did 70 highway miles, now it's at half a tank. being a 13.2 gallon tank that's about 10mpg. What's weird is that it does better in the city, that seems a little backwards right. </p> <p>I'm not that aggressive when driving although I do get on it every once in a while, especially on the highway since it doesn't have much power to begin with and I have to compensate. Otherwise I'm basicall",
+      "link": "https://www.reddit.com/r/Autos/comments/1pahez2/horrible_mpg_in_1994_subaru_impreza/",
       "source": "Reddit - Autos",
       "sourceType": "forum",
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
-      "published": "2025-11-30T09:34:36+00:00",
+      "published": "2025-11-30T12:43:45+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -874,6 +874,8 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_971304",
+        "habr_969098",
         "habr_971694",
         "habr_970068",
         "habr_908828",
@@ -891,9 +893,7 @@
         "habr_969862",
         "habr_968602",
         "habr_969632",
-        "habr_968918",
-        "habr_969348",
-        "habr_968496"
+        "habr_968918"
       ],
       "📚 Электроника": [
         "habr_971344",
@@ -920,7 +920,7 @@
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1p9tuof",
-        "forum_Reddit_-_Autos_t3_1pae9yi",
+        "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -947,6 +947,8 @@
     },
     "sources": {
       "Habr.com": [
+        "habr_971304",
+        "habr_969098",
         "habr_971694",
         "habr_970068",
         "habr_908828",
@@ -965,8 +967,6 @@
         "habr_968602",
         "habr_969632",
         "habr_968918",
-        "habr_969348",
-        "habr_968496",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -991,7 +991,7 @@
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1p9tuof",
-        "forum_Reddit_-_Autos_t3_1pae9yi",
+        "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -1018,6 +1018,8 @@
     },
     "types": {
       "habr": [
+        "habr_971304",
+        "habr_969098",
         "habr_971694",
         "habr_970068",
         "habr_908828",
@@ -1036,8 +1038,6 @@
         "habr_968602",
         "habr_969632",
         "habr_968918",
-        "habr_969348",
-        "habr_968496",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -1062,7 +1062,7 @@
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1p9tuof",
-        "forum_Reddit_-_Autos_t3_1pae9yi",
+        "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-11-30T12:22:11.896199",
+  "lastUpdated": "2025-11-30T18:16:53.086541",
   "version": "5.2-forums"
 }
