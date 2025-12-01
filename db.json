@@ -209,32 +209,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_966866",
-      "title": "Домашний поверхностный монтаж: путь к своей мини-фабрике",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/a1e/5e9/e33/a1e5e9e33edbed91ca9f480613c64728.jpg\" /><p><em>Картинка  — Youtube-каналы: </em><a href=\"https://youtu.be/y14pdfjYsyo?si=Fy0Kn3rwBQAx6bj5\" rel=\"noopener noreferrer nofollow\"><em>Tobi</em></a><em>, </em><a href=\"https://youtu.be/RyKvEcgcswg?si=63fxtkqlUOucWdoR\" rel=\"noopener noreferrer nofollow\"><em>StuckAtPrototype</em></a></p",
-      "link": "https://habr.com/ru/companies/ruvds/articles/966866/?utm_campaign=966866&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Thu, 20 Nov 2025 13:01:50 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_967532",
-      "title": "Светлое будущее вычислений: гироморфные материалы",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/60d/c53/524/60dc5352406fe795c0b23c5667de99ad.jpg\" /><p>Современная вычислительная техника в разы превосходит ту, что была десятки лет тому назад. Данный технологический прогресс не является чем-то удивительным, а лишь показывает, что совершенствование не имеет предела (по крайней мере, мы его пока точно не достигли). Одной из потенциальны",
-      "link": "https://habr.com/ru/companies/ua-hosting/articles/967532/?utm_campaign=967532&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Thu, 20 Nov 2025 12:25:04 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_971304",
       "title": "Загадка магнитной подвески",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/c34/585/1d1/c345851d173f1baa06a530f592129461.jpg\" /><p>Знаете, что такое мендосинский двигатель? Это демонстрационный солнечный моторчик, левитирующий благодаря магнитам — красивый, простой и по‑настоящему познавательный. Такой мотор можно сделать с помощью самых простых инструментов, поэтому это замечательный проект для любого любителя.<",
@@ -270,19 +244,6 @@
       "contentType": "📚 Статья",
       "category": "📚 DIY",
       "published": "Sun, 30 Nov 2025 10:52:29 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_968918",
-      "title": "Pi.Alert на минималках — сканируем сеть с помощью ESP32",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b9d/c62/b28/b9dc62b28196068a1f990cbdc2a4e62a.png\" /><p>Привет, Хабр! Меня зовут Алексей, и я разработчик в <a href=\"http://Cloud.ru\" rel=\"noopener noreferrer nofollow\">Cloud.ru</a>. Бороздя просторы Github в поисках вдохновения для проекта выходного дня, наткнулся на репозиторий Pi.Alert. В его описании первой строкой было ёмкое «WIFI / L",
-      "link": "https://habr.com/ru/companies/cloud_ru/articles/968918/?utm_campaign=968918&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Sun, 23 Nov 2025 15:35:03 GMT",
       "image": null,
       "type": "habr"
     },
@@ -387,6 +348,45 @@
       "contentType": "📚 Статья",
       "category": "📚 Электроника",
       "published": "Mon, 24 Nov 2025 05:00:25 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_972044",
+      "title": "[Перевод] Кто и зачем будет покупать мощные чипы для спутников? Интервью главы компании Athero",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/2f7/b30/ff5/2f7b30ff53167159916bc788cbae2b19.png\" /><p>Вычислительные возможности на Земле стремительно развиваются. Но бортовые вычисления в космосе - более сложная задача, поскольку чипы должны быть устойчивы к воздействию радиации в космосе. Эдвард Джи, соучредитель и генеральный директор стартапа&nbsp;<a href=\"https://www.aethero.com/",
+      "link": "https://habr.com/ru/articles/972044/?utm_campaign=972044&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Mon, 01 Dec 2025 11:45:36 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_969292",
+      "title": "Замена GPU в ноутбуках",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/dcb/ed4/2e4/dcbed42e46b1a59deb422c8828a0e1e5.webp\" /><p>В перспективе нескольких лет у нас только два необходимых апгрейда в ноутбуке: увеличить RAM и заменить GPU. Остальное по желанию. Видеокарта становится проблемой, если мы хотим играть в современные игры. Представьте, как здорово было бы проапгрейдить GPU в ноутбуке! Просто заменить ",
+      "link": "https://habr.com/ru/companies/ruvds/articles/969292/?utm_campaign=969292&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Mon, 01 Dec 2025 09:01:43 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_969292",
+      "title": "Замена GPU в ноутбуках",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/dcb/ed4/2e4/dcbed42e46b1a59deb422c8828a0e1e5.webp\" /><p>В перспективе нескольких лет у нас только два необходимых апгрейда в ноутбуке: увеличить RAM и заменить GPU. Остальное по желанию. Видеокарта становится проблемой, если мы хотим играть в современные игры. Представьте, как здорово было бы проапгрейдить GPU в ноутбуке! Просто заменить ",
+      "link": "https://habr.com/ru/companies/ruvds/articles/969292/?utm_campaign=969292&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Mon, 01 Dec 2025 09:01:43 GMT",
       "image": null,
       "type": "habr"
     },
@@ -521,15 +521,15 @@
       "type": "habr"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1pb3zdt",
-      "title": "Bugatti Veyron Super Sport with exposed blue carbon looks stunning in the sunshine",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pb3zdt/bugatti_veyron_super_sport_with_exposed_blue/\"> <img alt=\"Bugatti Veyron Super Sport with exposed blue carbon looks stunning in the sunshine\" src=\"https://b.thumbs.redditmedia.com/XN6pqzs2xs8IQp0k8htqB92SzvgUXwPHXMyCo957woE.jpg\" title=\"Bugatti Veyron Super Sport with exposed blue carbon looks stunning in the sunshine\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/bigboss1999x\"> /u/bigboss1",
-      "link": "https://www.reddit.com/r/Autos/comments/1pb3zdt/bugatti_veyron_super_sport_with_exposed_blue/",
+      "id": "forum_Reddit_-_Autos_t3_1pb9lkt",
+      "title": "What do you think was the greatest era of cars — and why?",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Every generation swears their era was peak.</p> <p>Some say the 70s–80s for the raw vibes.</p> <p>Others swear the 90s–2000s were the perfect balance of analog feel + modern reliability.</p> <p>Then you’ve got people arguing today is the best era thanks to power, safety, and efficiency.</p> <p>For you, what decade nailed it?</p> <p>And what makes that era unbeatable the design, the tech, the engines, the soul?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a",
+      "link": "https://www.reddit.com/r/Autos/comments/1pb9lkt/what_do_you_think_was_the_greatest_era_of_cars/",
       "source": "Reddit - Autos",
       "sourceType": "forum",
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
-      "published": "2025-12-01T05:01:50+00:00",
+      "published": "2025-12-01T10:41:42+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -874,6 +874,7 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_969292",
         "habr_971304",
         "habr_969098",
         "habr_971694",
@@ -892,10 +893,11 @@
         "habr_970378",
         "habr_969862",
         "habr_968602",
-        "habr_969632",
-        "habr_968918"
+        "habr_969632"
       ],
       "📚 Электроника": [
+        "habr_972044",
+        "habr_969292",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -913,13 +915,11 @@
         "habr_967782",
         "habr_968926",
         "habr_968700",
-        "habr_968370",
-        "habr_966866",
-        "habr_967532"
+        "habr_968370"
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
-        "forum_Reddit_-_Autos_t3_1pb3zdt",
+        "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
@@ -947,6 +947,7 @@
     },
     "sources": {
       "Habr.com": [
+        "habr_969292",
         "habr_971304",
         "habr_969098",
         "habr_971694",
@@ -966,7 +967,8 @@
         "habr_969862",
         "habr_968602",
         "habr_969632",
-        "habr_968918",
+        "habr_972044",
+        "habr_969292",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -984,13 +986,11 @@
         "habr_967782",
         "habr_968926",
         "habr_968700",
-        "habr_968370",
-        "habr_966866",
-        "habr_967532"
+        "habr_968370"
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
-        "forum_Reddit_-_Autos_t3_1pb3zdt",
+        "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
@@ -1018,6 +1018,7 @@
     },
     "types": {
       "habr": [
+        "habr_969292",
         "habr_971304",
         "habr_969098",
         "habr_971694",
@@ -1037,7 +1038,8 @@
         "habr_969862",
         "habr_968602",
         "habr_969632",
-        "habr_968918",
+        "habr_972044",
+        "habr_969292",
         "habr_971344",
         "habr_908828",
         "habr_970866",
@@ -1055,13 +1057,11 @@
         "habr_967782",
         "habr_968926",
         "habr_968700",
-        "habr_968370",
-        "habr_966866",
-        "habr_967532"
+        "habr_968370"
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
-        "forum_Reddit_-_Autos_t3_1pb3zdt",
+        "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-01T06:21:43.429176",
+  "lastUpdated": "2025-12-01T12:26:13.187599",
   "version": "5.2-forums"
 }
