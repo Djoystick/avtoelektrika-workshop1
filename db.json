@@ -94,7 +94,7 @@
     {
       "id": "habr_972396",
       "title": "Интеграция WDA Sensor для HomeAssistant: для чего она нужна и как ей пользоваться",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/98e/a65/a27/98ea65a27f4e8e9ad6e934c9b0ee6b76.png\" /><p>После выхода статьи <a href=\"https://habr.com/ru/articles/900294\" rel=\"noopener noreferrer nofollow\">\"Погодозависимая автоматика для газового котла своими руками. Технологии умного дома.\"</a> часто получаю вопросы по поводу интеграции <a href=\"https://github.com/sokolovs/wda-sensor\" r",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/98e/a65/a27/98ea65a27f4e8e9ad6e934c9b0ee6b76.png\" /><p>После выхода статьи <a href=\"https://habr.com/ru/articles/900294\" rel=\"noopener noreferrer nofollow\">«Погодозависимая автоматика для&nbsp;газового котла своими руками. Технологии умного дома.»</a> часто получаю вопросы по&nbsp;поводу интеграции <a href=\"https://github.com/sokolovs/wda",
       "link": "https://habr.com/ru/articles/972396/?utm_campaign=972396&utm_source=habrahabr&utm_medium=rss",
       "source": "Habr.com",
       "sourceType": "article",
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-02T12:26:22.085133",
+  "lastUpdated": "2025-12-02T18:20:20.480944",
   "version": "5.2-forums"
 }
