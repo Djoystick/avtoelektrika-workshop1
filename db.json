@@ -16,39 +16,13 @@
     {
       "id": "habr_961484",
       "title": "Как я Альфе новый навык делал и что из этого вышло",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/d72/ec1/ea6/d72ec1ea6bcdcd6e6bba2812beb729b9.jpg\" /><p><em>Привет, Хабр! </em></p><p>Время от времени я возвращаюсь к своему pet-проекту голосового ассистента с кодовым именем «Альфа», который разрабатывался как приватный голосовой интерфейс (а-ля «умная колонка») для управления своим «Умным домом». И в этот раз — так сошлись звезды или п",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/d72/ec1/ea6/d72ec1ea6bcdcd6e6bba2812beb729b9.jpg\" /><p><em>Привет, Хабр! </em></p><p>Время от времени я возвращаюсь к своему pet-проекту голосового ассистента с кодовым именем «Альфа», который разрабатывался как приватный голосовой интерфейс (а-ля «умная колонка») для управления своим «Умным домом». И в этот раз – так сошлись звезды или п",
       "link": "https://habr.com/ru/companies/timeweb/articles/961484/?utm_campaign=961484&utm_source=habrahabr&utm_medium=rss",
       "source": "Habr.com",
       "sourceType": "article",
       "contentType": "📚 Статья",
       "category": "📚 DIY",
       "published": "Wed, 26 Nov 2025 09:05:40 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_970378",
-      "title": "Я почти купил ненужные киловатты: история о том, как Хабр спас мой проект от перерасхода и замерзания",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/82d/d1b/1a6/82dd1b1a68808c476ce03e0495b2ce4c.jpg\" /><p>Привет всем!&nbsp;</p><p>Хочу поблагодарить каждого, кто высказал конструктивную критику в адрес моего предыдущего <a href=\"https://habr.com/ru/articles/960734/\" rel=\"noopener noreferrer nofollow\">поста про расчет электрики для частного дома</a>. Благодаря вам я избежал целой кучи оши",
-      "link": "https://habr.com/ru/articles/970378/?utm_campaign=970378&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Wed, 26 Nov 2025 08:45:51 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_969862",
-      "title": "DIY мультирум: переключаем ТВ между комнатами с помощью смартфона",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/3ee/884/dd5/3ee884dd5ba6f8f682e5b397d86f06d5.png\" /><p>Привет, Хабр! Когда делал ремонт у меня возникла идея сделать систему управления потоками аудио-видео между источниками и устройствами воспроизведения, чтобы, когда жена выгоняет из комнаты, нажать одну кнопку на телефоне и продолжить смотреть суточный марафон 24 часа Ле Мана в другой",
-      "link": "https://habr.com/ru/companies/alfa/articles/969862/?utm_campaign=969862&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Wed, 26 Nov 2025 07:24:04 GMT",
       "image": null,
       "type": "habr"
     },
@@ -101,6 +75,97 @@
       "contentType": "📚 Статья",
       "category": "📚 Электроника",
       "published": "Tue, 25 Nov 2025 06:37:32 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_972398",
+      "title": "Контроль импеданса",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b78/b16/5f6/b78b165f67d734f5f9e8eae274e131e3.jpg\" /><p>Контроль импеданса - это основа проектирования современных высокоскоростных цифровых и высокочастотных аналоговых схем.</p><p><strong>1.</strong>&nbsp;<strong>Что такое контроль импеданса?</strong></p><p><strong>Контроль импеданса (ImpedanceControl)</strong>&nbsp;– это совокупность ме",
+      "link": "https://habr.com/ru/companies/electroconnect/articles/972398/?utm_campaign=972398&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Tue, 02 Dec 2025 10:09:55 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_972396",
+      "title": "Интеграция WDA Sensor для HomeAssistant: для чего она нужна и как ей пользоваться",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/98e/a65/a27/98ea65a27f4e8e9ad6e934c9b0ee6b76.png\" /><p>После выхода статьи <a href=\"https://habr.com/ru/articles/900294\" rel=\"noopener noreferrer nofollow\">\"Погодозависимая автоматика для газового котла своими руками. Технологии умного дома.\"</a> часто получаю вопросы по поводу интеграции <a href=\"https://github.com/sokolovs/wda-sensor\" r",
+      "link": "https://habr.com/ru/articles/972396/?utm_campaign=972396&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Tue, 02 Dec 2025 10:06:20 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_972380",
+      "title": "Финальная точка или новая глава истории: Intel сегодня",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/1d9/a08/721/1d9a0872108d0b9f8180ffeb8402a2cd.png\" /><p>Перед вами третья и заключительная часть саги про борьбу двух великих американских кремниевых компаний — Intel и AMD (<a href=\"https://habr.com/ru/companies/inferit/articles/955906/\" rel=\"noopener noreferrer nofollow\">первую</a> и <a href=\"https://habr.com/ru/companies/inferit/article",
+      "link": "https://habr.com/ru/companies/inferit/articles/972380/?utm_campaign=972380&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Tue, 02 Dec 2025 09:48:43 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_968330",
+      "title": "Веб-камера — глаза робота. Пишу веб-приложение на FastApi для управления DIY-проектом. Часть 6",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/db5/10a/1e5/db510a1e58904b684c21b965da430eb6.png\" /><p>В предыдущей <a href=\"https://habr.com/ru/companies/first/articles/958686/\" rel=\"noopener noreferrer nofollow\">статье</a> я подключил веб-камеру, одноплатный компьютер Orange Pi Zero H+, драйвер двигателей L298N, светодиод (LED) и пауэрбанк к гусеничному шасси. Я написал код для LED, ",
+      "link": "https://habr.com/ru/companies/first/articles/968330/?utm_campaign=968330&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Tue, 02 Dec 2025 09:07:49 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_969738",
+      "title": "ESPVMON — проект открытого универсального ваттметра/логгера",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/000/b93/cd4/000b93cd44a16e1324ba6ecc66b2dd47.jpg\" /><p>Иногда мне требуется этакий логгер напряжения и мощности. Например, построить график разряда аккумулятора, следить за этим аккумулятором в режиме реального времени или собрать исторические данные потребления какого-либо прибора. И вот беда: готовые ваттметры уже давно изобретены, но о",
+      "link": "https://habr.com/ru/companies/ruvds/articles/969738/?utm_campaign=969738&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Tue, 02 Dec 2025 07:01:13 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_969738",
+      "title": "ESPVMON — проект открытого универсального ваттметра/логгера",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/000/b93/cd4/000b93cd44a16e1324ba6ecc66b2dd47.jpg\" /><p>Иногда мне требуется этакий логгер напряжения и мощности. Например, построить график разряда аккумулятора, следить за этим аккумулятором в режиме реального времени или собрать исторические данные потребления какого-либо прибора. И вот беда: готовые ваттметры уже давно изобретены, но о",
+      "link": "https://habr.com/ru/companies/ruvds/articles/969738/?utm_campaign=969738&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Tue, 02 Dec 2025 07:01:13 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_972222",
+      "title": "Сортировка, сварка, тесты: из чего состоит современное производство накопителей энергии Volts",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/630/bcb/efd/630bcbefd6362b0b4bf0d8a7dd244377.jpg\" /><p>Компания Volts выпускает накопители электрической энергии для квартир и домов. Мы уже <a href=\"https://habr.com/ru/companies/wirenboard/articles/743432/\" rel=\"noopener noreferrer nofollow\">бывали на их производственной площадке два года назад</a> — и вот вернулись снова. С первых мину",
+      "link": "https://habr.com/ru/companies/wirenboard/articles/972222/?utm_campaign=972222&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Tue, 02 Dec 2025 07:00:08 GMT",
       "image": null,
       "type": "habr"
     },
@@ -209,19 +274,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_966866",
-      "title": "Домашний поверхностный монтаж: путь к своей мини-фабрике",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/a1e/5e9/e33/a1e5e9e33edbed91ca9f480613c64728.jpg\" /><p><em>Картинка  — Youtube-каналы: </em><a href=\"https://youtu.be/y14pdfjYsyo?si=Fy0Kn3rwBQAx6bj5\" rel=\"noopener noreferrer nofollow\"><em>Tobi</em></a><em>, </em><a href=\"https://youtu.be/RyKvEcgcswg?si=63fxtkqlUOucWdoR\" rel=\"noopener noreferrer nofollow\"><em>StuckAtPrototype</em></a></p",
-      "link": "https://habr.com/ru/companies/ruvds/articles/966866/?utm_campaign=966866&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Thu, 20 Nov 2025 13:01:50 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_971304",
       "title": "Загадка магнитной подвески",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/c34/585/1d1/c345851d173f1baa06a530f592129461.jpg\" /><p>Знаете, что такое мендосинский двигатель? Это демонстрационный солнечный моторчик, левитирующий благодаря магнитам — красивый, простой и по‑настоящему познавательный. Такой мотор можно сделать с помощью самых простых инструментов, поэтому это замечательный проект для любого любителя.<",
@@ -309,19 +361,6 @@
       "contentType": "📚 Статья",
       "category": "📚 Электроника",
       "published": "Mon, 24 Nov 2025 13:24:03 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_968602",
-      "title": "Одноразовые вейпы: как из-за общества потребления тысячи полезных компонентов отправляются в мусорку?",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/d91/d0b/46a/d91d0b46a6a621c7f37ca6f925d7a3d8.jpg\" /><p>Концепция моего блога построена на том, чтобы давать новую жизнь устройствам прошлых лет. Чего мы с вами только не делали: и клиенты современных сервисов для смартфонов из 2010-х писали, и изучали их прошивки с последующей модификацией, и даже ремонтировали гаджеты со свалки, попутно ",
-      "link": "https://habr.com/ru/articles/968602/?utm_campaign=968602&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Mon, 24 Nov 2025 10:45:21 GMT",
       "image": null,
       "type": "habr"
     },
@@ -482,43 +521,18 @@
       "type": "habr"
     },
     {
-      "id": "habr_968926",
-      "title": "От идеи до сертификации: как мы делали устройство, которое должно спасать людей при ДТП",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/022/3fd/485/0223fd485406040c4ef4ca070a399145.jpg\" /><p>Меня зовут Владимир Радченко, я инженер-программист в компании Taiga IoT. В 2022 году мне довелось принять участие в проекте, который оказался значительно сложнее, чем можно было представить по описанию стандарта: разработке Устройства Вызова Экстренных Оперативных Служб (УВЭОС) в фор",
-      "link": "https://habr.com/ru/articles/968926/?utm_campaign=968926&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Fri, 21 Nov 2025 14:16:34 GMT",
+      "id": "forum_Reddit_-_Autos_t3_1pc6qky",
+      "title": "Do modern cars really lack style, or are we just nostalgic?",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>People always say:</p> <p>“They don’t build ’em like they used to”</p> <p>“Every car looks the same”</p> <p>But can we really say that? Cars in the 60s–80s all looked very similar too. The 90s–2010s brought more variety, and today there are more models, trims, and colors than ever.</p> <p>So… are modern cars truly boring, or are we just remembering the past with rose-tinted glasses?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.co",
+      "link": "https://www.reddit.com/r/Autos/comments/1pc6qky/do_modern_cars_really_lack_style_or_are_we_just/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-02T12:05:16+00:00",
       "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_968700",
-      "title": "Сколько воды в бочке?",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/ac5/238/681/ac52386817a8146025391b95600cc599.png\" /><p>В статье рассматривается опыт проектирования и разработки контроллера управления простой водяной системой для дачного дома, приводятся архитектурные решения, принятые в процессе проектирования, описана элементная база, на которой собран контроллер, и кратко приведён итоговый отчёт о р",
-      "link": "https://habr.com/ru/companies/tensor/articles/968700/?utm_campaign=968700&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Fri, 21 Nov 2025 07:45:31 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_968370",
-      "title": "Чтение на выходные: «Как построить машину. Автобиография величайшего конструктора “Формулы-1”» Эдриана Ньюи",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/e2b/848/5c2/e2b8485c2a51699b9475af3609a71f4f.png\" /><p>Книга для фанатов автоспорта —&nbsp;с чертежами, историями и признаниями. Автобиография легендарного конструктора гоночных автомобилей, на которых становились чемпионами.</p><p>Эдриан Ньюи сейчас — управляющий технический партнер&nbsp;Aston Martin&nbsp;и акционер гоночного коллектива.",
-      "link": "https://habr.com/ru/companies/onlinepatent/articles/968370/?utm_campaign=968370&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Fri, 21 Nov 2025 05:24:42 GMT",
-      "image": null,
-      "type": "habr"
+      "type": "forum_rss",
+      "language": "en"
     },
     {
       "id": "forum_Reddit_-_Autos_t3_1pbqs15",
@@ -843,20 +857,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p5ye8f",
-      "title": "When your road trip looks like a video game loading screen",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p5ye8f/when_your_road_trip_looks_like_a_video_game/\"> <img alt=\"When your road trip looks like a video game loading screen\" src=\"https://b.thumbs.redditmedia.com/tLoyj7QJMx0wgrPNWs-XuinFIvs94gdPsM_gERJLvkQ.jpg\" title=\"When your road trip looks like a video game loading screen\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>My brother and I took my Porsche 992 GT3 and McLaren 750S for a long jaunt around California. The photo",
-      "link": "https://www.reddit.com/r/Autos/comments/1p5ye8f/when_your_road_trip_looks_like_a_video_game/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-25T00:39:12+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_q826yg",
       "title": "Additional resources for your automotive needs!",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Thought we would share some of the various automotive-related communities around Reddit, as <a href=\"https://www.reddit.com/r/Autos\">r/Autos</a> is a more general automotive subreddit.</p> <ul> <li><p><a href=\"https://www.reddit.com/r/MechanicAdvice\">/r/MechanicAdvice</a> - &quot;This is a subreddit for asking Mechanical questions pertaining to vehicles, engines, etc.&quot;</p></li> <li><p><a href=\"https://www.reddit.com/r/whatcarshouldIbuy\">/r/whatcarshouldIbuy",
@@ -874,6 +874,9 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_972396",
+        "habr_968330",
+        "habr_969738",
         "habr_971008",
         "habr_969292",
         "habr_971304",
@@ -890,12 +893,13 @@
         "habr_970816",
         "habr_969274",
         "habr_970434",
-        "habr_961484",
-        "habr_970378",
-        "habr_969862",
-        "habr_968602"
+        "habr_961484"
       ],
       "📚 Электроника": [
+        "habr_972398",
+        "habr_972380",
+        "habr_969738",
+        "habr_972222",
         "habr_969292",
         "habr_971344",
         "habr_908828",
@@ -911,14 +915,11 @@
         "habr_968766",
         "habr_969330",
         "habr_968730",
-        "habr_967782",
-        "habr_968926",
-        "habr_968700",
-        "habr_968370",
-        "habr_966866"
+        "habr_967782"
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
@@ -941,12 +942,14 @@
         "forum_Reddit_-_Autos_t3_1p6h47n",
         "forum_Reddit_-_Autos_t3_1p7m9n0",
         "forum_Reddit_-_Autos_t3_1p7i49n",
-        "forum_Reddit_-_Autos_t3_1p7bse6",
-        "forum_Reddit_-_Autos_t3_1p5ye8f"
+        "forum_Reddit_-_Autos_t3_1p7bse6"
       ]
     },
     "sources": {
       "Habr.com": [
+        "habr_972396",
+        "habr_968330",
+        "habr_969738",
         "habr_971008",
         "habr_969292",
         "habr_971304",
@@ -964,9 +967,10 @@
         "habr_969274",
         "habr_970434",
         "habr_961484",
-        "habr_970378",
-        "habr_969862",
-        "habr_968602",
+        "habr_972398",
+        "habr_972380",
+        "habr_969738",
+        "habr_972222",
         "habr_969292",
         "habr_971344",
         "habr_908828",
@@ -982,14 +986,11 @@
         "habr_968766",
         "habr_969330",
         "habr_968730",
-        "habr_967782",
-        "habr_968926",
-        "habr_968700",
-        "habr_968370",
-        "habr_966866"
+        "habr_967782"
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
@@ -1012,12 +1013,14 @@
         "forum_Reddit_-_Autos_t3_1p6h47n",
         "forum_Reddit_-_Autos_t3_1p7m9n0",
         "forum_Reddit_-_Autos_t3_1p7i49n",
-        "forum_Reddit_-_Autos_t3_1p7bse6",
-        "forum_Reddit_-_Autos_t3_1p5ye8f"
+        "forum_Reddit_-_Autos_t3_1p7bse6"
       ]
     },
     "types": {
       "habr": [
+        "habr_972396",
+        "habr_968330",
+        "habr_969738",
         "habr_971008",
         "habr_969292",
         "habr_971304",
@@ -1035,9 +1038,10 @@
         "habr_969274",
         "habr_970434",
         "habr_961484",
-        "habr_970378",
-        "habr_969862",
-        "habr_968602",
+        "habr_972398",
+        "habr_972380",
+        "habr_969738",
+        "habr_972222",
         "habr_969292",
         "habr_971344",
         "habr_908828",
@@ -1053,14 +1057,11 @@
         "habr_968766",
         "habr_969330",
         "habr_968730",
-        "habr_967782",
-        "habr_968926",
-        "habr_968700",
-        "habr_968370",
-        "habr_966866"
+        "habr_967782"
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
@@ -1083,8 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p6h47n",
         "forum_Reddit_-_Autos_t3_1p7m9n0",
         "forum_Reddit_-_Autos_t3_1p7i49n",
-        "forum_Reddit_-_Autos_t3_1p7bse6",
-        "forum_Reddit_-_Autos_t3_1p5ye8f"
+        "forum_Reddit_-_Autos_t3_1p7bse6"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-02T06:21:04.396536",
+  "lastUpdated": "2025-12-02T12:26:22.085133",
   "version": "5.2-forums"
 }
