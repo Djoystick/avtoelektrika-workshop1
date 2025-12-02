@@ -521,6 +521,20 @@
       "type": "habr"
     },
     {
+      "id": "forum_Reddit_-_Autos_t3_1pbqs15",
+      "title": "Sunroof Leak w/ Growth in '07 Chevy Equinox",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>This isn't my car, it's my dad's, and the situation is basically what the title says (plus more). I'm an amateur detailer making my way up to doing it for a living sooner than later, and I'm now the established detailer for family and friends. I've done some nasty cars that I've given a neat 180 but I have NO IDEA what my dad expects from this situation...</p> <p>I'll try to keep it short, sunroof has a leak and now the car is moldy as hell. And I mean steering ",
+      "link": "https://www.reddit.com/r/Autos/comments/1pbqs15/sunroof_leak_w_growth_in_07_chevy_equinox/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-01T22:20:26+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
       "id": "forum_Reddit_-_Autos_t3_1pb9lkt",
       "title": "What do you think was the greatest era of cars — and why?",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Every generation swears their era was peak.</p> <p>Some say the 70s–80s for the raw vibes.</p> <p>Others swear the 90s–2000s were the perfect balance of analog feel + modern reliability.</p> <p>Then you’ve got people arguing today is the best era thanks to power, safety, and efficiency.</p> <p>For you, what decade nailed it?</p> <p>And what makes that era unbeatable the design, the tech, the engines, the soul?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a",
@@ -829,20 +843,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p60339",
-      "title": "My gt2rs that arrived 2 days ago with a full fabspeed.",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p60339/my_gt2rs_that_arrived_2_days_ago_with_a_full/\"> <img alt=\"My gt2rs that arrived 2 days ago with a full fabspeed.\" src=\"https://a.thumbs.redditmedia.com/yzBfQ0iNI89HhBEZAVycXCpqKzGqdZT5efUQJdjVhk8.jpg\" title=\"My gt2rs that arrived 2 days ago with a full fabspeed.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>this is my first rodeo with a RS porsche, and i got a full fabspeed exhaust on it before shipping it here, hon",
-      "link": "https://www.reddit.com/r/Autos/comments/1p60339/my_gt2rs_that_arrived_2_days_ago_with_a_full/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-25T01:56:57+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p5ye8f",
       "title": "When your road trip looks like a video game loading screen",
       "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p5ye8f/when_your_road_trip_looks_like_a_video_game/\"> <img alt=\"When your road trip looks like a video game loading screen\" src=\"https://b.thumbs.redditmedia.com/tLoyj7QJMx0wgrPNWs-XuinFIvs94gdPsM_gERJLvkQ.jpg\" title=\"When your road trip looks like a video game loading screen\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>My brother and I took my Porsche 992 GT3 and McLaren 750S for a long jaunt around California. The photo",
@@ -920,6 +920,7 @@
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
+        "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
@@ -941,8 +942,7 @@
         "forum_Reddit_-_Autos_t3_1p7m9n0",
         "forum_Reddit_-_Autos_t3_1p7i49n",
         "forum_Reddit_-_Autos_t3_1p7bse6",
-        "forum_Reddit_-_Autos_t3_1p5ye8f",
-        "forum_Reddit_-_Autos_t3_1p60339"
+        "forum_Reddit_-_Autos_t3_1p5ye8f"
       ]
     },
     "sources": {
@@ -991,6 +991,7 @@
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
+        "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
@@ -1012,8 +1013,7 @@
         "forum_Reddit_-_Autos_t3_1p7m9n0",
         "forum_Reddit_-_Autos_t3_1p7i49n",
         "forum_Reddit_-_Autos_t3_1p7bse6",
-        "forum_Reddit_-_Autos_t3_1p5ye8f",
-        "forum_Reddit_-_Autos_t3_1p60339"
+        "forum_Reddit_-_Autos_t3_1p5ye8f"
       ]
     },
     "types": {
@@ -1062,6 +1062,7 @@
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
+        "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
         "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
@@ -1083,8 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p7m9n0",
         "forum_Reddit_-_Autos_t3_1p7i49n",
         "forum_Reddit_-_Autos_t3_1p7bse6",
-        "forum_Reddit_-_Autos_t3_1p5ye8f",
-        "forum_Reddit_-_Autos_t3_1p60339"
+        "forum_Reddit_-_Autos_t3_1p5ye8f"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-01T18:20:40.138795",
+  "lastUpdated": "2025-12-02T00:59:02.068233",
   "version": "5.2-forums"
 }
