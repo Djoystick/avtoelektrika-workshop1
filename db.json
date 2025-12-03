@@ -521,6 +521,20 @@
       "type": "habr"
     },
     {
+      "id": "forum_Reddit_-_Autos_t3_1pchksu",
+      "title": "Aston Martin Lagonda concept 2013 Geneva motor show",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pchksu/aston_martin_lagonda_concept_2013_geneva_motor/\"> <img alt=\"Aston Martin Lagonda concept 2013 Geneva motor show\" src=\"https://preview.redd.it/mu1ykpcybu4g1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ffcad7c0ad6bf89f8b1b38ebd9e5c9bc0c3ffa59\" title=\"Aston Martin Lagonda concept 2013 Geneva motor show\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I really liked this design. Too bad that Aston Martin never made s",
+      "link": "https://www.reddit.com/r/Autos/comments/1pchksu/aston_martin_lagonda_concept_2013_geneva_motor/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-02T19:16:12+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
       "id": "forum_Reddit_-_Autos_t3_1pc6qky",
       "title": "Do modern cars really lack style, or are we just nostalgic?",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>People always say:</p> <p>“They don’t build ’em like they used to”</p> <p>“Every car looks the same”</p> <p>But can we really say that? Cars in the 60s–80s all looked very similar too. The 90s–2010s brought more variety, and today there are more models, trims, and colors than ever.</p> <p>So… are modern cars truly boring, or are we just remembering the past with rose-tinted glasses?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.co",
@@ -815,20 +829,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p7bse6",
-      "title": "Fahrrad auf Parkplatz. Legal??",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p7bse6/fahrrad_auf_parkplatz_legal/\"> <img alt=\"Fahrrad auf Parkplatz. Legal??\" src=\"https://preview.redd.it/3pif54fulm3g1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=d133c316333681310af5bca75b8e7347172b6aec\" title=\"Fahrrad auf Parkplatz. Legal??\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hab das heute beim parken gesehen.</p> <p>Weiß jemand ob der das darf</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href",
-      "link": "https://www.reddit.com/r/Autos/comments/1p7bse6/fahrrad_auf_parkplatz_legal/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-26T16:13:13+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p78xty",
       "title": "This is the back end of a one-of-one Porsche 911 rebodied as a touring car by Bertone.",
       "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p78xty/this_is_the_back_end_of_a_oneofone_porsche_911/\"> <img alt=\"This is the back end of a one-of-one Porsche 911 rebodied as a touring car by Bertone.\" src=\"https://preview.redd.it/pyp1isps1m3g1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=5ff296aa087a71a7e0ac077e5e1d8ef46630c7fc\" title=\"This is the back end of a one-of-one Porsche 911 rebodied as a touring car by Bertone.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\">",
@@ -919,6 +919,7 @@
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
@@ -941,8 +942,7 @@
         "forum_Reddit_-_Autos_t3_1p78xty",
         "forum_Reddit_-_Autos_t3_1p6h47n",
         "forum_Reddit_-_Autos_t3_1p7m9n0",
-        "forum_Reddit_-_Autos_t3_1p7i49n",
-        "forum_Reddit_-_Autos_t3_1p7bse6"
+        "forum_Reddit_-_Autos_t3_1p7i49n"
       ]
     },
     "sources": {
@@ -990,6 +990,7 @@
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
@@ -1012,8 +1013,7 @@
         "forum_Reddit_-_Autos_t3_1p78xty",
         "forum_Reddit_-_Autos_t3_1p6h47n",
         "forum_Reddit_-_Autos_t3_1p7m9n0",
-        "forum_Reddit_-_Autos_t3_1p7i49n",
-        "forum_Reddit_-_Autos_t3_1p7bse6"
+        "forum_Reddit_-_Autos_t3_1p7i49n"
       ]
     },
     "types": {
@@ -1061,6 +1061,7 @@
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
@@ -1083,8 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p78xty",
         "forum_Reddit_-_Autos_t3_1p6h47n",
         "forum_Reddit_-_Autos_t3_1p7m9n0",
-        "forum_Reddit_-_Autos_t3_1p7i49n",
-        "forum_Reddit_-_Autos_t3_1p7bse6"
+        "forum_Reddit_-_Autos_t3_1p7i49n"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-02T18:20:20.480944",
+  "lastUpdated": "2025-12-03T00:58:39.211371",
   "version": "5.2-forums"
 }
