@@ -14,6 +14,19 @@
       "type": "habr"
     },
     {
+      "id": "habr_972952",
+      "title": "Переделка UPS на  LiFePO4, или мой бег по граблям",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/653/ede/ad3/653edead39d8f575ee356de9599260fa.png\" /><p>Всё началось с&nbsp;писка UPS, сообщающего, что&nbsp;батарея&nbsp;— всё. Как&nbsp;человек продвинутый, я решил, что&nbsp;нужно переходить на&nbsp;LiFePO₄&nbsp;— это&nbsp;же модно, современно:‑) Не&nbsp;долго думая (признаю, есть грех&nbsp;— сначала купить, а&nbsp;потом разобраться в&n",
+      "link": "https://habr.com/ru/articles/972952/?utm_campaign=972952&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Wed, 03 Dec 2025 15:10:39 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_972872",
       "title": "Почему ОЗУ так подорожала в конце 2025-го и стоит ли сейчас апгрейдиться",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/39d/c06/4fb/39dc064fb8c2c5fc4b68ef19723e8f0e.webp\" /><p>Осенью 2025-го многие, как и я, открыли любимый магазин железа, чтобы «по-быстрому взять ещё 32–64 ГБ DDR5 под игры, IDE и пару Docker-контейнеров» — и закрыли вкладку с лёгким культурным шоком. Память, которая летом стоила «адекватных» денег, внезапно стала стоить почти как видеокар",
@@ -274,19 +287,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_970816",
-      "title": "Выгоняем китайцев из розетки: переезд умного дома на Zigbee2MQTT и Home Assistant",
-      "summary": "<p>Все началось с того, что я хотел включить свет в туалете, а он включился через три секунды.</p><p>У меня стоял шлюз Xiaomi, датчик движения Aqara и какая-то ноунейм релешка. Схема работала так: датчик видит меня -&gt; сигнал летит в Китай на сервер Xiaomi -&gt; там скрипт думает -&gt; сигнал летит обратно ко мне в квартиру -&gt; свет включается.</p><p>В тот момент я понял две вещи.</p><p>Первая",
-      "link": "https://habr.com/ru/articles/970816/?utm_campaign=970816&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Thu, 27 Nov 2025 09:15:57 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_971304",
       "title": "Загадка магнитной подвески",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/c34/585/1d1/c345851d173f1baa06a530f592129461.jpg\" /><p>Знаете, что такое мендосинский двигатель? Это демонстрационный солнечный моторчик, левитирующий благодаря магнитам — красивый, простой и по‑настоящему познавательный. Такой мотор можно сделать с помощью самых простых инструментов, поэтому это замечательный проект для любого любителя.<",
@@ -519,6 +519,34 @@
       "published": "Fri, 28 Nov 2025 07:27:15 GMT",
       "image": null,
       "type": "habr"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pdaymp",
+      "title": "Opala 1977 - €32900",
+      "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BrazilianClassicCars\"> /u/BrazilianClassicCars </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments/1pdaymp/opala_1977_32900/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Autos/comments/1pdaymp/opala_1977_32900/\">[comments]</a></span>",
+      "link": "https://www.reddit.com/r/Autos/comments/1pdaymp/opala_1977_32900/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-03T17:43:54+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pcx7oj",
+      "title": "First Lamborghini In Afghanistan",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pcx7oj/first_lamborghini_in_afghanistan/\"> <img alt=\"First Lamborghini In Afghanistan\" src=\"https://b.thumbs.redditmedia.com/_URBUfyioso3dC9b507lEwtUfs39_v0XUQg8RulBcik.jpg\" title=\"First Lamborghini In Afghanistan\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/gf9m3swyqx4g1.jpg?width=768&amp;format=pjpg&amp;auto=webp&amp;s=4658cd3d8371af2a0bc25d34c714aaca05d09d9f\">https://preview.redd.it/gf9",
+      "link": "https://www.reddit.com/r/Autos/comments/1pcx7oj/first_lamborghini_in_afghanistan/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-03T06:46:39+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
     },
     {
       "id": "forum_Reddit_-_Autos_t3_1pct273",
@@ -801,20 +829,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p7m9n0",
-      "title": "Can someone explain in detail how selling car at dealership works in US?",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Can someone help me understand how does selling car to dealership work? At what point does the ownership change from me to them? Is there a great area period? When should I cancel my insurance? How does the payment work? Overall how reliable is it to sell car to dealership in US?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/AsleepInBay\"> /u/AsleepInBay </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments/1p",
-      "link": "https://www.reddit.com/r/Autos/comments/1p7m9n0/can_someone_explain_in_detail_how_selling_car_at/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-26T22:58:48+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p7ljxv",
       "title": "My Grandpa’s Dying Wish Is to Find His Old ‘46 Chevy Coupe",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Please remove if not allowed or if there are any suggestions of other subreddits this might be better suited for I would appreciate the recommendation.</p> <p>So like the title says I’m trying to locate my grandpa’s (89m) old ‘1946 Chevy coupe. Every time I come to visit him he always mentioned this car and asks me or who ever he is telling the story to to help him find it. It was a beloved car by him and when he went to Germany after WWII my grandma sold it in ",
@@ -843,20 +857,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p6h47n",
-      "title": "The infamous Subaru 360 was the only Kei car to have ever been sold in the USA. It had a 37-second 0-50 time, 18 horsepower, and \"displayed shockingly deficient structural integrity\".",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p6h47n/the_infamous_subaru_360_was_the_only_kei_car_to/\"> <img alt=\"The infamous Subaru 360 was the only Kei car to have ever been sold in the USA. It had a 37-second 0-50 time, 18 horsepower, and &quot;displayed shockingly deficient structural integrity&quot;.\" src=\"https://b.thumbs.redditmedia.com/cwWg2QCO0yKVMfBQ2FlTIsmoFjIGK2apIVHxIf3YdoA.jpg\" title=\"The infamous Subaru 360 was the only Kei car to have ever been sold in the U",
-      "link": "https://www.reddit.com/r/Autos/comments/1p6h47n/the_infamous_subaru_360_was_the_only_kei_car_to/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-25T16:34:08+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_q826yg",
       "title": "Additional resources for your automotive needs!",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Thought we would share some of the various automotive-related communities around Reddit, as <a href=\"https://www.reddit.com/r/Autos\">r/Autos</a> is a more general automotive subreddit.</p> <ul> <li><p><a href=\"https://www.reddit.com/r/MechanicAdvice\">/r/MechanicAdvice</a> - &quot;This is a subreddit for asking Mechanical questions pertaining to vehicles, engines, etc.&quot;</p></li> <li><p><a href=\"https://www.reddit.com/r/whatcarshouldIbuy\">/r/whatcarshouldIbuy",
@@ -874,6 +874,7 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_972952",
         "habr_963400",
         "habr_971058",
         "habr_972592",
@@ -892,8 +893,7 @@
         "habr_970384",
         "habr_970998",
         "habr_942336",
-        "habr_970860",
-        "habr_970816"
+        "habr_970860"
       ],
       "📚 Электроника": [
         "habr_972872",
@@ -920,8 +920,10 @@
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pct273",
+        "forum_Reddit_-_Autos_t3_1pdaymp",
         "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
+        "forum_Reddit_-_Autos_t3_1pcx7oj",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
@@ -940,13 +942,12 @@
         "forum_Reddit_-_Autos_t3_1p8uqrn",
         "forum_Reddit_-_Autos_t3_1p8ax73",
         "forum_Reddit_-_Autos_t3_1p7ljxv",
-        "forum_Reddit_-_Autos_t3_1p78xty",
-        "forum_Reddit_-_Autos_t3_1p6h47n",
-        "forum_Reddit_-_Autos_t3_1p7m9n0"
+        "forum_Reddit_-_Autos_t3_1p78xty"
       ]
     },
     "sources": {
       "Habr.com": [
+        "habr_972952",
         "habr_963400",
         "habr_971058",
         "habr_972592",
@@ -966,7 +967,6 @@
         "habr_970998",
         "habr_942336",
         "habr_970860",
-        "habr_970816",
         "habr_972872",
         "habr_972398",
         "habr_972380",
@@ -991,8 +991,10 @@
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pct273",
+        "forum_Reddit_-_Autos_t3_1pdaymp",
         "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
+        "forum_Reddit_-_Autos_t3_1pcx7oj",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
@@ -1011,13 +1013,12 @@
         "forum_Reddit_-_Autos_t3_1p8uqrn",
         "forum_Reddit_-_Autos_t3_1p8ax73",
         "forum_Reddit_-_Autos_t3_1p7ljxv",
-        "forum_Reddit_-_Autos_t3_1p78xty",
-        "forum_Reddit_-_Autos_t3_1p6h47n",
-        "forum_Reddit_-_Autos_t3_1p7m9n0"
+        "forum_Reddit_-_Autos_t3_1p78xty"
       ]
     },
     "types": {
       "habr": [
+        "habr_972952",
         "habr_963400",
         "habr_971058",
         "habr_972592",
@@ -1037,7 +1038,6 @@
         "habr_970998",
         "habr_942336",
         "habr_970860",
-        "habr_970816",
         "habr_972872",
         "habr_972398",
         "habr_972380",
@@ -1062,8 +1062,10 @@
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pct273",
+        "forum_Reddit_-_Autos_t3_1pdaymp",
         "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
+        "forum_Reddit_-_Autos_t3_1pcx7oj",
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
@@ -1082,9 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p8uqrn",
         "forum_Reddit_-_Autos_t3_1p8ax73",
         "forum_Reddit_-_Autos_t3_1p7ljxv",
-        "forum_Reddit_-_Autos_t3_1p78xty",
-        "forum_Reddit_-_Autos_t3_1p6h47n",
-        "forum_Reddit_-_Autos_t3_1p7m9n0"
+        "forum_Reddit_-_Autos_t3_1p78xty"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-03T12:25:49.972400",
+  "lastUpdated": "2025-12-03T18:20:00.571874",
   "version": "5.2-forums"
 }
