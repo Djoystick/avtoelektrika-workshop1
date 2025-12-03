@@ -1,6 +1,45 @@
 {
   "articles": [
     {
+      "id": "habr_963400",
+      "title": "Собираем Linux, который весит меньше, чем мем с котиком, ну или почти…",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/9a8/d95/bf8/9a8d95bf8d71fadcb2d665a26a9b5e5a.png\" /><p>Мне всегда было интересно, насколько минимальным может быть Linux.</p><p>Три года назад я уже публиковал <a href=\"https://habr.com/ru/companies/ruvds/articles/702570/\" rel=\"noopener noreferrer nofollow\">статью</a>, но понимание темы меняется. Сейчас хочу освежить знания и поделиться и",
+      "link": "https://habr.com/ru/companies/ruvds/articles/963400/?utm_campaign=963400&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Wed, 03 Dec 2025 09:01:00 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_971058",
+      "title": "Колхозим новую помпу для воды",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/5a7/78e/db4/5a778edb448eaf286b86f9dfb6df631c.jpg\" /><p>Приветствую, Хабр! </p><p>Накрылась у меня тут очередная механическая помпа для накачивания воды из бутылей по 19 литров. А поскольку это далеко не первый подобный случай за последние 16 лет, я решил, что <s>хватит это терпеть</s> пора бы перейти на полу-автоматизацию данного процесса",
+      "link": "https://habr.com/ru/companies/selectel/articles/971058/?utm_campaign=971058&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Wed, 03 Dec 2025 07:01:13 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_972592",
+      "title": "Интеграция ectoControl Adapter для HomeAssistant делает из обычного газового котла «умный»",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/ee8/1e6/3dc/ee81e63dc4f5d945e1ae50deef98575c.png\" /><p>Ранее, в&nbsp;статье <a href=\"https://habr.com/ru/articles/900294\" rel=\"noopener noreferrer nofollow\">«Погодозависимая автоматика для&nbsp;газового котла своими руками. Технологии умного дома»</a>,&nbsp;было описано как&nbsp;я подключал <a href=\"https://ectocontrol.ru/heating-control/",
+      "link": "https://habr.com/ru/articles/972592/?utm_campaign=972592&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Wed, 03 Dec 2025 07:00:10 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_972396",
       "title": "Интеграция WDA Sensor для HomeAssistant: для чего она нужна и как ей пользоваться",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/98e/a65/a27/98ea65a27f4e8e9ad6e934c9b0ee6b76.png\" /><p>После выхода статьи <a href=\"https://habr.com/ru/articles/900294\" rel=\"noopener noreferrer nofollow\">«Погодозависимая автоматика для&nbsp;газового котла своими руками. Технологии умного дома.»</a> часто получаю вопросы по&nbsp;поводу интеграции <a href=\"https://github.com/sokolovs/wda",
@@ -222,41 +261,15 @@
       "type": "habr"
     },
     {
-      "id": "habr_969274",
-      "title": "Повышение прочности FDM-печати",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/2e3/ec3/0be/2e3ec30bef49b6e1091b211e88e16b6a.jpg\" /><p><em>Картинка: </em><a href=\"https://www.freepik.com/free-ai-image/view-brilliant-cartoon-diamond_273786382.htm#fromView=search&amp;page=2&amp;position=24&amp;uuid=957d20dc-2639-4441-8ad2-936c82a346f5&amp;query=tough\" rel=\"noopener noreferrer nofollow\"><em>freepik.com</em></a></p><p>Чт",
-      "link": "https://habr.com/ru/companies/ruvds/articles/969274/?utm_campaign=969274&utm_source=habrahabr&utm_medium=rss",
+      "id": "habr_972872",
+      "title": "Почему ОЗУ так подорожала в конце 2025-го и стоит ли сейчас апгрейдиться",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/39d/c06/4fb/39dc064fb8c2c5fc4b68ef19723e8f0e.webp\" /><p>Осенью 2025-го многие, как и я, открыли любимый магазин железа, чтобы «по-быстрому взять ещё 32–64 ГБ DDR5 под игры, IDE и пару Docker-контейнеров» — и закрыли вкладку с лёгким культурным шоком. Память, которая летом стоила «адекватных» денег, внезапно стала стоить почти как видеокар",
+      "link": "https://habr.com/ru/articles/972872/?utm_campaign=972872&utm_source=habrahabr&utm_medium=rss",
       "source": "Habr.com",
       "sourceType": "article",
       "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Thu, 27 Nov 2025 09:01:54 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_970434",
-      "title": "Разрабатываем голосового ассистента на Rockchip. Часть 1",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b28/267/a7c/b28267a7c03280d0ef88223444761215.jpeg\" /><p>Всем привет! Я Виктор Загускин, руководитель отдела голосового ML в MWS AI. Мы разрабатываем продукт формата «спичкит» — распознавание и синтез речи, анализ ее содержания. Наши клиенты используют эту технологию как кубики для создания прикладных продуктов. Чтобы лучше прочувствовать ",
-      "link": "https://habr.com/ru/companies/ru_mts/articles/970434/?utm_campaign=970434&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Thu, 27 Nov 2025 08:03:20 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_961484",
-      "title": "Как я Альфе новый навык делал и что из этого вышло",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/d72/ec1/ea6/d72ec1ea6bcdcd6e6bba2812beb729b9.jpg\" /><p><em>Привет, Хабр! </em></p><p>Время от времени я возвращаюсь к своему pet-проекту голосового ассистента с кодовым именем «Альфа», который разрабатывался как приватный голосовой интерфейс (а-ля «умная колонка») для управления своим «Умным домом». И в этот раз – так сошлись звезды или п",
-      "link": "https://habr.com/ru/companies/timeweb/articles/961484/?utm_campaign=961484&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Wed, 26 Nov 2025 09:05:40 GMT",
+      "category": "📚 Электроника",
+      "published": "Wed, 03 Dec 2025 12:04:39 GMT",
       "image": null,
       "type": "habr"
     },
@@ -506,21 +519,8 @@
       "published": "Sat, 22 Nov 2025 08:00:46 GMT",
       "image": null,
       "type": "habr"
-    },
-    {
-      "id": "habr_967782",
-      "title": "Немного об электродвигателях",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/554/86d/27b/55486d27bdabf81463a6c702fad8bf01.jpg\" /><p>Все, кто более-менее знаком с электротехникой, знают, насколько это консервативная сфера: большинство законов, принципов (и даже устройств!) были разработаны чуть ли не сто, а то и более лет назад!&nbsp;</p><p>Тем не менее, иногда даже в такой консервативной сфере случаются серьёзные ",
-      "link": "https://habr.com/ru/companies/beget/articles/967782/?utm_campaign=967782&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Fri, 21 Nov 2025 16:05:52 GMT",
-      "image": null,
-      "type": "habr"
     }
   ],
   "count": 40,
-  "lastUpdated": "2025-12-03T06:20:21.868335"
+  "lastUpdated": "2025-12-03T12:25:26.728250"
 }
