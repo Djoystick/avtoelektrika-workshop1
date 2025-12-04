@@ -14,6 +14,19 @@
       "type": "habr"
     },
     {
+      "id": "habr_972212",
+      "title": "USB Power Box – устройство управления 4-канальным модулем реле с помощью USB GPIO Extender из Роутер ОС Микротик",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/e2b/ef3/e1b/e2bef3e1bcf1aedc05ebec09a150c645.jpg\" /><p>USB Power Box для Микротик - USB-управляемый роутером блок реле в корпусе:</p><p>• два управляемых выхода питания</p><p>• управление из Микротик Router OS</p><p>• независимость от \"переполюсовки\" фазы и нуля</p><p>• пока ручная сборка!</p> <a href=\"https://habr.com/ru/articles/972212/",
+      "link": "https://habr.com/ru/articles/972212/?utm_campaign=972212&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Wed, 03 Dec 2025 18:54:07 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_972952",
       "title": "Переделка UPS на  LiFePO4, или мой бег по граблям",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/653/ede/ad3/653edead39d8f575ee356de9599260fa.png\" /><p>Всё началось с&nbsp;писка UPS, сообщающего, что&nbsp;батарея&nbsp;— всё. Как&nbsp;человек продвинутый, я решил, что&nbsp;нужно переходить на&nbsp;LiFePO₄&nbsp;— это&nbsp;же модно, современно:‑) Не&nbsp;долго думая (признаю, есть грех&nbsp;— сначала купить, а&nbsp;потом разобраться в&n",
@@ -339,19 +352,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_968730",
-      "title": "Loongson 3D7000: новый китайский процессор с большим потенциалом. Что это за чип?",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/7a8/469/f32/7a8469f328a5b4eceedbc0cd3162c607.jpg\" /><p>В ноябре 2025 года Loongson <a href=\"https://wccftech.com/loongson-32-core-chiplets-next-gen-3d7000-cpus-sub-10nm-process-2027-release/\" rel=\"noopener noreferrer nofollow\">анонсировала</a> 3D7000 — свой новый производительный чип. У него есть несколько интересных особенностей. Так, эт",
-      "link": "https://habr.com/ru/companies/selectel/articles/968730/?utm_campaign=968730&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Sat, 22 Nov 2025 08:00:46 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_969476",
       "title": "Верификация цифровых схем. Маршрут функциональной верификации",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b39/482/823/b39482823910290276b9ee24b35b5101.png\" /><p>Данная статья — это своего рода продолжение <strong><a href=\"https://habr.com/en/post/481542/\" rel=\"noopener noreferrer nofollow\">Верификация цифровых схем. Обзор.</a></strong>. В ней хотелось показать некоторые типы тестовых окружений для функциональной верификации и особенности рабо",
@@ -521,15 +521,15 @@
       "type": "habr"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1pdaymp",
-      "title": "Opala 1977 - €32900",
-      "summary": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BrazilianClassicCars\"> /u/BrazilianClassicCars </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments/1pdaymp/opala_1977_32900/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Autos/comments/1pdaymp/opala_1977_32900/\">[comments]</a></span>",
-      "link": "https://www.reddit.com/r/Autos/comments/1pdaymp/opala_1977_32900/",
+      "id": "forum_Reddit_-_Autos_t3_1pdlyae",
+      "title": "AMA - I work with auto executives at every OEM in every country.",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Feel like folks might find this interesting - I work for a very niche SaaS company that’s on the bleeding edge of data/intelligence/AI for VP+ roles at every automotive OEM. Average contract value is $1m+/year. </p> <p>I hear EVERYTHING about ANYTHING. What do you want to know? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/chickeymickey\"> /u/chickeymickey </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments",
+      "link": "https://www.reddit.com/r/Autos/comments/1pdlyae/ama_i_work_with_auto_executives_at_every_oem_in/",
       "source": "Reddit - Autos",
       "sourceType": "forum",
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
-      "published": "2025-12-03T17:43:54+00:00",
+      "published": "2025-12-04T00:48:57+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -896,6 +896,7 @@
         "habr_970860"
       ],
       "📚 Электроника": [
+        "habr_972212",
         "habr_972872",
         "habr_972398",
         "habr_972380",
@@ -914,13 +915,12 @@
         "habr_969728",
         "habr_968602",
         "habr_968766",
-        "habr_969330",
-        "habr_968730"
+        "habr_969330"
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pct273",
-        "forum_Reddit_-_Autos_t3_1pdaymp",
+        "forum_Reddit_-_Autos_t3_1pdlyae",
         "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pcx7oj",
@@ -967,6 +967,7 @@
         "habr_970998",
         "habr_942336",
         "habr_970860",
+        "habr_972212",
         "habr_972872",
         "habr_972398",
         "habr_972380",
@@ -985,13 +986,12 @@
         "habr_969728",
         "habr_968602",
         "habr_968766",
-        "habr_969330",
-        "habr_968730"
+        "habr_969330"
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pct273",
-        "forum_Reddit_-_Autos_t3_1pdaymp",
+        "forum_Reddit_-_Autos_t3_1pdlyae",
         "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pcx7oj",
@@ -1038,6 +1038,7 @@
         "habr_970998",
         "habr_942336",
         "habr_970860",
+        "habr_972212",
         "habr_972872",
         "habr_972398",
         "habr_972380",
@@ -1056,13 +1057,12 @@
         "habr_969728",
         "habr_968602",
         "habr_968766",
-        "habr_969330",
-        "habr_968730"
+        "habr_969330"
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pct273",
-        "forum_Reddit_-_Autos_t3_1pdaymp",
+        "forum_Reddit_-_Autos_t3_1pdlyae",
         "forum_Reddit_-_Autos_t3_1pchksu",
         "forum_Reddit_-_Autos_t3_1pc6qky",
         "forum_Reddit_-_Autos_t3_1pcx7oj",
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-03T18:20:00.571874",
+  "lastUpdated": "2025-12-04T00:59:06.314348",
   "version": "5.2-forums"
 }
