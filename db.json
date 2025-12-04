@@ -300,6 +300,19 @@
       "type": "habr"
     },
     {
+      "id": "habr_972914",
+      "title": "Разбираемся, что слышит умная колонка. О нелинейных искажениях и метрике FRR",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/688/fe3/9fe/688fe39feed98596c8a68ccfa11f298c.jpg\" /><p>Салют, Хабр!&nbsp;&nbsp;</p><p>Меня зовут Александр. Я DSP-инженер, то есть специалист по цифровой обработке сигналов, и в SberDevices занимаюсь VQE — Voice Quality Enhancement, блоком улучшения качества звука. Мы разработали методику, которая позволяет прогнозировать качество распозн",
+      "link": "https://habr.com/ru/companies/sberdevices/articles/972914/?utm_campaign=972914&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 Электроника",
+      "published": "Thu, 04 Dec 2025 09:30:32 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_971304",
       "title": "Загадка магнитной подвески",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/c34/585/1d1/c345851d173f1baa06a530f592129461.jpg\" /><p>Знаете, что такое мендосинский двигатель? Это демонстрационный солнечный моторчик, левитирующий благодаря магнитам — красивый, простой и по‑настоящему познавательный. Такой мотор можно сделать с помощью самых простых инструментов, поэтому это замечательный проект для любого любителя.<",
@@ -335,19 +348,6 @@
       "contentType": "📚 Статья",
       "category": "📚 DIY",
       "published": "Sun, 30 Nov 2025 10:52:29 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_969330",
-      "title": "Комплексная схема процесса разработки физического продукта",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/0b8/c5b/890/0b8c5b8900d0905bf50eb54fd0644135.jpg\" /><p>Всем привет! Существует множество фреймворков для управления IT SaaS продуктами, по сравнению с которыми - физический продукт в инфополе обделен вниманием, что у нас, что за рубежом, но в меньшей мере. Поэтому я выделил немного времени, чтобы описать общий процесс продукта на основе п",
-      "link": "https://habr.com/ru/articles/969330/?utm_campaign=969330&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 Электроника",
-      "published": "Sun, 23 Nov 2025 11:47:27 GMT",
       "image": null,
       "type": "habr"
     },
@@ -896,6 +896,7 @@
         "habr_970860"
       ],
       "📚 Электроника": [
+        "habr_972914",
         "habr_972212",
         "habr_972872",
         "habr_972398",
@@ -914,8 +915,7 @@
         "habr_969476",
         "habr_969728",
         "habr_968602",
-        "habr_968766",
-        "habr_969330"
+        "habr_968766"
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
@@ -933,8 +933,8 @@
         "forum_Reddit_-_Autos_t3_1pavxvh",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
-        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p9yic6",
+        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
@@ -967,6 +967,7 @@
         "habr_970998",
         "habr_942336",
         "habr_970860",
+        "habr_972914",
         "habr_972212",
         "habr_972872",
         "habr_972398",
@@ -985,8 +986,7 @@
         "habr_969476",
         "habr_969728",
         "habr_968602",
-        "habr_968766",
-        "habr_969330"
+        "habr_968766"
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
@@ -1004,8 +1004,8 @@
         "forum_Reddit_-_Autos_t3_1pavxvh",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
-        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p9yic6",
+        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
@@ -1038,6 +1038,7 @@
         "habr_970998",
         "habr_942336",
         "habr_970860",
+        "habr_972914",
         "habr_972212",
         "habr_972872",
         "habr_972398",
@@ -1056,8 +1057,7 @@
         "habr_969476",
         "habr_969728",
         "habr_968602",
-        "habr_968766",
-        "habr_969330"
+        "habr_968766"
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
@@ -1075,8 +1075,8 @@
         "forum_Reddit_-_Autos_t3_1pavxvh",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
-        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p9yic6",
+        "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-04T06:20:28.032178",
+  "lastUpdated": "2025-12-04T12:26:13.180221",
   "version": "5.2-forums"
 }

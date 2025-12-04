@@ -211,20 +211,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p9owb2",
-      "title": "Switching from a Range Rover to something practical and less flashy.",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>I live in Belgium, so I don’t have access to the full lineup of trucks/SUVs you’d see in the US market. I’m currently driving a 2024 Range Rover because I’m the CEO of a company, and for a long time I thought that was the kind of car I was “supposed” to drive.</p> <p>But I recently started another business that’s a lot more hands-on and practical, and I’m honestly a bit done with the flashy image. It doesn’t feel like me anymore.</p> <p>I’ve always loved the ide",
-      "link": "https://www.reddit.com/r/Autos/comments/1p9owb2/switching_from_a_range_rover_to_something/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-29T13:24:43+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p9yic6",
       "title": "78 TA Maaco paint job",
       "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p9yic6/78_ta_maaco_paint_job/\"> <img alt=\"78 TA Maaco paint job\" src=\"https://b.thumbs.redditmedia.com/796WyHzb8HwSpIM_4WIn-BauDhyx38yCi-NPvV0h9tI.jpg\" title=\"78 TA Maaco paint job\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Adding billet hinges to make paint job look even better </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/traffic_pe\"> /u/traffic_pe </a> <br /> <span><a href=\"h",
@@ -234,6 +220,20 @@
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
       "published": "2025-11-29T20:10:32+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1p9owb2",
+      "title": "Switching from a Range Rover to something practical and less flashy.",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>I live in Belgium, so I don’t have access to the full lineup of trucks/SUVs you’d see in the US market. I’m currently driving a 2024 Range Rover because I’m the CEO of a company, and for a long time I thought that was the kind of car I was “supposed” to drive.</p> <p>But I recently started another business that’s a lot more hands-on and practical, and I’m honestly a bit done with the flashy image. It doesn’t feel like me anymore.</p> <p>I’ve always loved the ide",
+      "link": "https://www.reddit.com/r/Autos/comments/1p9owb2/switching_from_a_range_rover_to_something/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-11-29T13:24:43+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -352,5 +352,5 @@
     }
   ],
   "count": 25,
-  "lastUpdated": "2025-12-04T06:20:27.671815"
+  "lastUpdated": "2025-12-04T12:26:12.085328"
 }
