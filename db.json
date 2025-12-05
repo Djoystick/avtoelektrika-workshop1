@@ -287,19 +287,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_970860",
-      "title": "Выдыхай, бобёр: как я перестал тупить и собрал монитор CO2, который не врет",
-      "summary": "<p>Маркетологи говорят нам: купи увлажнитель, купи очиститель, купи ионизатор. Но&nbsp;никто не&nbsp;говорит про&nbsp;главное&nbsp;— углекислый газ.</p><p>Ты можешь сидеть в&nbsp;кристально чистой комнате с&nbsp;идеальной влажностью, но&nbsp;если CO2&nbsp;там зашкаливает за 1500&nbsp;ppm&nbsp;— твой мозг превращается в&nbsp;хлебушек. Ты устаешь, делаешь баги и хочешь спать.</p><p>Готовые мониторы ",
-      "link": "https://habr.com/ru/articles/970860/?utm_campaign=970860&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Thu, 27 Nov 2025 10:30:09 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_972914",
       "title": "Разбираемся, что слышит умная колонка. О нелинейных искажениях и метрике FRR",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/688/fe3/9fe/688fe39feed98596c8a68ccfa11f298c.jpg\" /><p>Салют, Хабр!&nbsp;&nbsp;</p><p>Меня зовут Александр. Я DSP-инженер, то есть специалист по цифровой обработке сигналов, и в SberDevices занимаюсь VQE — Voice Quality Enhancement, блоком улучшения качества звука. Мы разработали методику, которая позволяет прогнозировать качество распозн",
@@ -517,6 +504,19 @@
       "contentType": "📚 Статья",
       "category": "📚 DIY",
       "published": "Fri, 28 Nov 2025 07:27:15 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_973472",
+      "title": "Спасаем ARGB: Как я заменил сгоревший китайский хаб на ESP32 с веб-интерфейсом",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/837/f61/ce0/837f61ce03f61159abeae664398d68dd.jpg\" /><p>Год назад я собрал систему с пятью бюджетными ARGB вентиляторами&nbsp;<strong>Aigo AR12</strong>&nbsp;с 6-pin разъёмами. В комплекте шёл хаб&nbsp;<strong>AR12-2012</strong>&nbsp;— типичная китайская плата с 5 портами для вентилей, SATA питанием и выходом на материнку для синхронизации",
+      "link": "https://habr.com/ru/articles/973472/?utm_campaign=973472&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Fri, 05 Dec 2025 06:17:15 GMT",
       "image": null,
       "type": "habr"
     },
@@ -874,6 +874,7 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_973472",
         "habr_972952",
         "habr_963400",
         "habr_971058",
@@ -892,8 +893,7 @@
         "habr_971140",
         "habr_970384",
         "habr_970998",
-        "habr_942336",
-        "habr_970860"
+        "habr_942336"
       ],
       "📚 Электроника": [
         "habr_972914",
@@ -920,8 +920,8 @@
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pds76h",
-        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe7e72",
+        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe572z",
         "forum_Reddit_-_Autos_t3_1pct273",
         "forum_Reddit_-_Autos_t3_1pdqn80",
@@ -947,6 +947,7 @@
     },
     "sources": {
       "Habr.com": [
+        "habr_973472",
         "habr_972952",
         "habr_963400",
         "habr_971058",
@@ -966,7 +967,6 @@
         "habr_970384",
         "habr_970998",
         "habr_942336",
-        "habr_970860",
         "habr_972914",
         "habr_972212",
         "habr_972872",
@@ -991,8 +991,8 @@
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pds76h",
-        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe7e72",
+        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe572z",
         "forum_Reddit_-_Autos_t3_1pct273",
         "forum_Reddit_-_Autos_t3_1pdqn80",
@@ -1018,6 +1018,7 @@
     },
     "types": {
       "habr": [
+        "habr_973472",
         "habr_972952",
         "habr_963400",
         "habr_971058",
@@ -1037,7 +1038,6 @@
         "habr_970384",
         "habr_970998",
         "habr_942336",
-        "habr_970860",
         "habr_972914",
         "habr_972212",
         "habr_972872",
@@ -1062,8 +1062,8 @@
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pds76h",
-        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe7e72",
+        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe572z",
         "forum_Reddit_-_Autos_t3_1pct273",
         "forum_Reddit_-_Autos_t3_1pdqn80",
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-05T00:59:10.615469",
+  "lastUpdated": "2025-12-05T06:20:52.035459",
   "version": "5.2-forums"
 }

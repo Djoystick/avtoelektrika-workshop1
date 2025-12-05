@@ -29,20 +29,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1pednqh",
-      "title": "Can’t find this part online",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/\"> <img alt=\"Can’t find this part online\" src=\"https://b.thumbs.redditmedia.com/90AD1GMnM6NzDZib1vKHFdc93mclFcubBMKfV_1Hbek.jpg\" title=\"Can’t find this part online\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hello I have a 2015 gmc seirra and this came off of my weather tech hood bug deflector it came off on a rough road and the whole thing has been shaking since worried something will b",
-      "link": "https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-12-04T22:18:03+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1pe7e72",
       "title": "Need some help",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello everyone, maybe you can help me. For about three weeks now, I have had the problem that my Golf 5 TDI 2.0 with pump-duse injectors will not start in cold temperatures. In the past few weeks, I managed to get it running by using starting spray. After that, it would run. The glow plugs have been replaced, and I have just installed a new relay as well. However, it still will not start. It does preheat, and it is almost at the ignition point, but it still does",
@@ -52,6 +38,20 @@
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
       "published": "2025-12-04T18:16:59+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pednqh",
+      "title": "Can’t find this part online",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/\"> <img alt=\"Can’t find this part online\" src=\"https://b.thumbs.redditmedia.com/90AD1GMnM6NzDZib1vKHFdc93mclFcubBMKfV_1Hbek.jpg\" title=\"Can’t find this part online\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hello I have a 2015 gmc seirra and this came off of my weather tech hood bug deflector it came off on a rough road and the whole thing has been shaking since worried something will b",
+      "link": "https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-04T22:18:03+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -352,5 +352,5 @@
     }
   ],
   "count": 25,
-  "lastUpdated": "2025-12-05T00:59:09.523504"
+  "lastUpdated": "2025-12-05T06:20:51.252151"
 }
