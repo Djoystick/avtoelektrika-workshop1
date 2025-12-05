@@ -235,32 +235,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_970384",
-      "title": "Как Гэндальфу провести ИИ-хоббитов по fullstack проекту: Часть 1 – программирование",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/bff/9d0/d7f/bff9d0d7f9effc8294c30c0be45b441f.jpg\" /><p>Привет! Меня зовут Воронин Николай, я занимаюсь автоматизацией систем отчётности и анализа в ПГК Диджитал.</p><p>В этой статье я хочу поделиться опытом ведения личного творческого проекта, где многие функции переложены на нейросети. Расскажу об обнаруженных мной особенностях, плюсах и",
-      "link": "https://habr.com/ru/companies/pgk/articles/970384/?utm_campaign=970384&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Thu, 27 Nov 2025 14:51:55 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_970998",
-      "title": "Генерируем G-code прямо в браузере: как я написал карманную CAM-систему на JS+WebGL, чтобы не запускать тяжелый CAD",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/8dc/f6b/37f/8dcf6b37ffb988bc8951451b48b71ea9.jpg\" /><p>Зачем запускать тяжелый Fusion 360 или ArtCAM, чтобы просто вырезать фланец или прокладку? Я написал свой CAM-процессор на чистом JavaScript и Three.js, который готовит G-code из DXF за пару секунд прямо в браузере.</p><p>В статье разбираем архитектуру легковесного инженерного софта: ",
-      "link": "https://habr.com/ru/articles/970998/?utm_campaign=970998&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Thu, 27 Nov 2025 14:48:21 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_970866",
       "title": "BGA и RoHS – Дуумвират из Ада",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/0c5/c2b/84a/0c5c2b84a11868bbfdea75d015e092e7.jpg\" /><p>Знаете это чувство, когда теряешь паспорт, в который вложены карточки и пропуска? Когда уволили, а жена сбежала, прихватив сбережения? Забудьте – вы ничего не знаете о боли, если не паяли BGA на бессвинце.</p> <a href=\"https://habr.com/ru/articles/970866/?utm_campaign=970866&amp;utm_s",
@@ -482,6 +456,32 @@
       "type": "habr"
     },
     {
+      "id": "habr_973804",
+      "title": "Сыч: телеграм-бот, который помнит обиды и обходит лимиты Google Gemini",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/110/ecb/2cb/110ecb2cb2dfec7ab91bdf7ade692786.png\" /><p>Написал бота на <strong>Google Gemini</strong>, который ведет себя как живой участник чата: у него есть характер, он помнит обиды (система репутации) и может послать, если вы это заслужили.<br /><br />А еще он бесплатно расшифровывает голосовые (лучше Telegram Premium), понимает конте",
+      "link": "https://habr.com/ru/articles/973804/?utm_campaign=973804&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Fri, 05 Dec 2025 16:30:00 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
+      "id": "habr_971676",
+      "title": "Формула успеха?",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/bba/ada/1a3/bbaada1a38100e3425ab4410c9f96712.png\" /><p>Не секрет, что каждый из нас, так или иначе, стремится достичь определённой победы в своих начинаниях, которую и называет успехом, причём, для каждого, это будет нечто своё, где, тем не менее, всё равно можно выделить некоторые общие составляющие для достижения этой точки.</p><p>Далее",
+      "link": "https://habr.com/ru/companies/beget/articles/971676/?utm_campaign=971676&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Fri, 05 Dec 2025 16:05:51 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_971818",
       "title": "Кустарные вакуумные триоды Клода Пайяра. Часть 4. Вакуумные насосы",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b65/8cd/c33/b658cdc33d486107c4534b908b80ca66.jpg\" /><p>Мы уже познакомились с Клодом Пайяром — французским радиолюбителем, в бытность, редактором журнала&nbsp;Radio-REF,&nbsp;энтузиастом-электровакуумщиком, воссоздавшим в своей мастерской кустарное производство практических триодов ТМ [1] (первых, 1920-х годов, промышленных «жёстких» — с ",
@@ -519,6 +519,34 @@
       "published": "Fri, 05 Dec 2025 06:17:15 GMT",
       "image": null,
       "type": "habr"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pex8nz",
+      "title": "It’s Grand Wagoneer Season",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pex8nz/its_grand_wagoneer_season/\"> <img alt=\"It’s Grand Wagoneer Season\" src=\"https://preview.redd.it/ht4o3n5xge5g1.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=d3b58e6b7cdab12f60fec798d48b78e001718891\" title=\"It’s Grand Wagoneer Season\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TheGentlemanRacer\"> /u/TheGentlemanRacer </a> <br /> <span><a href=\"https://i.redd.it/ht4o3n5xge5g1.jpeg\">[li",
+      "link": "https://www.reddit.com/r/Autos/comments/1pex8nz/its_grand_wagoneer_season/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-05T14:59:37+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1peupsn",
+      "title": "Tyre change after puncture",
+      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hey there, looking for advice, i`ve got a puncture today on my right rear tyre. Tyres are only 500 km old, would you buy pair or should i replace just the punctured one?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Dusan_Oprsal\"> /u/Dusan_Oprsal </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments/1peupsn/tyre_change_after_puncture/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/Autos/comm",
+      "link": "https://www.reddit.com/r/Autos/comments/1peupsn/tyre_change_after_puncture/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-05T13:12:47+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
     },
     {
       "id": "forum_Reddit_-_Autos_t3_1pednqh",
@@ -787,20 +815,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p942ni",
-      "title": "Tired of constant random things breaking in my 2013 Kia Rio, is a 2012 Lexus CT200h any more reliable?",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Basically I sold my diesel 2013 Kia Rio, and I need another car. I live in Germany and have €10k to spend on one. I’m thinking of going hybrid. I need a reliable car first and foremost. I know about Toyota hybrids but I just can’t make my peace with their interior, I really hate it. Any chance a 2012 Lexus CT200h with 130k km on the odometer is a good choice? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/anchouse94\"> /u/",
-      "link": "https://www.reddit.com/r/Autos/comments/1p942ni/tired_of_constant_random_things_breaking_in_my/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-28T19:41:25+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p8xit0",
       "title": "What's a car that handles better than it has any business doing?",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>I feel like my C-max handles way better than its perceived as it should. I'm not saying it's a Miata or anything but its also far from a plowing mess other front cars I've driven have been.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Mental_Medium3988\"> /u/Mental_Medium3988 </a> <br /> <span><a href=\"https://www.reddit.com/r/Autos/comments/1p8xit0/whats_a_car_that_handles_better_than_it_has_any/\">[link]</a></span> &#32;",
@@ -843,20 +857,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p8b4mi",
-      "title": "PEUGEOT 205 IN 2025?",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p8b4mi/peugeot_205_in_2025/\"> <img alt=\"PEUGEOT 205 IN 2025?\" src=\"https://preview.redd.it/eot1y88nru3g1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=89afa9aecc80b702ff9e9328bbdd4b4db7b4b410\" title=\"PEUGEOT 205 IN 2025?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Is the Peugeot 205 still considered a good car in 2025? I’ve been thinking about getting one because I love its classic look and lightweight feel, but I’m ",
-      "link": "https://www.reddit.com/r/Autos/comments/1p8b4mi/peugeot_205_in_2025/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-27T19:40:35+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_q826yg",
       "title": "Additional resources for your automotive needs!",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Thought we would share some of the various automotive-related communities around Reddit, as <a href=\"https://www.reddit.com/r/Autos\">r/Autos</a> is a more general automotive subreddit.</p> <ul> <li><p><a href=\"https://www.reddit.com/r/MechanicAdvice\">/r/MechanicAdvice</a> - &quot;This is a subreddit for asking Mechanical questions pertaining to vehicles, engines, etc.&quot;</p></li> <li><p><a href=\"https://www.reddit.com/r/whatcarshouldIbuy\">/r/whatcarshouldIbuy",
@@ -874,6 +874,8 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_973804",
+        "habr_971676",
         "habr_971818",
         "habr_973472",
         "habr_972952",
@@ -891,9 +893,7 @@
         "habr_970068",
         "habr_908828",
         "habr_967104",
-        "habr_971140",
-        "habr_970384",
-        "habr_970998"
+        "habr_971140"
       ],
       "📚 Электроника": [
         "habr_973522",
@@ -919,6 +919,8 @@
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pex8nz",
+        "forum_Reddit_-_Autos_t3_1peupsn",
         "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pds76h",
         "forum_Reddit_-_Autos_t3_1pe7e72",
@@ -940,13 +942,13 @@
         "forum_Reddit_-_Autos_t3_1p8viso",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
-        "forum_Reddit_-_Autos_t3_1p8xit0",
-        "forum_Reddit_-_Autos_t3_1p942ni",
-        "forum_Reddit_-_Autos_t3_1p8b4mi"
+        "forum_Reddit_-_Autos_t3_1p8xit0"
       ]
     },
     "sources": {
       "Habr.com": [
+        "habr_973804",
+        "habr_971676",
         "habr_971818",
         "habr_973472",
         "habr_972952",
@@ -965,8 +967,6 @@
         "habr_908828",
         "habr_967104",
         "habr_971140",
-        "habr_970384",
-        "habr_970998",
         "habr_973522",
         "habr_972914",
         "habr_972212",
@@ -990,6 +990,8 @@
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pex8nz",
+        "forum_Reddit_-_Autos_t3_1peupsn",
         "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pds76h",
         "forum_Reddit_-_Autos_t3_1pe7e72",
@@ -1011,13 +1013,13 @@
         "forum_Reddit_-_Autos_t3_1p8viso",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
-        "forum_Reddit_-_Autos_t3_1p8xit0",
-        "forum_Reddit_-_Autos_t3_1p942ni",
-        "forum_Reddit_-_Autos_t3_1p8b4mi"
+        "forum_Reddit_-_Autos_t3_1p8xit0"
       ]
     },
     "types": {
       "habr": [
+        "habr_973804",
+        "habr_971676",
         "habr_971818",
         "habr_973472",
         "habr_972952",
@@ -1036,8 +1038,6 @@
         "habr_908828",
         "habr_967104",
         "habr_971140",
-        "habr_970384",
-        "habr_970998",
         "habr_973522",
         "habr_972914",
         "habr_972212",
@@ -1061,6 +1061,8 @@
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
+        "forum_Reddit_-_Autos_t3_1pex8nz",
+        "forum_Reddit_-_Autos_t3_1peupsn",
         "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pds76h",
         "forum_Reddit_-_Autos_t3_1pe7e72",
@@ -1082,9 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p8viso",
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
-        "forum_Reddit_-_Autos_t3_1p8xit0",
-        "forum_Reddit_-_Autos_t3_1p942ni",
-        "forum_Reddit_-_Autos_t3_1p8b4mi"
+        "forum_Reddit_-_Autos_t3_1p8xit0"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-05T12:25:29.663443",
+  "lastUpdated": "2025-12-05T18:16:14.662256",
   "version": "5.2-forums"
 }
