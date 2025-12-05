@@ -521,6 +521,20 @@
       "type": "habr"
     },
     {
+      "id": "forum_Reddit_-_Autos_t3_1pednqh",
+      "title": "Can’t find this part online",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/\"> <img alt=\"Can’t find this part online\" src=\"https://b.thumbs.redditmedia.com/90AD1GMnM6NzDZib1vKHFdc93mclFcubBMKfV_1Hbek.jpg\" title=\"Can’t find this part online\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hello I have a 2015 gmc seirra and this came off of my weather tech hood bug deflector it came off on a rough road and the whole thing has been shaking since worried something will b",
+      "link": "https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-04T22:18:03+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
       "id": "forum_Reddit_-_Autos_t3_1pe7e72",
       "title": "Need some help",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hello everyone, maybe you can help me. For about three weeks now, I have had the problem that my Golf 5 TDI 2.0 with pump-duse injectors will not start in cold temperatures. In the past few weeks, I managed to get it running by using starting spray. After that, it would run. The glow plugs have been replaced, and I have just installed a new relay as well. However, it still will not start. It does preheat, and it is almost at the ignition point, but it still does",
@@ -843,20 +857,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p8b4mi",
-      "title": "PEUGEOT 205 IN 2025?",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1p8b4mi/peugeot_205_in_2025/\"> <img alt=\"PEUGEOT 205 IN 2025?\" src=\"https://preview.redd.it/eot1y88nru3g1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=89afa9aecc80b702ff9e9328bbdd4b4db7b4b410\" title=\"PEUGEOT 205 IN 2025?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Is the Peugeot 205 still considered a good car in 2025? I’ve been thinking about getting one because I love its classic look and lightweight feel, but I’m ",
-      "link": "https://www.reddit.com/r/Autos/comments/1p8b4mi/peugeot_205_in_2025/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-27T19:40:35+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_q826yg",
       "title": "Additional resources for your automotive needs!",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>Thought we would share some of the various automotive-related communities around Reddit, as <a href=\"https://www.reddit.com/r/Autos\">r/Autos</a> is a more general automotive subreddit.</p> <ul> <li><p><a href=\"https://www.reddit.com/r/MechanicAdvice\">/r/MechanicAdvice</a> - &quot;This is a subreddit for asking Mechanical questions pertaining to vehicles, engines, etc.&quot;</p></li> <li><p><a href=\"https://www.reddit.com/r/whatcarshouldIbuy\">/r/whatcarshouldIbuy",
@@ -920,6 +920,7 @@
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pds76h",
+        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe7e72",
         "forum_Reddit_-_Autos_t3_1pe572z",
         "forum_Reddit_-_Autos_t3_1pct273",
@@ -931,8 +932,8 @@
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
-        "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
+        "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -941,8 +942,7 @@
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
         "forum_Reddit_-_Autos_t3_1p8xit0",
-        "forum_Reddit_-_Autos_t3_1p942ni",
-        "forum_Reddit_-_Autos_t3_1p8b4mi"
+        "forum_Reddit_-_Autos_t3_1p942ni"
       ]
     },
     "sources": {
@@ -991,6 +991,7 @@
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pds76h",
+        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe7e72",
         "forum_Reddit_-_Autos_t3_1pe572z",
         "forum_Reddit_-_Autos_t3_1pct273",
@@ -1002,8 +1003,8 @@
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
-        "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
+        "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -1012,8 +1013,7 @@
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
         "forum_Reddit_-_Autos_t3_1p8xit0",
-        "forum_Reddit_-_Autos_t3_1p942ni",
-        "forum_Reddit_-_Autos_t3_1p8b4mi"
+        "forum_Reddit_-_Autos_t3_1p942ni"
       ]
     },
     "types": {
@@ -1062,6 +1062,7 @@
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
         "forum_Reddit_-_Autos_t3_1pds76h",
+        "forum_Reddit_-_Autos_t3_1pednqh",
         "forum_Reddit_-_Autos_t3_1pe7e72",
         "forum_Reddit_-_Autos_t3_1pe572z",
         "forum_Reddit_-_Autos_t3_1pct273",
@@ -1073,8 +1074,8 @@
         "forum_Reddit_-_Autos_t3_1pb9lkt",
         "forum_Reddit_-_Autos_t3_1pbqs15",
         "forum_Reddit_-_Autos_t3_1pahez2",
-        "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1pavxvh",
+        "forum_Reddit_-_Autos_t3_1p9tuof",
         "forum_Reddit_-_Autos_t3_1p99n9v",
         "forum_Reddit_-_Autos_t3_1p9bzil",
         "forum_Reddit_-_Autos_t3_1p9yic6",
@@ -1083,8 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p8hz96",
         "forum_Reddit_-_Autos_t3_1p9kk9r",
         "forum_Reddit_-_Autos_t3_1p8xit0",
-        "forum_Reddit_-_Autos_t3_1p942ni",
-        "forum_Reddit_-_Autos_t3_1p8b4mi"
+        "forum_Reddit_-_Autos_t3_1p942ni"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-04T18:20:16.409475",
+  "lastUpdated": "2025-12-05T00:59:10.615469",
   "version": "5.2-forums"
 }
