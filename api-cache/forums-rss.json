@@ -43,20 +43,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1pednqh",
-      "title": "Can’t find this part online",
-      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/\"> <img alt=\"Can’t find this part online\" src=\"https://b.thumbs.redditmedia.com/90AD1GMnM6NzDZib1vKHFdc93mclFcubBMKfV_1Hbek.jpg\" title=\"Can’t find this part online\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hello I have a 2015 gmc seirra and this came off of my weather tech hood bug deflector it came off on a rough road and the whole thing has been shaking since worried something will b",
-      "link": "https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-12-04T22:18:03+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1pds76h",
       "title": "Cold mornings are wrecking my fuel economy. Anyone else seeing this...",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>I drive a 2017 Camry 2.5 with about 118k miles on it, and the cold snap this month has been rough. My fuel economy dropped from around 28 mpg to about 23 mpg and the idle gets a little grumpy any time it dips below 23°F. The car acts like it hates mornings more than I do.</p> <p>My daily commute is from Maple Grove to downtown Minneapolis, about 22 to 25 minutes depending on traffic. It is a mix of suburb stop-and-go and a stretch of highway where the engine fin",
@@ -80,6 +66,20 @@
       "contentType": "💬 Форум",
       "category": "🔗 Reddit",
       "published": "2025-12-04T18:16:59+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pednqh",
+      "title": "Can’t find this part online",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/\"> <img alt=\"Can’t find this part online\" src=\"https://b.thumbs.redditmedia.com/90AD1GMnM6NzDZib1vKHFdc93mclFcubBMKfV_1Hbek.jpg\" title=\"Can’t find this part online\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Hello I have a 2015 gmc seirra and this came off of my weather tech hood bug deflector it came off on a rough road and the whole thing has been shaking since worried something will b",
+      "link": "https://www.reddit.com/r/Autos/comments/1pednqh/cant_find_this_part_online/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-04T22:18:03+00:00",
       "image": null,
       "type": "forum_rss",
       "language": "en"
@@ -352,5 +352,5 @@
     }
   ],
   "count": 25,
-  "lastUpdated": "2025-12-05T18:16:14.028403"
+  "lastUpdated": "2025-12-06T00:56:38.821358"
 }
