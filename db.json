@@ -300,6 +300,19 @@
       "type": "habr"
     },
     {
+      "id": "habr_971716",
+      "title": "Профессия, род деятельности ≠ призвание",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/9b1/d5f/6ae/9b1d5f6ae02c5941ce80daaa540e5155.jpg\" /><p><em>Картинка: </em><a href=\"https://www.freepik.com/free-ai-image/portrait-male-scribe-medieval-times_81397496.htm#fromView=search&amp;page=1&amp;position=28&amp;uuid=f94c4cc2-345f-4f01-97e6-855483da0301&amp;query=inventor\" rel=\"noopener noreferrer nofollow\"><em>freepik.com</em></a></",
+      "link": "https://habr.com/ru/companies/ruvds/articles/971716/?utm_campaign=971716&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Sat, 06 Dec 2025 13:01:29 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_969476",
       "title": "Верификация цифровых схем. Маршрут функциональной верификации",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/b39/482/823/b39482823910290276b9ee24b35b5101.png\" /><p>Данная статья — это своего рода продолжение <strong><a href=\"https://habr.com/en/post/481542/\" rel=\"noopener noreferrer nofollow\">Верификация цифровых схем. Обзор.</a></strong>. В ней хотелось показать некоторые типы тестовых окружений для функциональной верификации и особенности рабо",
@@ -443,19 +456,6 @@
       "type": "habr"
     },
     {
-      "id": "habr_971140",
-      "title": "Индикаторы для домашнего ПК",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/dcb/fa0/d5b/dcbfa0d5b5fc98e33377bb89db6483b3.jpg\" /><p>Для мониторинга работы персонального компьютера с Windows можно использовать множество параметров, которые можно наблюдать как с помощью различных программ, так и внешних индикаторов.  </p> <a href=\"https://habr.com/ru/articles/971140/?utm_campaign=971140&amp;utm_source=habrahabr&amp;",
-      "link": "https://habr.com/ru/articles/971140/?utm_campaign=971140&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Fri, 28 Nov 2025 07:27:15 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
       "id": "habr_973804",
       "title": "Сыч: телеграм-бот, который помнит обиды и обходит лимиты Google Gemini",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/110/ecb/2cb/110ecb2cb2dfec7ab91bdf7ade692786.png\" /><p>Написал бота на <strong>Google Gemini</strong>, который ведет себя как живой участник чата: у него есть характер, он помнит обиды (система репутации) и может послать, если вы это заслужили.<br /><br />А еще он бесплатно расшифровывает голосовые (лучше Telegram Premium), понимает конте",
@@ -519,6 +519,20 @@
       "published": "Fri, 05 Dec 2025 06:17:15 GMT",
       "image": null,
       "type": "habr"
+    },
+    {
+      "id": "forum_Reddit_-_Autos_t3_1pftcw8",
+      "title": "Hyundai’s autonomous driving subsidiary 42dot reveals a camera-based End-to-End autonomous driving",
+      "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/Autos/comments/1pftcw8/hyundais_autonomous_driving_subsidiary_42dot/\"> <img alt=\"Hyundai’s autonomous driving subsidiary 42dot reveals a camera-based End-to-End autonomous driving\" src=\"https://b.thumbs.redditmedia.com/_i1pamhB467_uglmRjsuyG3LId-2zqpLCf6KzIi2ITE.jpg\" title=\"Hyundai’s autonomous driving subsidiary 42dot reveals a camera-based End-to-End autonomous driving\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Just saw this demo fro",
+      "link": "https://www.reddit.com/r/Autos/comments/1pftcw8/hyundais_autonomous_driving_subsidiary_42dot/",
+      "source": "Reddit - Autos",
+      "sourceType": "forum",
+      "contentType": "💬 Форум",
+      "category": "🔗 Reddit",
+      "published": "2025-12-06T16:30:18+00:00",
+      "image": null,
+      "type": "forum_rss",
+      "language": "en"
     },
     {
       "id": "forum_Reddit_-_Autos_t3_1pfmlkt",
@@ -787,20 +801,6 @@
       "language": "en"
     },
     {
-      "id": "forum_Reddit_-_Autos_t3_1p9kk9r",
-      "title": "Carport im Winter vorwärts einparken statt wie immer rückwärts?",
-      "summary": "<!-- SC_OFF --><div class=\"md\"><p>Hallo :)</p> <p>Wir haben ein Carport mit 4 plätzen, mein Platz ist quasi in der Mitte also kein Aussenplatz, habe einen Opel mit Frontantrieb.</p> <p>Das Carport ist auf 3 Seiten offen, besetht also quasi rückwand, Dach und 4 Tragestangen.</p> <p>Ich parke immer rückwärts ein, zum raschen wegfahren, also dass die Motorhaube des Autos zwar überdacht aber doch nach vorne &quot;rausschaut&quot;, und das microclima des Carports sorgt eigentlich dafür dass ich quasi",
-      "link": "https://www.reddit.com/r/Autos/comments/1p9kk9r/carport_im_winter_vorwärts_einparken_statt_wie/",
-      "source": "Reddit - Autos",
-      "sourceType": "forum",
-      "contentType": "💬 Форум",
-      "category": "🔗 Reddit",
-      "published": "2025-11-29T09:14:16+00:00",
-      "image": null,
-      "type": "forum_rss",
-      "language": "en"
-    },
-    {
       "id": "forum_Reddit_-_Autos_t3_1p9bzil",
       "title": "What are the best YouTube channels for actually learning how cars work?",
       "summary": "<!-- SC_OFF --><div class=\"md\"><p>I’ve always been into cars, but mostly just the models and general vibes — not the deeper “what’s actually going on under the hood” stuff.</p> <p>For anyone who really wants to understand the mechanics, engineering, or inner workings of cars…</p> <p>what YouTube channels are actually worth watching in 2025?</p> <p>I know a lot of people recommend DonutMedia, but beyond that I’m kinda lost.</p> <p>Looking for channels that explain:</p> <p>--how engines really wor",
@@ -874,6 +874,7 @@
   "indexes": {
     "categories": {
       "📚 DIY": [
+        "habr_971716",
         "habr_973804",
         "habr_971676",
         "habr_971818",
@@ -892,8 +893,7 @@
         "habr_971694",
         "habr_970068",
         "habr_908828",
-        "habr_967104",
-        "habr_971140"
+        "habr_967104"
       ],
       "📚 Электроника": [
         "habr_973522",
@@ -919,8 +919,9 @@
       ],
       "🔗 Reddit": [
         "forum_Reddit_-_Autos_t3_q826yg",
-        "forum_Reddit_-_Autos_t3_1pfmlkt",
+        "forum_Reddit_-_Autos_t3_1pftcw8",
         "forum_Reddit_-_Autos_t3_1pex8nz",
+        "forum_Reddit_-_Autos_t3_1pfmlkt",
         "forum_Reddit_-_Autos_t3_1peupsn",
         "forum_Reddit_-_Autos_t3_1pds76h",
         "forum_Reddit_-_Autos_t3_1pe7e72",
@@ -941,12 +942,12 @@
         "forum_Reddit_-_Autos_t3_1p9yic6",
         "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
-        "forum_Reddit_-_Autos_t3_1p8hz96",
-        "forum_Reddit_-_Autos_t3_1p9kk9r"
+        "forum_Reddit_-_Autos_t3_1p8hz96"
       ]
     },
     "sources": {
       "Habr.com": [
+        "habr_971716",
         "habr_973804",
         "habr_971676",
         "habr_971818",
@@ -966,7 +967,6 @@
         "habr_970068",
         "habr_908828",
         "habr_967104",
-        "habr_971140",
         "habr_973522",
         "habr_972914",
         "habr_972212",
@@ -990,8 +990,9 @@
       ],
       "Reddit - Autos": [
         "forum_Reddit_-_Autos_t3_q826yg",
-        "forum_Reddit_-_Autos_t3_1pfmlkt",
+        "forum_Reddit_-_Autos_t3_1pftcw8",
         "forum_Reddit_-_Autos_t3_1pex8nz",
+        "forum_Reddit_-_Autos_t3_1pfmlkt",
         "forum_Reddit_-_Autos_t3_1peupsn",
         "forum_Reddit_-_Autos_t3_1pds76h",
         "forum_Reddit_-_Autos_t3_1pe7e72",
@@ -1012,12 +1013,12 @@
         "forum_Reddit_-_Autos_t3_1p9yic6",
         "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
-        "forum_Reddit_-_Autos_t3_1p8hz96",
-        "forum_Reddit_-_Autos_t3_1p9kk9r"
+        "forum_Reddit_-_Autos_t3_1p8hz96"
       ]
     },
     "types": {
       "habr": [
+        "habr_971716",
         "habr_973804",
         "habr_971676",
         "habr_971818",
@@ -1037,7 +1038,6 @@
         "habr_970068",
         "habr_908828",
         "habr_967104",
-        "habr_971140",
         "habr_973522",
         "habr_972914",
         "habr_972212",
@@ -1061,8 +1061,9 @@
       ],
       "forum_rss": [
         "forum_Reddit_-_Autos_t3_q826yg",
-        "forum_Reddit_-_Autos_t3_1pfmlkt",
+        "forum_Reddit_-_Autos_t3_1pftcw8",
         "forum_Reddit_-_Autos_t3_1pex8nz",
+        "forum_Reddit_-_Autos_t3_1pfmlkt",
         "forum_Reddit_-_Autos_t3_1peupsn",
         "forum_Reddit_-_Autos_t3_1pds76h",
         "forum_Reddit_-_Autos_t3_1pe7e72",
@@ -1083,8 +1084,7 @@
         "forum_Reddit_-_Autos_t3_1p9yic6",
         "forum_Reddit_-_Autos_t3_1p9owb2",
         "forum_Reddit_-_Autos_t3_1p8viso",
-        "forum_Reddit_-_Autos_t3_1p8hz96",
-        "forum_Reddit_-_Autos_t3_1p9kk9r"
+        "forum_Reddit_-_Autos_t3_1p8hz96"
       ]
     },
     "brands": {}
@@ -1098,6 +1098,6 @@
     "forums": 25,
     "community": 0
   },
-  "lastUpdated": "2025-12-06T12:22:19.252943",
+  "lastUpdated": "2025-12-06T18:16:39.173903",
   "version": "5.2-forums"
 }

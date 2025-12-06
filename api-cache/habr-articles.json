@@ -1,6 +1,19 @@
 {
   "articles": [
     {
+      "id": "habr_971716",
+      "title": "Профессия, род деятельности ≠ призвание",
+      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/9b1/d5f/6ae/9b1d5f6ae02c5941ce80daaa540e5155.jpg\" /><p><em>Картинка: </em><a href=\"https://www.freepik.com/free-ai-image/portrait-male-scribe-medieval-times_81397496.htm#fromView=search&amp;page=1&amp;position=28&amp;uuid=f94c4cc2-345f-4f01-97e6-855483da0301&amp;query=inventor\" rel=\"noopener noreferrer nofollow\"><em>freepik.com</em></a></",
+      "link": "https://habr.com/ru/companies/ruvds/articles/971716/?utm_campaign=971716&utm_source=habrahabr&utm_medium=rss",
+      "source": "Habr.com",
+      "sourceType": "article",
+      "contentType": "📚 Статья",
+      "category": "📚 DIY",
+      "published": "Sat, 06 Dec 2025 13:01:29 GMT",
+      "image": null,
+      "type": "habr"
+    },
+    {
       "id": "habr_973804",
       "title": "Сыч: телеграм-бот, который помнит обиды и обходит лимиты Google Gemini",
       "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/110/ecb/2cb/110ecb2cb2dfec7ab91bdf7ade692786.png\" /><p>Написал бота на <strong>Google Gemini</strong>, который ведет себя как живой участник чата: у него есть характер, он помнит обиды (система репутации) и может послать, если вы это заслужили.<br /><br />А еще он бесплатно расшифровывает голосовые (лучше Telegram Premium), понимает конте",
@@ -244,19 +257,6 @@
       "contentType": "📚 Статья",
       "category": "📚 DIY",
       "published": "Fri, 28 Nov 2025 09:01:12 GMT",
-      "image": null,
-      "type": "habr"
-    },
-    {
-      "id": "habr_971140",
-      "title": "Индикаторы для домашнего ПК",
-      "summary": "<img src=\"https://habrastorage.org/getpro/habr/upload_files/dcb/fa0/d5b/dcbfa0d5b5fc98e33377bb89db6483b3.jpg\" /><p>Для мониторинга работы персонального компьютера с Windows можно использовать множество параметров, которые можно наблюдать как с помощью различных программ, так и внешних индикаторов.  </p> <a href=\"https://habr.com/ru/articles/971140/?utm_campaign=971140&amp;utm_source=habrahabr&amp;",
-      "link": "https://habr.com/ru/articles/971140/?utm_campaign=971140&utm_source=habrahabr&utm_medium=rss",
-      "source": "Habr.com",
-      "sourceType": "article",
-      "contentType": "📚 Статья",
-      "category": "📚 DIY",
-      "published": "Fri, 28 Nov 2025 07:27:15 GMT",
       "image": null,
       "type": "habr"
     },
@@ -522,5 +522,5 @@
     }
   ],
   "count": 40,
-  "lastUpdated": "2025-12-06T12:21:55.385911"
+  "lastUpdated": "2025-12-06T18:16:15.743798"
 }
